@@ -31,9 +31,10 @@ public class CharacterMovement : MonoBehaviour
             {
                 currentGravity = 0.01f;
             }
+            //Teleportiert einen in die Luft ?
             if (Input.GetButtonDown("Jump") && _characterController.isGrounded)
             {
-                currentGravity -= jumpForce * Time.deltaTime;
+                currentGravity -= jumpForce;
             }
             return gravitymovement;
         }
