@@ -16,13 +16,10 @@ public class CharacterMovement : MonoBehaviour
         _characterController = gameObject.GetComponent<CharacterController>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (_characterController.isGrounded)
         {
-            // We are grounded, so recalculate
-            // move direction directly from axes
 
             MoveVector = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
             MoveVector *= speed;
