@@ -22,7 +22,9 @@ public class CharacterMovement : MonoBehaviour
         Vector3 FinalMovement = (Movement() * speed) + Gravitation();
         _characterController.Move(FinalMovement);
 
-        //Gravitation
+
+
+    }        //Gravitation
         Vector3 Gravitation()
         {
             Vector3 gravitymovement = new Vector3(0, -currentGravity, 0);
@@ -30,11 +32,6 @@ public class CharacterMovement : MonoBehaviour
             if (_characterController.isGrounded)
             {
                 currentGravity = 0.01f;
-            }
-            //Teleportiert einen in die Luft ?
-            if (Input.GetButtonDown("Jump") && _characterController.isGrounded)
-            {
-                currentGravity -= jumpForce;
             }
             return gravitymovement;
         }
@@ -46,9 +43,11 @@ public class CharacterMovement : MonoBehaviour
 
             MoveVector += transform.forward * Input.GetAxis("Vertical");
             MoveVector += transform.right * Input.GetAxis("Horizontal");
+            if (Input.GetButtonDown("Jump") && _characterController.isGrounded)
+            {
+                MoveVector += transform.up * jumpForce;
+            }
             MoveVector *= Time.deltaTime;
             return MoveVector;
         }
-
-    }
 }
