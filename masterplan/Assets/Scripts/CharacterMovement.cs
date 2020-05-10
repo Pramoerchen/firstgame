@@ -8,8 +8,8 @@ public class CharacterMovement : MonoBehaviour
     public float speed;
     public float gravity;
     public float jumpForce;
-    [SerializeField] private float currentGravity = 0;
     private CharacterController _characterController;
+    private Vector3 MoveVector = Vector3.zero;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,36 +19,21 @@ public class CharacterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 FinalMovement = (Movement() * speed) + Gravitation();
-        _characterController.Move(FinalMovement);
-
-        //Gravitation
-        Vector3 Gravitation()
+        if (_characterController.isGrounded)
         {
-            Vector3 gravitymovement = new Vector3(0, -currentGravity, 0);
-            currentGravity += gravity * Time.deltaTime;
-            if (_characterController.isGrounded)
-            {
-                currentGravity = 0.01f;
-            }
-            //Teleportiert einen in die Luft ?
-            if (Input.GetButtonDown("Jump") && _characterController.isGrounded)
-            {
-                currentGravity -= jumpForce;
-            }
-            return gravitymovement;
-        }
+            // We are grounded, so recalculate
+            // move direction directly from axes
 
-        //Movement
-        Vector3 Movement()
-        {
-            Vector3 MoveVector = Vector3.zero;
+            MoveVector = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
+            MoveVector *= speed;
 
-            MoveVector += transform.forward * Input.GetAxis("Vertical");
-            MoveVector += transform.right * Input.GetAxis("Horizontal");
-            MoveVector *= Time.deltaTime;
-            return MoveVector;
+            if (Input.GetButton("Jump"))
+            {
+                MoveVector.y = jumpForce;
+            }
         }
+        MoveVector.y -= gravity * Time.deltaTime;
+        _characterController.Move(MoveVector * Time.deltaTime);
 
     }
 }
