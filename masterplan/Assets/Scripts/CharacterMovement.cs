@@ -8,7 +8,7 @@ public class CharacterMovement : MonoBehaviour
     public CharacterController _characterController;
     public float speed;
     public float gravity;
-    public float jumpForce = 3f;
+    public float jumpheight = 3f;
     
     public Transform GroundCheck;
     public float checkDistance = 0.4f;
@@ -38,7 +38,7 @@ public class CharacterMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            gravitymovement.y = Mathf.Sqrt(jumpForce * -2f * gravity);
+            gravitymovement.y = Mathf.Sqrt(jumpheight * -2f * gravity);
         }
 
         gravitymovement.y += gravity * Time.deltaTime;
