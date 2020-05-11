@@ -7,6 +7,8 @@ public class Gun : MonoBehaviour
     public float impactForce = 100f;
     public float fireRate = 15f;
     private float nextTimeToFire = 0f;
+    public ParticleSystem muzzleFlash;
+    public GameObject impactEffect;
 
     public Camera fpsCam;
     // Update is called once per frame
@@ -20,6 +22,7 @@ public class Gun : MonoBehaviour
     }
     void Shoot()
     {
+        muzzleFlash.Play();
         RaycastHit hit;
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
         {
@@ -33,6 +36,8 @@ public class Gun : MonoBehaviour
             {
                 hit.rigidbody.AddForce(-hit.normal * impactForce);
             }
+            GameObject ImpacktGo =  Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
+            Destroy(ImpacktGo, 2f);
         }
     }
 }
