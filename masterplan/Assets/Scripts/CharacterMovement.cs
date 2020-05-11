@@ -4,50 +4,45 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-    //Variablen
+    //
+    public CharacterController _characterController;
     public float speed;
     public float gravity;
-    public float jumpForce;
-    [SerializeField] private float currentGravity = 0;
-    private CharacterController _characterController;
-    // Start is called before the first frame update
-    void Start()
-    {
-        _characterController = gameObject.GetComponent<CharacterController>();
-    }
+    public float jumpForce = 3f;
+    
+    public Transform GroundCheck;
+    public float checkDistance = 0.4f;
+    public LayerMask groundMask;
+
+    Vector3 gravitymovement;
+
+    bool isGrounded;
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 FinalMovement = (Movement() * speed) + Gravitation();
-        _characterController.Move(FinalMovement);
 
+        isGrounded = Physics.CheckSphere(GroundCheck.position, checkDistance, groundMask);
 
-
-    }        //Gravitation
-        Vector3 Gravitation()
+        if (isGrounded && gravitymovement.y < 0)
         {
-            Vector3 gravitymovement = new Vector3(0, -currentGravity, 0);
-            currentGravity += gravity * Time.deltaTime;
-            if (_characterController.isGrounded)
-            {
-                currentGravity = 0.01f;
-            }
-            return gravitymovement;
+            gravitymovement.y = -2f;
         }
 
-        //Movement
-        Vector3 Movement()
-        {
-            Vector3 MoveVector = Vector3.zero;
+        float x = Input.GetAxis("Horizontal");
+        float z = Input.GetAxis("Vertical");
 
-            MoveVector += transform.forward * Input.GetAxis("Vertical");
-            MoveVector += transform.right * Input.GetAxis("Horizontal");
-            if (Input.GetButtonDown("Jump") && _characterController.isGrounded)
-            {
-                MoveVector += transform.up * jumpForce;
-            }
-            MoveVector *= Time.deltaTime;
-            return MoveVector;
+        Vector3 move = transform.right * x + transform.forward * z;
+
+        _characterController.Move(move * speed * Time.deltaTime);
+
+        if (Input.GetButtonDown("Jump") && isGrounded)
+        {
+            gravitymovement.y = Mathf.Sqrt(jumpForce * -2f * gravity);
         }
+
+        gravitymovement.y += gravity * Time.deltaTime;
+
+        _characterController.Move(gravitymovement * Time.deltaTime);
+    }
 }
