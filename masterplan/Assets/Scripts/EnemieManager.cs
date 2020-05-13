@@ -4,20 +4,24 @@ using UnityEngine;
 
 public class EnemieManager : MonoBehaviour
 {
+    Target myTarget;
     public HealthBar healthBar;
-    private float health;
+    [SerializeField] private float health;
     // Start is called before the first frame update
-    void start()
-
+    void Start()
     {
-        health = GameObject.Find("Enemie").GetComponent<Target>().health; ;
-        Debug.Log(health);
-        healthBar.SetMaxHealth((int)health);
+        myTarget = gameObject.GetComponent<Target>();
+        
+        Debug.Log(myTarget.health);
+        healthBar.SetMaxHealth((int)myTarget.health);
     }
+
+    
+    
 
     // Update is called once per frame
     void Update()
     {
-        healthBar.SetHealth((int)health);
+        healthBar.SetHealth((int)myTarget.health);
     }
 }
