@@ -111,6 +111,8 @@ MonoBehaviour:
   range: 100
   impactForce: 100
   fireRate: 15
+  muzzleFlash: {fileID: 0}
+  impactEffect: {fileID: 0}
   fpsCam: {fileID: 4284724154344420106}
 --- !u!1 &4284724154344420105
 GameObject:
