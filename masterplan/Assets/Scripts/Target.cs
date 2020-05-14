@@ -18,7 +18,10 @@ public class Target : MonoBehaviour
     }
     void Die()
     {
-        Instantiate(deathEffect, transform.position, Quaternion.identity);
+        if (deathEffect)
+        {
+            Instantiate(deathEffect, transform.position, Quaternion.identity);
+        }
         Destroy(gameObject);
     }
 }
