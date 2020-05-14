@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731713, g: 0.13414736, b: 0.12107852, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -121,27 +121,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: 6fe4d7a4922df0f47850a1166f49b613, type: 2}
---- !u!1 &136099164 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2851371691343023751, guid: 803ef69b8de97294390bf91f80b27856,
-    type: 3}
-  m_PrefabInstance: {fileID: 2851371691475975131}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &136099170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 136099164}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d04c8a1b204fd04dbf9b04f65543517, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  force: 100
-  radius: 700
-  damage: 10
 --- !u!1 &290800837
 GameObject:
   m_ObjectHideFlags: 0
@@ -5020,7 +4999,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
-  deathEffect: {fileID: 0}
+  deathParticle: {fileID: 0}
 --- !u!1 &707042904
 GameObject:
   m_ObjectHideFlags: 0
@@ -5182,13 +5161,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 740837471}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 40.50615, y: -0.67237616, z: -0.78550863}
   m_LocalScale: {x: 50, y: 1, z: 50}
   m_Children: []
   m_Father: {fileID: 2000534700}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &885235553
 GameObject:
   m_ObjectHideFlags: 0
@@ -5424,7 +5403,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
-  deathEffect: {fileID: 0}
+  deathParticle: {fileID: 0}
 --- !u!1 &1614562229
 GameObject:
   m_ObjectHideFlags: 0
@@ -5549,7 +5528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
-  deathEffect: {fileID: 0}
+  deathParticle: {fileID: 0}
 --- !u!1 &1701603258
 GameObject:
   m_ObjectHideFlags: 0
@@ -5585,7 +5564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
-  deathEffect: {fileID: 0}
+  deathParticle: {fileID: 0}
 --- !u!114 &1701603260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5599,8 +5578,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 5
-  force: 700
-  explosionDamage: 100
+  force: 7000
+  explosionDamage: 10
   explosionEffect: {fileID: 290800839}
 --- !u!136 &1701603261
 CapsuleCollider:
@@ -5713,6 +5692,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 1069545473900312408, guid: c330d0d3c2de6ec408a16a146b5d8be3,
+        type: 3}
+      propertyPath: deathParticle
+      value: 
+      objectReference: {fileID: 1286428059694248887, guid: eff988a91e4765448b9e4a8494f3445e,
+        type: 3}
     - target: {fileID: 1069545473900312413, guid: c330d0d3c2de6ec408a16a146b5d8be3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5915,7 +5900,7 @@ Transform:
   - {fileID: 509072201}
   - {fileID: 2022051268}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2022051264
 GameObject:
@@ -6041,7 +6026,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
-  deathEffect: {fileID: 0}
+  deathParticle: {fileID: 0}
 --- !u!1001 &1069545475329332950
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6066,6 +6051,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemie
       objectReference: {fileID: 0}
+    - target: {fileID: 1069545473900312408, guid: c330d0d3c2de6ec408a16a146b5d8be3,
+        type: 3}
+      propertyPath: deathParticle
+      value: 
+      objectReference: {fileID: 1286428059694248887, guid: eff988a91e4765448b9e4a8494f3445e,
+        type: 3}
     - target: {fileID: 1069545473900312413, guid: c330d0d3c2de6ec408a16a146b5d8be3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6104,7 +6095,7 @@ PrefabInstance:
     - target: {fileID: 1069545473900312413, guid: c330d0d3c2de6ec408a16a146b5d8be3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1069545473900312413, guid: c330d0d3c2de6ec408a16a146b5d8be3,
         type: 3}
@@ -6130,6 +6121,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 472740924, guid: 803ef69b8de97294390bf91f80b27856, type: 3}
+      propertyPath: fireRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 472740924, guid: 803ef69b8de97294390bf91f80b27856, type: 3}
+      propertyPath: impactForce
+      value: 400
+      objectReference: {fileID: 0}
     - target: {fileID: 2851371691343023751, guid: 803ef69b8de97294390bf91f80b27856,
         type: 3}
       propertyPath: m_Name

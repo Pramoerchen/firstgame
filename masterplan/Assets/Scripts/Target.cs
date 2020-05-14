@@ -4,7 +4,7 @@ using UnityEngine;
 public class Target : MonoBehaviour
 {
     public float health = 50f;
-    public ParticleSystem deathEffect;
+    public GameObject deathParticle;
     
     public void TakeDamage (float amount)
     {
@@ -18,9 +18,10 @@ public class Target : MonoBehaviour
     }
     void Die()
     {
-        if (deathEffect)
+        if (deathParticle)
         {
-            Instantiate(deathEffect, transform.position, Quaternion.identity);
+           GameObject deathEffekt =  Instantiate(deathParticle, transform.position, Quaternion.identity);
+           Destroy(deathEffekt, 5f);
         }
         Destroy(gameObject);
     }
