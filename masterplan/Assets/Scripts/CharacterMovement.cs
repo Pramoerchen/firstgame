@@ -11,7 +11,7 @@ public class CharacterMovement : MonoBehaviour
     public float jumpheight = 3f;
     
     public Transform GroundCheck;
-    public float checkDistance = 0.4f;
+    float checkDistance = 0.4f;
     public LayerMask groundMask;
 
     Vector3 gravitymovement;

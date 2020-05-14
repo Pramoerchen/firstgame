@@ -12,7 +12,6 @@ public class EnemieManager : MonoBehaviour
     {
         myTarget = gameObject.GetComponent<Target>();
         
-        Debug.Log(myTarget.health);
         healthBar.SetMaxHealth((int)myTarget.health);
     }
 

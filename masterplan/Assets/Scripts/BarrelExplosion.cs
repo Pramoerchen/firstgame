@@ -20,7 +20,7 @@ public class BarrelExplosion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(myTarget.health <= 10 && !hasExploded)
+        if(myTarget.health <= 90 && !hasExploded)
         {
             Explode();
             hasExploded = true;
