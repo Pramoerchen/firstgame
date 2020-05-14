@@ -15,7 +15,7 @@ public class PushForce : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    { 
         if(Input.GetKeyDown(KeyCode.Q))
         {
             AbilityForce();
@@ -24,12 +24,13 @@ public class PushForce : MonoBehaviour
     void AbilityForce()
     {
         Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
-        foreach (Collider nearByoObject in colliders)
+        foreach (var nearByoObject in colliders)
         {
             Rigidbody rb = nearByoObject.GetComponent<Rigidbody>();
             if (rb != null)
             {
-                rb.AddExplosionForce(force, transform.position, radius);
+                rb.AddForce(transform.position * force);
+                Debug.Log("rb gefunden");
             }
             Target target = nearByoObject.GetComponent<Target>();
             if (target != null)
