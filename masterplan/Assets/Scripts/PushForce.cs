@@ -5,7 +5,7 @@ using UnityEngine;
 public class PushForce : MonoBehaviour
 {
     public float force = 1000f;
-    public float radius = 700f;
+    public float radius = 70f;
     public float damage = 10f;
     // Start is called before the first frame update
     void Start()
@@ -29,7 +29,7 @@ public class PushForce : MonoBehaviour
             Rigidbody rb = nearByoObject.GetComponent<Rigidbody>();
             if (rb != null)
             {
-                rb.AddForce(transform.position * force);
+                rb.AddExplosionForce(force, transform.position, radius);
                 Debug.Log("rb gefunden");
             }
             Target target = nearByoObject.GetComponent<Target>();
