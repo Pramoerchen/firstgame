@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour
 {
     public HealthBar healthBar;
-    [SerializeField] private float health;
+    public float health;
     // Start is called before the first frame update
     void Start()
     {
