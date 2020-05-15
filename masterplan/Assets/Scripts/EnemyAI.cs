@@ -44,7 +44,7 @@ public class EnemyAI : MonoBehaviour
            var player =  nearByoObject.GetComponent<PlayerManager>();
            if ( player != null && !hasExploded)
             {
-                player.GetComponent<PlayerManager>().health -= ExplosionDmg;
+                player.GetComponent<PlayerManager>().changeHealth(-ExplosionDmg);
                 hasExploded = true;
                 GameObject explosionEffekt = Instantiate(explosion, transform.position, Quaternion.identity);
                 Destroy(explosionEffekt, 5f);

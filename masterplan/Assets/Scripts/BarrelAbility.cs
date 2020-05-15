@@ -5,6 +5,8 @@ using UnityEngine;
 public class BarrelAbility : MonoBehaviour
 {
     public GameObject objectToSpawn;
+    float spawnDistance = 10;
+
 
     // Start is called before the first frame update
     void Start()
@@ -15,9 +17,14 @@ public class BarrelAbility : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vector3 playerPos = transform.position;
+        Vector3 playerDirection = transform.forward;
+        Quaternion playerRotation = transform.rotation;
+        Vector3 spawnPos = playerPos + playerDirection * spawnDistance;
         if(Input.GetKeyDown(KeyCode.F))
         {
-            Instantiate(objectToSpawn, transform.position , Quaternion.LookRotation(transform.position));
+            Instantiate(objectToSpawn, spawnPos  , playerRotation);
         }
+
     }
 }
