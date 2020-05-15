@@ -50,7 +50,7 @@ public class EnemyAI : MonoBehaviour
             var enemie = nearByoObject.GetComponent<Target>();
             if(hasExploded)
             {
-                enemie.GetComponent<Target>().health -= ExplosionDmg;
+                enemie.GetComponent<Target>().TakeDamage(ExplosionDmg);
             }
         }   
     }
