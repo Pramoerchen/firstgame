@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
+    public GameObject explosion;
     public int ExplosionDmg = 50;
     Transform playerTransform;
     UnityEngine.AI.NavMeshAgent myNavMesh;
@@ -39,18 +40,23 @@ public class EnemyAI : MonoBehaviour
         //OverlapSphere erstellen um nach Player zu suchen
         Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
         foreach (var nearByoObject in colliders)
-        {
+        {  //Gegner Jagt sich in die Luft sobald Spieler nah genug dran ist und andere objekte in reichweite auch
            var player =  nearByoObject.GetComponent<PlayerManager>();
-            //Gegner Jagt sich in die Luft sobald Spieler nah genug dran ist und andere objekte in reichweite auch
-            if ( player != null && !hasExploded)
+           if ( player != null && !hasExploded)
             {
                 player.GetComponent<PlayerManager>().health -= ExplosionDmg;
                 hasExploded = true;
+                GameObject explosionEffekt = Instantiate(explosion, transform.position, Quaternion.identity);
+                Destroy(explosionEffekt, 5f);
             }
-            var enemie = nearByoObject.GetComponent<Target>();
+            /*var enemie = nearByoObject.GetComponent<Target>();
+            if(hasExploded)
+            { 
+                enemie.GetComponent<Target>().TakeDamage(ExplosionDmg);
+            }*/
             if(hasExploded)
             {
-                enemie.GetComponent<Target>().TakeDamage(ExplosionDmg);
+                Destroy(gameObject);
             }
         }   
     }
