@@ -12,7 +12,10 @@ public class PlayerManager : MonoBehaviour
         healthBar.SetMaxHealth((int)health);
     }
 
-
+    public void changeHealth(float change)
+    {
+        health += change;
+    }
 
 
     // Update is called once per frame
