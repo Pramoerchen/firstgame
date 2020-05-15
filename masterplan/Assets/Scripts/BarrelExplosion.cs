@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BarrelExplosion : MonoBehaviour
 {
-
     Target myTarget;
     bool hasExploded = false;
     public float radius = 5f;
