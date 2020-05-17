@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -15,6 +16,10 @@ public class PlayerManager : MonoBehaviour
     public void changeHealth(float change)
     {
         health += change;
+        if(health <= 0)
+        {
+            SceneManager.LoadScene("MainScene");
+        }
     }
 
 
