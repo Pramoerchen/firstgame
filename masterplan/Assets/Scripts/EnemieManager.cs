@@ -6,7 +6,6 @@ public class EnemieManager : MonoBehaviour
 {
     Target myTarget;
     public HealthBar healthBar;
-    [SerializeField] private float health;
     // Start is called before the first frame update
     void Start()
     {
