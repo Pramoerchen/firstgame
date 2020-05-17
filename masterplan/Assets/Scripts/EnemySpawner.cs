@@ -4,17 +4,24 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public Rigidbody rb;
+    public GameObject ObjectToSpawn;
+    public float SpawnAmount = 1;
+    public float spawnTime = 1f;
+    public float spawnDelay = 10f;
 
     // Start is called before the first frame update
     void Start()
     {
-     
+        InvokeRepeating("SpawningEnemy", spawnTime, spawnDelay);
     }
 
-    // Update is called once per frame
-    void Update()
+    void SpawningEnemy()
     {
-     
+        int i = 0;
+        do{ 
+        Instantiate(ObjectToSpawn, transform.position, transform.rotation);
+            i++;
+        }while (i <= SpawnAmount);
+        SpawnAmount *= 2;
     }
 }
