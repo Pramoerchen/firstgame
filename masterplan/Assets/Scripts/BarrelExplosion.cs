@@ -9,7 +9,7 @@ public class BarrelExplosion : MonoBehaviour
     public float radius = 5f;
     public float force = 700f;
     public float explosionDamage = 100f;
-    public ParticleSystem explosionEffect;
+    public GameObject explosionParticle;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +19,7 @@ public class BarrelExplosion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(myTarget.health <= 90 && !hasExploded)
+        if(myTarget.health < 1000 && !hasExploded)
         {
             Explode();
             hasExploded = true;
@@ -27,7 +27,8 @@ public class BarrelExplosion : MonoBehaviour
     }
     void Explode()
     {
-        explosionEffect.Play();
+        GameObject explosionEffect = Instantiate(explosionParticle, transform.position, Quaternion.identity);
+        Destroy(explosionEffect, 5f);
         Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
         foreach(Collider nearByoObject in colliders )
         {

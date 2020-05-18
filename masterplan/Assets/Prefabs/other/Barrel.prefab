@@ -112,7 +112,7 @@ MonoBehaviour:
   radius: 20
   force: 1000
   explosionDamage: 40
-  explosionEffect: {fileID: 444887993112373278, guid: eb136f8b2893de6498f260776c23afd4,
+  explosionParticle: {fileID: 444887993112373276, guid: eb136f8b2893de6498f260776c23afd4,
     type: 3}
 --- !u!114 &5442700090945742543
 MonoBehaviour:
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c41666421083c3142b0a107e0a6ee3bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 1000
   deathParticle: {fileID: 444887993112373276, guid: eb136f8b2893de6498f260776c23afd4,
     type: 3}
 --- !u!54 &5442700090945742517
