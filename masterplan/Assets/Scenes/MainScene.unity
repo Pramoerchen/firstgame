@@ -586,6 +586,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 943854699}
   health: 100
+  energie: 0
 --- !u!114 &591943614
 MonoBehaviour:
   m_ObjectHideFlags: 0

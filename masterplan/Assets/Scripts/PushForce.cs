@@ -7,13 +7,17 @@ public class PushForce : MonoBehaviour
     public float force = 1000f;
     public float radius = 70f;
     public float damage = 10f;
-    // Start is called before the first frame update
+
+    //Implement ability cost
+    public float healthcost = 10f;
+    PlayerManager myPlayerManager;
+
+    // get playermanaer
     void Start()
     {
-        
+        myPlayerManager = GameObject.Find("Player").GetComponent<PlayerManager>();
     }
 
-    // Update is called once per frame
     void Update()
     { 
         if(Input.GetKeyDown(KeyCode.Q))
@@ -38,5 +42,7 @@ public class PushForce : MonoBehaviour
                 target.TakeDamage(damage);
             }
         }
+        // ability cost
+        myPlayerManager.changeEnergie(-healthcost);
     }
 }

@@ -7,6 +7,7 @@ public class PlayerManager : MonoBehaviour
 {
     public HealthBar healthBar;
     public float health;
+    public float energie;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,10 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
+    public void changeEnergie(float change)
+    {
+        health += change;
+    }
 
     // Update is called once per frame
     void Update()
