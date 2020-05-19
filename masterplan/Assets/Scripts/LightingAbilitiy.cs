@@ -7,6 +7,8 @@ public class LightingAbilitiy : MonoBehaviour
     public GameObject objectToSpawn;
     public float spawnDistance = 10;
     public float Energy = 5;
+    public float range = 100f;
+    public Camera fpsCam;
 
 
     // Start is called before the first frame update
@@ -18,13 +20,11 @@ public class LightingAbilitiy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 playerPos = transform.position;
-        Vector3 playerDirection = transform.forward;
-        Quaternion playerRotation = transform.rotation;
-        Vector3 spawnPos = playerPos + playerDirection * spawnDistance;
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            Instantiate(objectToSpawn, spawnPos, playerRotation);
+            RaycastHit hit;
+            Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range);
+            Instantiate(objectToSpawn, hit.point, Quaternion.LookRotation(hit.normal));
         }
 
     }

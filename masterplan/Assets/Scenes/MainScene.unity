@@ -5314,6 +5314,12 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!20 &417571698 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2851371692014235953, guid: 803ef69b8de97294390bf91f80b27856,
+    type: 3}
+  m_PrefabInstance: {fileID: 2851371691475975131}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &591943603 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2851371691343023751, guid: 803ef69b8de97294390bf91f80b27856,
@@ -5350,6 +5356,8 @@ MonoBehaviour:
     type: 3}
   spawnDistance: 10
   Energy: 5
+  range: 100
+  fpsCam: {fileID: 417571698}
 --- !u!1 &740837471
 GameObject:
   m_ObjectHideFlags: 0
