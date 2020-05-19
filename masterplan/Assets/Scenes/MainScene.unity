@@ -5948,8 +5948,9 @@ GameObject:
   - component: {fileID: 1684633268}
   - component: {fileID: 1684633270}
   - component: {fileID: 1684633269}
+  - component: {fileID: 1684633271}
   m_Layer: 5
-  m_Name: Text
+  m_Name: CurrentWave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5969,10 +5970,10 @@ RectTransform:
   m_Father: {fileID: 1610250021}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -384}
-  m_SizeDelta: {x: -864, y: 30}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -15}
+  m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1684633269
 MonoBehaviour:
@@ -6006,7 +6007,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Current Wave: '
+  m_Text: Wasch dich bitte!
 --- !u!222 &1684633270
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6015,6 +6016,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1684633267}
   m_CullTransparentMesh: 0
+--- !u!114 &1684633271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684633267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d669e6afb4069b64a8ffaa6d1a85ea0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wave: 0
 --- !u!4 &1913744890 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7127139634490154426, guid: 803ef69b8de97294390bf91f80b27856,
@@ -6417,6 +6431,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2851371692223210034, guid: 803ef69b8de97294390bf91f80b27856,
+        type: 3}
+      propertyPath: impactEffect
+      value: 
+      objectReference: {fileID: 4376773087402019987, guid: 7f3e6ae6efe5437409966f68e10ca0f1,
+        type: 3}
     - target: {fileID: 2851371692533490861, guid: 803ef69b8de97294390bf91f80b27856,
         type: 3}
       propertyPath: m_LocalPosition.z
