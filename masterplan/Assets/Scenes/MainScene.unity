@@ -1723,6 +1723,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1503521952, guid: 3558543ecee8c0841856a74abcf672d8, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1733902751, guid: 3558543ecee8c0841856a74abcf672d8, type: 3}
       propertyPath: m_CollisionDetection
       value: 1
