@@ -7,11 +7,15 @@ public class BarrelAbility : MonoBehaviour
     public GameObject objectToSpawn;
     float spawnDistance = 10;
 
+    //Implement ability cost
+    public float healthcost = 10f;
+    PlayerManager myPlayerManager;
 
-    // Start is called before the first frame update
+
     void Start()
     {
-        
+        // get playermanaer
+        myPlayerManager = GameObject.Find("Player").GetComponent<PlayerManager>();
     }
 
     // Update is called once per frame
@@ -24,6 +28,8 @@ public class BarrelAbility : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.F))
         {
             Instantiate(objectToSpawn, spawnPos  , playerRotation);
+            // ability cost
+            myPlayerManager.changeEnergie(-healthcost);
         }
 
     }

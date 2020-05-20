@@ -12,9 +12,10 @@ public class PushForce : MonoBehaviour
     public float healthcost = 10f;
     PlayerManager myPlayerManager;
 
-    // get playermanaer
+    
     void Start()
-    {
+    {   
+        // get playermanaer
         myPlayerManager = GameObject.Find("Player").GetComponent<PlayerManager>();
     }
 

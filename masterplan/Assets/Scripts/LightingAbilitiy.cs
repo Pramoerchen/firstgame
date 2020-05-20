@@ -10,11 +10,15 @@ public class LightingAbilitiy : MonoBehaviour
     public float range = 100f;
     public Camera fpsCam;
 
+    //Implement ability cost
+    public float healthcost = 10f;
+    PlayerManager myPlayerManager;
 
-    // Start is called before the first frame update
+
     void Start()
     {
-
+        // get playermanaer
+        myPlayerManager = GameObject.Find("Player").GetComponent<PlayerManager>();
     }
 
     // Update is called once per frame
@@ -25,6 +29,8 @@ public class LightingAbilitiy : MonoBehaviour
             RaycastHit hit;
             Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range);
             Instantiate(objectToSpawn, hit.point, Quaternion.LookRotation(hit.normal));
+            // ability cost
+            myPlayerManager.changeEnergie(-healthcost);
         }
 
     }
