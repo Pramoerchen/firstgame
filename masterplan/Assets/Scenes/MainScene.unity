@@ -605,6 +605,7 @@ MonoBehaviour:
   Energy: 5
   range: 100
   fpsCam: {fileID: 417571698}
+  healthcost: 10
 --- !u!1 &740837471
 GameObject:
   m_ObjectHideFlags: 0
