@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.99999905, g: 0.99999905, b: 0.99999905, a: 1}
+  m_IndirectSpecularColor: {r: 0.99974084, g: 0.99974084, b: 0.99974084, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1723,6 +1723,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1733902751, guid: 3558543ecee8c0841856a74abcf672d8, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733902751, guid: 3558543ecee8c0841856a74abcf672d8, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733902752, guid: 3558543ecee8c0841856a74abcf672d8, type: 3}
+      propertyPath: m_Size.y
+      value: 5.1275845
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733902752, guid: 3558543ecee8c0841856a74abcf672d8, type: 3}
+      propertyPath: m_Center.y
+      value: 1.5637922
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733902752, guid: 3558543ecee8c0841856a74abcf672d8, type: 3}
+      propertyPath: m_Size.z
+      value: 2.8074474
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733902752, guid: 3558543ecee8c0841856a74abcf672d8, type: 3}
+      propertyPath: m_Center.z
+      value: 0.10670757
+      objectReference: {fileID: 0}
     - target: {fileID: 354750358347860108, guid: 3558543ecee8c0841856a74abcf672d8,
         type: 3}
       propertyPath: m_LocalPosition.x
