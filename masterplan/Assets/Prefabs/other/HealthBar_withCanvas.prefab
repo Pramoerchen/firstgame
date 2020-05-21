@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3435837351741769680}
   - component: {fileID: 7381895660052024071}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: HealthBar_withCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6079824024064589996}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -40.07}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 0.43103448, z: 1}
   m_Children:
   - {fileID: 8194923463957219711}
@@ -37,7 +37,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0.82}
+  m_AnchoredPosition: {x: 0, y: 0.8200073}
   m_SizeDelta: {x: 4.540821, y: 0.41470623}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &8487472598606920445
@@ -127,6 +127,11 @@ PrefabInstance:
     - target: {fileID: 8137645020804293503, guid: 406dbfe7058059741af50aaf37c44534,
         type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137645020804293503, guid: 406dbfe7058059741af50aaf37c44534,
+        type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8137645020981449444, guid: 406dbfe7058059741af50aaf37c44534,
