@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraMovement : MonoBehaviour
 {
     [SerializeField] private string mouseXInputName, mouseYInputName;
-    [SerializeField] private float mouseSensitivity;
+    [SerializeField] public float mouseSensitivity;
     [SerializeField] private Transform playerbody;
     private float xAxisClamp;
 

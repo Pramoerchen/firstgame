@@ -10,6 +10,7 @@ public class TimeManager : MonoBehaviour
         {
             DoSlowMotion();
         }
+        //Gibt nen Bug mit dem esc menu
             Time.timeScale += (1f / slowDownLength) * Time.unscaledDeltaTime;
             Time.timeScale = Mathf.Clamp(Time.timeScale, 0f, 1f);
     }

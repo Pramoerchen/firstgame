@@ -16,5 +16,11 @@ public class MainMenu : MonoBehaviour
         Debug.Log("QUIT!");
         Application.Quit();
     }
+    public void MouseSensitivity(float sensiti)
+    {
+        CameraMovement myCameraMovement;
+        myCameraMovement = GetComponent<CameraMovement>();
+        myCameraMovement.mouseSensitivity = sensiti;
+    }
 
 }
