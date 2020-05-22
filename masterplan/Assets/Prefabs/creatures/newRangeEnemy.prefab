@@ -495,8 +495,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ObjectToShoot: {fileID: 1808461404616131391, guid: eb2b0e90b81891544bab0e23a53d2b15,
     type: 3}
-  FireRate: 1
-  checkRate: 0.1
+  FireRate: 0.5
+  checkRate: 0.01
 --- !u!1 &6082811553735055958
 GameObject:
   m_ObjectHideFlags: 0
