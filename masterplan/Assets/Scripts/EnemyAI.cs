@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyAI : MonoBehaviour
 {
     public GameObject explosion;
+    public CameraShake myCameraShake;
     public int ExplosionDmg = 50;
     Transform playerTransform;
     UnityEngine.AI.NavMeshAgent myNavMesh;
@@ -19,6 +20,7 @@ public class EnemyAI : MonoBehaviour
             playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
 
         myNavMesh = gameObject.GetComponent<UnityEngine.AI.NavMeshAgent>();
+        myCameraShake = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraShake>();
     }
 
     // Update is called once per frame
@@ -47,6 +49,7 @@ public class EnemyAI : MonoBehaviour
                 player.GetComponent<PlayerManager>().changeHealth(-ExplosionDmg);
                 hasExploded = true;
                 GameObject explosionEffekt = Instantiate(explosion, transform.position, Quaternion.identity);
+                StartCoroutine(myCameraShake.Shake(1f, 4f));
                 Destroy(explosionEffekt, 5f);
             }
             /*var enemie = nearByoObject.GetComponent<Target>();
