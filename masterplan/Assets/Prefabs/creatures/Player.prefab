@@ -249,7 +249,7 @@ Transform:
   m_LocalPosition: {x: 0.14, y: 3.7, z: 0.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2851371692014235954}
+  - {fileID: 7607629420269783387}
   - {fileID: 2851371692397692223}
   - {fileID: 2851371692533490861}
   m_Father: {fileID: 0}
@@ -462,12 +462,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2851371692014235955}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.77, z: 0.34}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3890454086657216082}
-  m_Father: {fileID: 2851371691548368980}
+  m_Father: {fileID: 7607629420269783387}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &2851371692014235953
@@ -720,6 +720,37 @@ MonoBehaviour:
   impactEffect: {fileID: 1990677546798235928, guid: c1edbe257f724b4429c1d4f824a53eb8,
     type: 3}
   fpsCam: {fileID: 2851371692014235953}
+--- !u!1 &7485839452192725370
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7607629420269783387}
+  m_Layer: 0
+  m_Name: CameraHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7607629420269783387
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7485839452192725370}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.7700002, z: 0.33999997}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2851371692014235954}
+  m_Father: {fileID: 2851371691548368980}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1674654562942196371
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1182,15 +1213,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1d1970c6bea21a46b2144a0f13a5087, type: 3}
---- !u!4 &7127139636573584534 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: a1d1970c6bea21a46b2144a0f13a5087,
-    type: 3}
-  m_PrefabInstance: {fileID: 2851371692650567564}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6103492829659909765 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: a1d1970c6bea21a46b2144a0f13a5087,
+    type: 3}
+  m_PrefabInstance: {fileID: 2851371692650567564}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7127139636573584534 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: a1d1970c6bea21a46b2144a0f13a5087,
     type: 3}
   m_PrefabInstance: {fileID: 2851371692650567564}
   m_PrefabAsset: {fileID: 0}

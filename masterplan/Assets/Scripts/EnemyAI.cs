@@ -49,7 +49,7 @@ public class EnemyAI : MonoBehaviour
                 player.GetComponent<PlayerManager>().changeHealth(-ExplosionDmg);
                 hasExploded = true;
                 GameObject explosionEffekt = Instantiate(explosion, transform.position, Quaternion.identity);
-                StartCoroutine(myCameraShake.Shake(.15f, .4f));
+                StartCoroutine(myCameraShake.Shake(1.5f, 4.4f));
                 Destroy(explosionEffekt, 5f);
             }
             /*var enemie = nearByoObject.GetComponent<Target>();
