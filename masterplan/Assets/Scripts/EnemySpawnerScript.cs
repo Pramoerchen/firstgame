@@ -10,6 +10,7 @@ public class EnemySpawnerScript : MonoBehaviour
     public float spawnTime = 1f;
     public float spawnDelay = 10f;
     public int currentWave = 1;
+    public Transform[] spawnPoints;
 
     // Start is called before the first frame update
     void Start()
@@ -19,9 +20,11 @@ public class EnemySpawnerScript : MonoBehaviour
 
     void SpawningEnemy()
     {
+        
         int i = 0;
-        do{ 
-        Instantiate(ObjectToSpawn, transform.position, transform.rotation);
+        do{
+        int choosenSpawnpoint = Random.Range(0, spawnPoints.Length);
+        Instantiate(ObjectToSpawn, spawnPoints[choosenSpawnpoint].position, spawnPoints[choosenSpawnpoint].rotation);
             i++;
         }while (i <= SpawnAmount);
         SpawnAmount *= 2;

@@ -36,7 +36,7 @@ public class Target : MonoBehaviour
         if (drop)
         {
             int r = Random.Range(1, 10);
-            if (r == 5)
+            if (r == 1)
             {
                 GameObject dropSpawn = Instantiate(drop, transform.position, Quaternion.identity);
                 Destroy(dropSpawn, 20f);
