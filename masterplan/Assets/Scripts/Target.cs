@@ -6,6 +6,7 @@ public class Target : MonoBehaviour
     public float health = 50f;
     private float heal = 5;
     public GameObject deathParticle;
+    public GameObject drop;
 
     PlayerManager myPlayerManager;
 
@@ -31,6 +32,18 @@ public class Target : MonoBehaviour
            GameObject deathEffekt =  Instantiate(deathParticle, transform.position, Quaternion.identity);
            Destroy(deathEffekt, 5f);
         }
+
+        if (drop)
+        {
+            int r = Random.Range(1, 10);
+            if (r == 5)
+            {
+                GameObject dropSpawn = Instantiate(drop, transform.position, Quaternion.identity);
+                Destroy(dropSpawn, 20f);
+            }
+            
+        }
+
         myPlayerManager.changeHealth(heal);
         Destroy(gameObject);
     }

@@ -480,6 +480,7 @@ MonoBehaviour:
   health: 50
   deathParticle: {fileID: 5283698816458880993, guid: be4980055f78cb04db2da2dae41ecaca,
     type: 3}
+  drop: {fileID: 0}
 --- !u!114 &5484251392703855427
 MonoBehaviour:
   m_ObjectHideFlags: 0
