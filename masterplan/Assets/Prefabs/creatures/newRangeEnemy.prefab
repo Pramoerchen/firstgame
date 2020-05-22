@@ -660,22 +660,22 @@ PrefabInstance:
     - target: {fileID: 7648940817299850788, guid: 114536452ca631745bf3d97bfc496ae1,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.122
+      value: -0.068
       objectReference: {fileID: 0}
     - target: {fileID: 7648940817299850788, guid: 114536452ca631745bf3d97bfc496ae1,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 5.344
+      value: 5.32
       objectReference: {fileID: 0}
     - target: {fileID: 7648940817299850788, guid: 114536452ca631745bf3d97bfc496ae1,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 2.7510705
+      value: 5.193647
       objectReference: {fileID: 0}
     - target: {fileID: 7648940817299850788, guid: 114536452ca631745bf3d97bfc496ae1,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0.5855782
+      value: 1.484873
       objectReference: {fileID: 0}
     - target: {fileID: 7648940817299850788, guid: 114536452ca631745bf3d97bfc496ae1,
         type: 3}
@@ -721,6 +721,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194923463957219711, guid: 114536452ca631745bf3d97bfc496ae1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194923463957219711, guid: 114536452ca631745bf3d97bfc496ae1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194923463957219711, guid: 114536452ca631745bf3d97bfc496ae1,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0.92254686
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194923463957219711, guid: 114536452ca631745bf3d97bfc496ae1,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.13669865
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 114536452ca631745bf3d97bfc496ae1, type: 3}

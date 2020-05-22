@@ -5,12 +5,13 @@ using UnityEngine.UI;
 
 public class EnemySpawnerScript : MonoBehaviour
 {
-    public GameObject ObjectToSpawn;
+    
     public float SpawnAmount = 1;
     public float spawnTime = 1f;
     public float spawnDelay = 10f;
     public int currentWave = 1;
     public Transform[] spawnPoints;
+    public GameObject[] ObjectsToSpawn;
 
     // Start is called before the first frame update
     void Start()
@@ -24,8 +25,9 @@ public class EnemySpawnerScript : MonoBehaviour
         int i = 0;
         do{
         int choosenSpawnpoint = Random.Range(0, spawnPoints.Length);
-        Instantiate(ObjectToSpawn, spawnPoints[choosenSpawnpoint].position, spawnPoints[choosenSpawnpoint].rotation);
-            i++;
+        int choosenObject = Random.Range(0, ObjectsToSpawn.Length);
+        Instantiate(ObjectsToSpawn[choosenObject], spawnPoints[choosenSpawnpoint].position, spawnPoints[choosenSpawnpoint].rotation);
+        i++;
         }while (i <= SpawnAmount);
         SpawnAmount *= 2;
         currentWave++;
