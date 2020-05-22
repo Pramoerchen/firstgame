@@ -17,11 +17,13 @@ public class PauseMenu : MonoBehaviour
             {
                 Resume();
                 Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
             }
             else
             {
                 Pause();
                 Cursor.lockState = CursorLockMode.Confined;
+                Cursor.visible = true;
             }
         }
     }
