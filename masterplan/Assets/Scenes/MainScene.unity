@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.99999905, g: 0.99999905, b: 0.99999905, a: 1}
+  m_IndirectSpecularColor: {r: 0.99974084, g: 0.99974084, b: 0.99974084, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1594,6 +1594,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1843469929}
   m_CullTransparentMesh: 0
+--- !u!198 &1866226232 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7923730873286214460, guid: 803ef69b8de97294390bf91f80b27856,
+    type: 3}
+  m_PrefabInstance: {fileID: 2851371691475975131}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1890115567
 GameObject:
   m_ObjectHideFlags: 0
@@ -1816,7 +1822,7 @@ PrefabInstance:
     - target: {fileID: 472740924, guid: 803ef69b8de97294390bf91f80b27856, type: 3}
       propertyPath: muzzleFlash
       value: 
-      objectReference: {fileID: 2081724553}
+      objectReference: {fileID: 1866226232}
     - target: {fileID: 591943612, guid: 803ef69b8de97294390bf91f80b27856, type: 3}
       propertyPath: health
       value: 10000
@@ -1827,6 +1833,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -3846018093981099296, guid: ccf73b047ffe42a41be98fa102682b35,
         type: 3}
+    - target: {fileID: 1443507562028345206, guid: 803ef69b8de97294390bf91f80b27856,
+        type: 3}
+      propertyPath: muzzleFlash
+      value: 
+      objectReference: {fileID: 2081724553}
     - target: {fileID: 2851371691343023751, guid: 803ef69b8de97294390bf91f80b27856,
         type: 3}
       propertyPath: m_Name
@@ -1897,6 +1908,21 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4847917551870520901, guid: 803ef69b8de97294390bf91f80b27856,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.243
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008693126645132453, guid: 803ef69b8de97294390bf91f80b27856,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008693126645132453, guid: 803ef69b8de97294390bf91f80b27856,
+        type: 3}
+      propertyPath: ShapeModule.angle
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 6260872994003353816, guid: 803ef69b8de97294390bf91f80b27856,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1913,5 +1939,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9121999482101362497, guid: 803ef69b8de97294390bf91f80b27856,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -3846018093981099296, guid: ccf73b047ffe42a41be98fa102682b35,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 803ef69b8de97294390bf91f80b27856, type: 3}
