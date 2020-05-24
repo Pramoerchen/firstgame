@@ -25,7 +25,8 @@ public class PushForce : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Q))
         {
             AbilityForce();
-            Instantiate(push_particles, transform.position, Quaternion.identity);
+            GameObject pusheffect = Instantiate(push_particles, transform.position, Quaternion.identity);
+            Destroy(pusheffect, 2f);
         }
     }
     void AbilityForce()
