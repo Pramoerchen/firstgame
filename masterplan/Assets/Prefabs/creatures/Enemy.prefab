@@ -163,7 +163,7 @@ MonoBehaviour:
   myCameraShake: {fileID: 0}
   ExplosionDmg: 50
   checkRate: 0.01
-  radius: 5
+  radius: 2
 --- !u!195 &1069545473900312410
 NavMeshAgent:
   m_ObjectHideFlags: 0
