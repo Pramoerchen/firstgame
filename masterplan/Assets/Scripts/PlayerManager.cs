@@ -19,6 +19,14 @@ public class PlayerManager : MonoBehaviour
         health += change;
         if(health <= 0)
         {
+
+            EnemySpawnerScript Spawner = GameObject.FindGameObjectWithTag("Spawner").GetComponent<EnemySpawnerScript>();
+
+            if (Spawner.currentWave >= PlayerPrefs.GetInt("highscore"))
+            {
+                PlayerPrefs.SetInt("highscore", Spawner.currentWave);
+            }
+
             SceneManager.LoadScene("MainScene");
         }
     }
