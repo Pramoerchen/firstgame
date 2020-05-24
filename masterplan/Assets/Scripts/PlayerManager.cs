@@ -8,6 +8,7 @@ public class PlayerManager : MonoBehaviour
     public HealthBar healthBar;
     public float health;
     public float energie;
+    public bool godmode;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +17,10 @@ public class PlayerManager : MonoBehaviour
 
     public void changeHealth(float change)
     {
+        if (godmode)
+        {
+            return;
+        }
         health += change;
         if(health <= 0)
         {
