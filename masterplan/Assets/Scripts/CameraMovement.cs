@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraMovement : MonoBehaviour
 {
     [SerializeField] private string mouseXInputName, mouseYInputName;
-    [SerializeField] public float mouseSensitivity;
+    public float mouseSensitivity;
     [SerializeField] private Transform playerbody;
     private float xAxisClamp;
 
@@ -13,9 +13,10 @@ public class CameraMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-    Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         xAxisClamp = 0.0f;
+        mouseSensitivity = PlayerPrefs.GetFloat("mousesense");
     }
 
     // Update is called once per frame

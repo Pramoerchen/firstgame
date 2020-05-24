@@ -18,10 +18,8 @@ public class MainMenu : MonoBehaviour
     }
     public void MouseSensitivity(float sensiti)
     {
-        CameraMovement myCameraMovement;
-        myCameraMovement = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraMovement>();
-        float Empfindlichkeit = myCameraMovement.mouseSensitivity;
-        Empfindlichkeit = sensiti;
+        PlayerPrefs.SetFloat("mousesense", sensiti);
+        PlayerPrefs.Save();
     }
 
 }

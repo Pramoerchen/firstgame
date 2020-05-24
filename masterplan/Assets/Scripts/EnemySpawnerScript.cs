@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class EnemySpawnerScript : MonoBehaviour
 {
     
-    public float SpawnAmount = 1;
+    public float SpawnAmount = 1f;
     public float spawnTime = 1f;
     public float spawnDelay = 10f;
     public int currentWave = 1;
@@ -29,7 +29,7 @@ public class EnemySpawnerScript : MonoBehaviour
         Instantiate(ObjectsToSpawn[choosenObject], spawnPoints[choosenSpawnpoint].position, spawnPoints[choosenSpawnpoint].rotation);
         i++;
         }while (i <= SpawnAmount);
-        SpawnAmount *= 2;
+        SpawnAmount = SpawnAmount * 1.5f;
         currentWave++;
         Debug.Log(currentWave);
     }

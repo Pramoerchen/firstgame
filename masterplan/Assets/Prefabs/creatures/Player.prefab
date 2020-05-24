@@ -434,7 +434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 6304092225332251094}
-  health: 100
+  health: 10000
   energie: 0
 --- !u!114 &591943614
 MonoBehaviour:
@@ -767,11 +767,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 47e4835c2891caf4cbe6ad7f00002c2a, type: 2}
+      objectReference: {fileID: -3846018093981099296, guid: ccf73b047ffe42a41be98fa102682b35,
+        type: 3}
     - target: {fileID: 5962733674036704822, guid: 8fdd3967d49f91e418edfddbb1982d55,
         type: 3}
       propertyPath: ShapeModule.angle
-      value: 10
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5962733674036704822, guid: 8fdd3967d49f91e418edfddbb1982d55,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6087408882067944662, guid: 8fdd3967d49f91e418edfddbb1982d55,
         type: 3}
@@ -786,7 +792,7 @@ PrefabInstance:
     - target: {fileID: 6087408882067944662, guid: 8fdd3967d49f91e418edfddbb1982d55,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.754
+      value: -6.243
       objectReference: {fileID: 0}
     - target: {fileID: 6087408882067944662, guid: 8fdd3967d49f91e418edfddbb1982d55,
         type: 3}
@@ -984,6 +990,16 @@ PrefabInstance:
       propertyPath: m_Direction
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8137645020981449443, guid: 406dbfe7058059741af50aaf37c44534,
+        type: 3}
+      propertyPath: m_MaxValue
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137645020981449443, guid: 406dbfe7058059741af50aaf37c44534,
+        type: 3}
+      propertyPath: m_Value
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8137645020981449444, guid: 406dbfe7058059741af50aaf37c44534,
         type: 3}
       propertyPath: m_Name
@@ -1145,7 +1161,8 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 47e4835c2891caf4cbe6ad7f00002c2a, type: 2}
+      objectReference: {fileID: -3846018093981099296, guid: ccf73b047ffe42a41be98fa102682b35,
+        type: 3}
     - target: {fileID: 5962733674036704822, guid: 8fdd3967d49f91e418edfddbb1982d55,
         type: 3}
       propertyPath: ShapeModule.angle
