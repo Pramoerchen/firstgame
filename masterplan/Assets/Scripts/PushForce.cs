@@ -7,6 +7,7 @@ public class PushForce : MonoBehaviour
     public float force = 1000f;
     public float radius = 70f;
     public float damage = 10f;
+    public GameObject push_particles;
 
     //Implement ability cost
     public float healthcost = 10f;
@@ -24,6 +25,7 @@ public class PushForce : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Q))
         {
             AbilityForce();
+            Instantiate(push_particles, transform.position, Quaternion.identity);
         }
     }
     void AbilityForce()

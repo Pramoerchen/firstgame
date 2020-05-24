@@ -405,6 +405,8 @@ MonoBehaviour:
   force: 1000
   radius: 15
   damage: 10
+  push_particles: {fileID: 2249499987260987916, guid: 6af5b025df2b7dc45a77ec29010cf2f9,
+    type: 3}
   healthcost: 10
 --- !u!114 &5605790441102724825
 MonoBehaviour:

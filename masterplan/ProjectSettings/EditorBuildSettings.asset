@@ -10,5 +10,8 @@ EditorBuildSettings:
     guid: 3205eb46172d2354d939f2e2f642e9df
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
+    guid: b9f8f46ea3921b04fbb19b43d45729f2
+  - enabled: 0
+    path: Assets/Scenes/MainScene_backup.unity
     guid: 34c59a82be56cef4bbed78d6962e57e5
   m_configObjects: {}
