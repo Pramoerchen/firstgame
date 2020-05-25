@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 332172267710043858}
   m_Layer: 0
   m_Name: Boss_1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -263,6 +263,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosion: {fileID: 444887993112373276, guid: eb136f8b2893de6498f260776c23afd4,
     type: 3}
+  myCameraShake: {fileID: 0}
   ExplosionDmg: 50
   checkRate: 0.01
   radius: 5
@@ -281,6 +282,7 @@ MonoBehaviour:
   health: 500
   deathParticle: {fileID: 6006798168773456408, guid: d97c2ae6a78cf874e874c23e03fe46e3,
     type: 3}
+  drop: {fileID: 0}
 --- !u!114 &332172267710043858
 MonoBehaviour:
   m_ObjectHideFlags: 0

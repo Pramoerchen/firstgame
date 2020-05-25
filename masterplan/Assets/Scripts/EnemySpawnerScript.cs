@@ -13,6 +13,11 @@ public class EnemySpawnerScript : MonoBehaviour
     public Transform[] spawnPoints;
     public GameObject[] ObjectsToSpawn;
 
+    //boss
+    public GameObject boss_prefab;
+    public Transform bossSpawnPoint;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,8 +27,20 @@ public class EnemySpawnerScript : MonoBehaviour
     void SpawningEnemy()
     {
         
+        if (currentWave % 10 == 0)
+        {
+            Instantiate(boss_prefab, bossSpawnPoint.position, bossSpawnPoint.rotation);
+            currentWave++;
+            return;
+        }
+
+        if (!GameObject.FindGameObjectWithTag("Enemy"))
+        {
+
+        
         int i = 0;
-        do{
+        do
+        {
         int choosenSpawnpoint = Random.Range(0, spawnPoints.Length);
         int choosenObject = Random.Range(0, ObjectsToSpawn.Length);
         Instantiate(ObjectsToSpawn[choosenObject], spawnPoints[choosenSpawnpoint].position, spawnPoints[choosenSpawnpoint].rotation);
@@ -31,6 +48,10 @@ public class EnemySpawnerScript : MonoBehaviour
         }while (i <= SpawnAmount);
         SpawnAmount = SpawnAmount * 1.5f;
         currentWave++;
-        Debug.Log(currentWave);
+        }
+        else
+        {
+            return;
+        }
     }
 }

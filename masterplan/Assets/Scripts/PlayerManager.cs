@@ -38,7 +38,7 @@ public class PlayerManager : MonoBehaviour
 
     public void changeEnergie(float change)
     {
-        health += change;
+        changeHealth(change);
     }
 
     // Update is called once per frame

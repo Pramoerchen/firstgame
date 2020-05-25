@@ -13,6 +13,7 @@ public class Fireball : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.velocity = transform.forward*speed;
+        transform.LookAt(GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>());
         Destroy(gameObject, 10f);
     }
 
@@ -27,6 +28,10 @@ public class Fireball : MonoBehaviour
         {
             var player = other.GetComponent<PlayerManager>();
             player.changeHealth(-Damage);
+            Destroy(gameObject);
+        }
+       if (other.tag == "Ground")
+        {
             Destroy(gameObject);
         }
     }
