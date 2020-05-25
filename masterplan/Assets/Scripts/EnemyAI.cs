@@ -40,9 +40,14 @@ public class EnemyAI : MonoBehaviour
     void ExplodeAtPlayer()
     {
         //OverlapSphere erstellen um nach Player zu suchen
-        Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.forward, out hit))
+        {
+            if (hit.transform.tag == "Player")
+            {
+                Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
         foreach (var nearByoObject in colliders)
-        {  //Gegner Jagt sich in die Luft sobald Spieler nah genug dran ist und andere objekte in reichweite auch
+        {  
            var player =  nearByoObject.GetComponent<PlayerManager>();
            if ( player != null && !hasExploded)
             {
@@ -52,15 +57,13 @@ public class EnemyAI : MonoBehaviour
                 StartCoroutine(myCameraShake.Shake(.15f, .4f));
                 Destroy(explosionEffekt, 5f);
             }
-            /*var enemie = nearByoObject.GetComponent<Target>();
-            if(hasExploded)
-            { 
-                enemie.GetComponent<Target>().TakeDamage(ExplosionDmg);
-            }*/
+
             if(hasExploded)
             {
                 Destroy(gameObject);
             }
+             }
+         }
         }   
     }
 }
