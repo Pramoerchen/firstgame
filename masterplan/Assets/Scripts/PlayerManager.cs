@@ -5,14 +5,45 @@ using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour
 {
+    private Camera fpsCam;
     public HealthBar healthBar;
     public float health;
-    public float energie;
     public bool godmode;
+
+    //Push abilty
+    private PushForce abilty_pushforce;
+
+    //Tunder abilty
+    public GameObject thunder_particles;
+    public float thunder_range = 100f;
+
+    //Barrel abilty
+    public GameObject barrel_tospawn;
+    float spawnDistance = 10;
+
+    //SlowMotion ability
+    private TimeManager abilty_slowmotion;
+
+
+    void Awake()
+    {
+        // if no camera referenced, grab the main camera
+        if (!fpsCam)
+            fpsCam = Camera.main;
+    }
+
+
     // Start is called before the first frame update
     void Start()
     {
         healthBar.SetMaxHealth((int)health);
+
+
+        // Get ability scripts
+        abilty_pushforce = GetComponent<PushForce>();
+        abilty_slowmotion = GetComponent<TimeManager>();
+
+
     }
 
     public void changeHealth(float change)
@@ -25,15 +56,21 @@ public class PlayerManager : MonoBehaviour
         if(health <= 0)
         {
 
-            EnemySpawnerScript Spawner = GameObject.FindGameObjectWithTag("Spawner").GetComponent<EnemySpawnerScript>();
+            Die();
 
-            if (Spawner.currentWave >= PlayerPrefs.GetInt("highscore"))
-            {
-                PlayerPrefs.SetInt("highscore", Spawner.currentWave);
-            }
-
-            SceneManager.LoadScene("MainScene");
         }
+    }
+
+    void Die()
+    {
+        EnemySpawnerScript Spawner = GameObject.FindGameObjectWithTag("Spawner").GetComponent<EnemySpawnerScript>();
+
+        if (Spawner.currentWave >= PlayerPrefs.GetInt("highscore"))
+        {
+            PlayerPrefs.SetInt("highscore", Spawner.currentWave);
+        }
+
+        SceneManager.LoadScene("MainScene");
     }
 
     public void changeEnergie(float change)
@@ -44,6 +81,37 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         healthBar.SetHealth((int)health);
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            abilty_pushforce.AbilityForce();
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+           
+            Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out RaycastHit hit, thunder_range);
+            Instantiate(thunder_particles, hit.point, Quaternion.LookRotation(hit.normal));
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Vector3 playerPos = transform.position;
+            Vector3 playerDirection = transform.forward;
+            Quaternion playerRotation = transform.rotation;
+            Vector3 spawnPos = playerPos + playerDirection * spawnDistance;
+            Instantiate(barrel_tospawn, spawnPos, playerRotation);
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            abilty_slowmotion.DoSlowMotion();
+        }
+
     }
 }

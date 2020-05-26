@@ -9,9 +9,20 @@ public class Thunder : MonoBehaviour
     public float duration = 5;
     float timescale = 0f;
     // Start is called before the first frame update
+    
+    //Implement ability cost
+    public float healthcost = 10f;
+    PlayerManager myPlayerManager;
+
+
     void Start()
     {
-        
+        // get playermanaer
+        myPlayerManager = GameObject.Find("Player").GetComponent<PlayerManager>();
+
+
+        // ability cost
+        myPlayerManager.changeEnergie(-healthcost);
     }
 
     // Update is called once per frame

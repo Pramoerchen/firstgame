@@ -20,17 +20,13 @@ public class PushForce : MonoBehaviour
         myPlayerManager = GameObject.Find("Player").GetComponent<PlayerManager>();
     }
 
-    void Update()
-    { 
-        if(Input.GetKeyDown(KeyCode.Q))
-        {
-            AbilityForce();
-            GameObject pusheffect = Instantiate(push_particles, transform.position, Quaternion.identity);
-            Destroy(pusheffect, 2f);
-        }
-    }
-    void AbilityForce()
+    public void AbilityForce()
     {
+        //Instantiate effect
+        GameObject pusheffect = Instantiate(push_particles, transform.position, Quaternion.identity);
+        Destroy(pusheffect, 2f);
+
+        //Ability itself
         Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
         foreach (var nearByoObject in colliders)
         {

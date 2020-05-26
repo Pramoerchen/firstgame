@@ -8,10 +8,7 @@ public class TimeManager : MonoBehaviour
     bool itsPause;
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            DoSlowMotion();
-        }
+        
         myPauseMenu = GameObject.FindGameObjectWithTag("Canvas").GetComponent<PauseMenu>();
         itsPause = myPauseMenu.GameIsPaused;
 
@@ -23,7 +20,7 @@ public class TimeManager : MonoBehaviour
         }
 
     }
-    void DoSlowMotion()
+    public void DoSlowMotion()
     {
         Time.timeScale = slowDownFactor;
         Time.fixedDeltaTime = Time.timeScale * 0.2f;
