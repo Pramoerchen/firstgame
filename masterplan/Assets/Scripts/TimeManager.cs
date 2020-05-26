@@ -16,7 +16,6 @@ public class TimeManager : MonoBehaviour
         {
             Time.timeScale += (1f / slowDownLength) * Time.unscaledDeltaTime;
             Time.timeScale = Mathf.Clamp(Time.timeScale, 0f, 1f);
-            Debug.Log("Hier wird die ZeitLupe gekillt");
         }
 
     }
