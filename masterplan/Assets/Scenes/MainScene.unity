@@ -26757,6 +26757,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 591943612, guid: 803ef69b8de97294390bf91f80b27856, type: 3}
+      propertyPath: ability_push_isActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 591943612, guid: 803ef69b8de97294390bf91f80b27856, type: 3}
+      propertyPath: ability_thunder_isActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 591943612, guid: 803ef69b8de97294390bf91f80b27856, type: 3}
+      propertyPath: ability_barrel_isActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 591943612, guid: 803ef69b8de97294390bf91f80b27856, type: 3}
+      propertyPath: ability_slowmo_isActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2851371691343023751, guid: 803ef69b8de97294390bf91f80b27856,
         type: 3}
       propertyPath: m_Name

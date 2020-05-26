@@ -10,6 +10,14 @@ public class PlayerManager : MonoBehaviour
     public float health;
     public bool godmode;
 
+    //ability bools
+
+    public bool ability_push_isActive;
+    public bool ability_thunder_isActive;
+    public bool ability_barrel_isActive;
+    public bool ability_slowmo_isActive;
+
+
     //Push abilty
     private PushForce abilty_pushforce;
 
@@ -84,13 +92,13 @@ public class PlayerManager : MonoBehaviour
 
         healthBar.SetHealth((int)health);
 
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q) && ability_push_isActive)
         {
             abilty_pushforce.AbilityForce();
 
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Alpha1) && ability_thunder_isActive)
         {
            
             Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out RaycastHit hit, thunder_range);
@@ -98,7 +106,7 @@ public class PlayerManager : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F) && ability_barrel_isActive)
         {
             Vector3 playerPos = transform.position;
             Vector3 playerDirection = transform.forward;
@@ -108,7 +116,7 @@ public class PlayerManager : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && ability_slowmo_isActive)
         {
             abilty_slowmotion.DoSlowMotion();
         }

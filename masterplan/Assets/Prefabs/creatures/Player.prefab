@@ -403,8 +403,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 6304092225332251094}
   health: 100
-  energie: 0
   godmode: 1
+  ability_push_isActive: 0
+  ability_thunder_isActive: 0
+  ability_barrel_isActive: 0
+  ability_slowmo_isActive: 0
   thunder_particles: {fileID: 2809426326081441068, guid: 5c173c1d5b956d044a782ab9ad9019e9,
     type: 3}
   thunder_range: 100
