@@ -10,7 +10,7 @@ public class Teleport : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Physics.autoSyncTransforms = false;
-            Player.transform.position = TeleportTarget.transform.position;
+        other.transform.position = TeleportTarget.transform.position;
         Physics.autoSyncTransforms = true;
 
     }
