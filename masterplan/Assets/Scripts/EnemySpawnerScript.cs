@@ -27,17 +27,17 @@ public class EnemySpawnerScript : MonoBehaviour
     void SpawningEnemy()
     {
         
-        if (currentWave % 10 == 0)
-        {
-            Instantiate(boss_prefab, bossSpawnPoint.position, bossSpawnPoint.rotation);
-            currentWave++;
-            return;
-        }
+        
 
         if (!GameObject.FindGameObjectWithTag("Enemy"))
         {
+            if (currentWave % 10 == 0)
+                {
+                    Instantiate(boss_prefab, bossSpawnPoint.position, bossSpawnPoint.rotation);
+                    currentWave++;
+                    return;
+                }
 
-        
         int i = 0;
         do
         {
