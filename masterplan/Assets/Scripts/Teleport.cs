@@ -7,12 +7,11 @@ public class Teleport : MonoBehaviour
     public Transform TeleportTarget;
     public GameObject Player;
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Es hat getriggert");
-        if (Input.GetKeyDown(KeyCode.T))
-        {
+        Physics.autoSyncTransforms = false;
             Player.transform.position = TeleportTarget.transform.position;
-        }
+        Physics.autoSyncTransforms = true;
+
     }
 }
