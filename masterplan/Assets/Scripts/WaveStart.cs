@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class WaveStart : MonoBehaviour
 {
-    public GameObject objectToDespawn;
-    EnemySpawnerScript myEnemySpawner;
+    GameObject objectToDespawn;
+    GameObject myEnemySpawner;
     private void Start()
     {
-       myEnemySpawner = GetComponent<EnemySpawnerScript>();
+        myEnemySpawner = GameObject.FindGameObjectWithTag("Spawner");
+        objectToDespawn = GameObject.FindGameObjectWithTag("Stairs");
     }
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        myEnemySpawner.isPlayerReady = true;
+        Debug.Log("Es triggert");
+        myEnemySpawner.GetComponent<EnemySpawnerScript>().isPlayerReady = true;
         objectToDespawn.SetActive(false);
+    }
+    private void Update()
+    {
+        if(!GameObject.FindGameObjectWithTag("Enemy"))
+        {
+            objectToDespawn.SetActive(true);
+        }
     }
 }
