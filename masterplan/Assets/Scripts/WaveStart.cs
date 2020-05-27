@@ -13,7 +13,6 @@ public class WaveStart : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Es triggert");
         myEnemySpawner.GetComponent<EnemySpawnerScript>().isPlayerReady = true;
         objectToDespawn.SetActive(false);
     }
