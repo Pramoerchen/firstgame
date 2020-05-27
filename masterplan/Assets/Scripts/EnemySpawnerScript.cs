@@ -12,10 +12,12 @@ public class EnemySpawnerScript : MonoBehaviour
     public int currentWave = 1;
     public Transform[] spawnPoints;
     public GameObject[] ObjectsToSpawn;
-
+    //Player Wavestart
+    public bool isPlayerReady = true;
     //boss
     public GameObject boss_prefab;
     public Transform bossSpawnPoint;
+
 
 
     // Start is called before the first frame update
@@ -26,32 +28,37 @@ public class EnemySpawnerScript : MonoBehaviour
 
     void SpawningEnemy()
     {
-        
-        
 
-        if (!GameObject.FindGameObjectWithTag("Enemy"))
+        if (isPlayerReady == true)
         {
-            if (currentWave % 10 == 0)
+
+            if (!GameObject.FindGameObjectWithTag("Enemy"))
+            {
+                if (currentWave % 10 == 0)
                 {
                     Instantiate(boss_prefab, bossSpawnPoint.position, bossSpawnPoint.rotation);
                     currentWave++;
+                    isPlayerReady = false;
                     return;
                 }
 
-        int i = 0;
-        do
-        {
-        int choosenSpawnpoint = Random.Range(0, spawnPoints.Length);
-        int choosenObject = Random.Range(0, ObjectsToSpawn.Length);
-        Instantiate(ObjectsToSpawn[choosenObject], spawnPoints[choosenSpawnpoint].position, spawnPoints[choosenSpawnpoint].rotation);
-        i++;
-        }while (i <= SpawnAmount);
-        SpawnAmount = SpawnAmount * 1.5f;
-        currentWave++;
-        }
-        else
-        {
-            return;
+                int i = 0;
+                do
+                {
+                    int choosenSpawnpoint = Random.Range(0, spawnPoints.Length);
+                    int choosenObject = Random.Range(0, ObjectsToSpawn.Length);
+                    Instantiate(ObjectsToSpawn[choosenObject], spawnPoints[choosenSpawnpoint].position, spawnPoints[choosenSpawnpoint].rotation);
+                    i++;
+                } while (i <= SpawnAmount);
+                SpawnAmount = SpawnAmount * 1.5f;
+                currentWave++;
+                isPlayerReady = false;
+            }
+            else
+            {
+                isPlayerReady = false;
+                return;
+            }
         }
     }
 }
