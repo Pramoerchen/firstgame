@@ -146,6 +146,7 @@ MonoBehaviour:
   deathParticle: {fileID: 1286428059694248887, guid: eff988a91e4765448b9e4a8494f3445e,
     type: 3}
   drop: {fileID: 2295743085634939588, guid: 6e64e49ea5d8cfd47b723adfe00e6c53, type: 3}
+  dropAmount: 1
 --- !u!114 &1069545473900312411
 MonoBehaviour:
   m_ObjectHideFlags: 0

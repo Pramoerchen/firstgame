@@ -7,6 +7,7 @@ public class Target : MonoBehaviour
     private float heal = 5;
     public GameObject deathParticle;
     public GameObject drop;
+    public int dropAmount =1;
 
     PlayerManager myPlayerManager;
 
@@ -35,12 +36,18 @@ public class Target : MonoBehaviour
 
         if (drop)
         {
-            int r = Random.Range(1, 10);
-            if (r == 1)
+            int i = 1;
+            do
             {
-                GameObject dropSpawn = Instantiate(drop, transform.position, Quaternion.identity);
-                Destroy(dropSpawn, 20f);
-            }
+                int r = Random.Range(1, 10);
+                if (r == 1)
+                {
+                    GameObject dropSpawn = Instantiate(drop, transform.position, Quaternion.identity);
+                    Destroy(dropSpawn, 20f);
+                }
+
+                i++;
+            } while (i < dropAmount);
             
         }
 

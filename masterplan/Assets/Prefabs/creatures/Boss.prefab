@@ -166,6 +166,7 @@ MonoBehaviour:
   deathParticle: {fileID: 6006798168773456408, guid: d97c2ae6a78cf874e874c23e03fe46e3,
     type: 3}
   drop: {fileID: 2295743085634939588, guid: 6e64e49ea5d8cfd47b723adfe00e6c53, type: 3}
+  dropAmount: 10
 --- !u!114 &6833431755381410287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,7 +183,7 @@ MonoBehaviour:
     type: 3}
   FireRate: 10
   SpawnRate: 1
-  checkRate: 0.1
+  checkRate: 0.01
   range: 100
   FollowRange: 30
   ObjectToSpawn: {fileID: 1069545473900312400, guid: c330d0d3c2de6ec408a16a146b5d8be3,
