@@ -8,6 +8,7 @@ TagManager:
   - Canvas
   - Ground
   - Enemy
+  - Stairs
   layers:
   - Default
   - TransparentFX
