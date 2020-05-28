@@ -13,7 +13,10 @@ public class WaveStart : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
+        if(!GameObject.FindGameObjectWithTag("Enemy"))
+        { 
         myEnemySpawner.GetComponent<EnemySpawnerScript>().isPlayerReady = true;
+        }
         objectToDespawn.SetActive(false);
     }
     private void Update()
