@@ -20,7 +20,10 @@ public class UiCurrentWave : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(myEnemySpawner)
+        { 
         wave = myEnemySpawner.currentWave;
         mytext.text = $"Wave: {wave}";
+        }
     }
 }

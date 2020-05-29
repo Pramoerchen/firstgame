@@ -729,10 +729,10 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 116
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!143 &2851371691343023749
 CharacterController:
   m_ObjectHideFlags: 0
@@ -785,7 +785,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 6304092225332251094}
   health: 100
-  godmode: 1
+  godmode: 0
   ability_push_isActive: 1
   ability_thunder_isActive: 1
   ability_barrel_isActive: 1
@@ -1254,10 +1254,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f6731f6d587d1b438e7071aff4a523f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 25
+  damage: 50
   range: 100
   impactForce: 400
-  fireRate: 4
+  fireRate: 2
   muzzleFlash: {fileID: 7923730873286214460}
   impactEffect: {fileID: 1990677546798235928, guid: c1edbe257f724b4429c1d4f824a53eb8,
     type: 3}
@@ -1542,17 +1542,17 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 4c44b917162fd59418206490d603e6d1,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.125
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 4c44b917162fd59418206490d603e6d1,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.185
+      value: 0.148
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 4c44b917162fd59418206490d603e6d1,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.73
+      value: 0.584
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 4c44b917162fd59418206490d603e6d1,
         type: 3}
