@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player_UI : MonoBehaviour
 {
@@ -8,8 +9,12 @@ public class Player_UI : MonoBehaviour
     GameObject ability_2;
     GameObject ability_3;
     GameObject ability_4;
+    Text CurrentEnemiesUI;
+
+    int currentEnemies;
 
     PlayerManager myPlayerManager;
+    EnemySpawnerScript myEnemySpawnerScript;
 
     void Awake()
     {
@@ -17,7 +22,9 @@ public class Player_UI : MonoBehaviour
         ability_2 = GameObject.Find("ability2");
         ability_3 = GameObject.Find("ability3");
         ability_4 = GameObject.Find("ability4");
+        CurrentEnemiesUI = GameObject.Find("CurrentEnemiesUI").GetComponent<Text>();
         myPlayerManager = GameObject.Find("Player").GetComponent<PlayerManager>();
+        myEnemySpawnerScript = GameObject.FindGameObjectWithTag("Spawner").GetComponent<EnemySpawnerScript>();
 
     }
 
@@ -25,6 +32,12 @@ public class Player_UI : MonoBehaviour
   
     void Update()
     {
+
+        if (myEnemySpawnerScript)
+        {
+            currentEnemies = myEnemySpawnerScript.currentEnemies;
+            CurrentEnemiesUI.text = $"Enemies: {currentEnemies}";
+        }
 
         if (myPlayerManager.ability_push_isActive)
         {

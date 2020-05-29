@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 using UnityEngine.UI;
 
 public class EnemySpawnerScript : MonoBehaviour
@@ -9,7 +10,12 @@ public class EnemySpawnerScript : MonoBehaviour
     public float SpawnAmount = 1f;
     public float spawnTime = 1f;
     public float spawnDelay = 10f;
+    public int maxEnemies = 5;
     public int currentWave = 1;
+
+    //enemies left
+    public int currentEnemies;
+
     public Transform[] spawnPoints;
     public GameObject[] ObjectsToSpawn;
     //Player Wavestart
@@ -26,13 +32,19 @@ public class EnemySpawnerScript : MonoBehaviour
         InvokeRepeating("SpawningEnemy", spawnTime, spawnDelay);
     }
 
+    void Update()
+    {
+        GameObject[] currenemyobjects = GameObject.FindGameObjectsWithTag("Enemy");
+        currentEnemies = currenemyobjects.Length;
+    }
+
     void SpawningEnemy()
     {
 
         if (isPlayerReady == true)
         {
 
-            if (!GameObject.FindGameObjectWithTag("Enemy"))
+            if (currentEnemies == 0)
             {
                 if (currentWave % 10 == 0)
                 {
@@ -47,12 +59,19 @@ public class EnemySpawnerScript : MonoBehaviour
                 {
                     int choosenSpawnpoint = Random.Range(0, spawnPoints.Length);
                     int choosenObject = Random.Range(0, ObjectsToSpawn.Length);
+
                     Instantiate(ObjectsToSpawn[choosenObject], spawnPoints[choosenSpawnpoint].position, spawnPoints[choosenSpawnpoint].rotation);
-                    i++;
+                    i++;                    
+                    
+                    
                 } while (i <= SpawnAmount);
+
+
                 SpawnAmount = SpawnAmount * 1.5f;
                 currentWave++;
                 isPlayerReady = false;
+
+
             }
             else
             {

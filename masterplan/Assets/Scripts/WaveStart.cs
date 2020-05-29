@@ -11,7 +11,7 @@ public class WaveStart : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        if(!GameObject.FindGameObjectWithTag("Enemy"))
+        if(myEnemySpawner.GetComponent<EnemySpawnerScript>().currentEnemies == 0)
         { 
         myEnemySpawner.GetComponent<EnemySpawnerScript>().isPlayerReady = true;
         }
