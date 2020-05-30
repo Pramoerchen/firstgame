@@ -7,7 +7,7 @@ public class WeaponBuy : MonoBehaviour
 {
     float range = 100;
     public Camera fpsCam;
-    PlayerManager myPlayerManager;
+    public PlayerManager myPlayerManager;
     public Text mytext;
     // Start is called before the first frame update
     void Start()
@@ -32,8 +32,7 @@ public class WeaponBuy : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.B))
                 {
                     myPlayerManager.changeHealth(-sale.price);
-                    Debug.Log(sale.weaponTag);
-                    GameObject.Find("DesertEagle").GetComponent<Gun>.IsBuyed = true;
+                    sale.sell(true);
                 }
             }
             else

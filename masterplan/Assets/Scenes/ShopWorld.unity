@@ -142,6 +142,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   price: 95
   saleText: "Richtig Dickes ding f\xFCr 95 hp"
+  myGameobj: {fileID: 803249660}
+  test: 0
 --- !u!64 &122485250
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -438,6 +440,12 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &207528751 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1784943121628818961, guid: 803ef69b8de97294390bf91f80b27856,
+    type: 3}
+  m_PrefabInstance: {fileID: 1003725672}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &218346056
 Mesh:
   m_ObjectHideFlags: 0
@@ -2456,6 +2464,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fpsCam: {fileID: 412520220}
+  myPlayerManager: {fileID: 0}
   mytext: {fileID: 2056578892}
 --- !u!20 &412520220 stripped
 Camera:
@@ -2547,6 +2556,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d5b9726c0aee3a409b6a107da7a5273, type: 3}
+--- !u!1 &803249660 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8296172668577424447, guid: 803ef69b8de97294390bf91f80b27856,
+    type: 3}
+  m_PrefabInstance: {fileID: 1003725672}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &877209221
 Mesh:
   m_ObjectHideFlags: 0
@@ -2717,6 +2732,19 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 472740924, guid: 803ef69b8de97294390bf91f80b27856, type: 3}
+      propertyPath: IsBuyed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 591943612, guid: 803ef69b8de97294390bf91f80b27856, type: 3}
+      propertyPath: godmode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784943121628818961, guid: 803ef69b8de97294390bf91f80b27856,
+        type: 3}
+      propertyPath: m_TagString
+      value: Rifle
+      objectReference: {fileID: 0}
     - target: {fileID: 2851371691343023751, guid: 803ef69b8de97294390bf91f80b27856,
         type: 3}
       propertyPath: m_Name
@@ -2782,6 +2810,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6103492831218921385, guid: 803ef69b8de97294390bf91f80b27856,
+        type: 3}
+      propertyPath: m_TagString
+      value: DesertEagle
+      objectReference: {fileID: 0}
     - target: {fileID: 6304092225171912779, guid: 803ef69b8de97294390bf91f80b27856,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -2792,8 +2825,19 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8296172668577424447, guid: 803ef69b8de97294390bf91f80b27856,
+        type: 3}
+      propertyPath: m_TagString
+      value: Shotgun
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 803ef69b8de97294390bf91f80b27856, type: 3}
+--- !u!1 &1180881891 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6103492831218921385, guid: 803ef69b8de97294390bf91f80b27856,
+    type: 3}
+  m_PrefabInstance: {fileID: 1003725672}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1254121758
 Mesh:
   m_ObjectHideFlags: 0
@@ -2989,6 +3033,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   price: 70
   saleText: Diese Edle Rifle Kostet 70 hp
+  myGameobj: {fileID: 207528751}
+  test: 0
 --- !u!65 &1601351753
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3198,6 +3244,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   price: 50
   saleText: "Leicht Rostige Deagle f\xFCr nur 50hp"
+  myGameobj: {fileID: 1180881891}
+  test: 0
 --- !u!1 &1763619116
 GameObject:
   m_ObjectHideFlags: 0
