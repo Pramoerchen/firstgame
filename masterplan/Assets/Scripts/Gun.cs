@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
@@ -9,6 +9,7 @@ public class Gun : MonoBehaviour
     private float nextTimeToFire = 0f;
     public ParticleSystem muzzleFlash;
     public GameObject impactEffect;
+    public bool IsBuyed = false;
 
     public Camera fpsCam;
     // Update is called once per frame
@@ -18,6 +19,10 @@ public class Gun : MonoBehaviour
         {
             nextTimeToFire = Time.time + 1f / fireRate;
             Shoot();
+        }
+        if(!IsBuyed)
+        {
+            this.gameObject.SetActive(false);
         }
     }
     void Shoot()

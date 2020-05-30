@@ -122,6 +122,40 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &122485245 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 6d5b9726c0aee3a409b6a107da7a5273,
+    type: 3}
+  m_PrefabInstance: {fileID: 567134304}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &122485247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122485245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aae769cbf28146448989fee3b96837e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 95
+  saleText: "Richtig Dickes ding f\xFCr 95 hp"
+--- !u!64 &122485250
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122485245}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -153830957423991239, guid: 6d5b9726c0aee3a409b6a107da7a5273, type: 3}
 --- !u!1001 &126531943
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -247,7 +281,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh61972
+  m_Name: pb_Mesh68662
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -410,7 +444,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-48046
+  m_Name: pb_Mesh-77424
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -573,7 +607,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-48094
+  m_Name: pb_Mesh-77472
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -736,7 +770,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-48022
+  m_Name: pb_Mesh-77400
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2403,6 +2437,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &408653254 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2851371691343023751, guid: 803ef69b8de97294390bf91f80b27856,
+    type: 3}
+  m_PrefabInstance: {fileID: 1003725672}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &408653255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408653254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31c1537e765e7b24d8d0e0741650d549, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fpsCam: {fileID: 412520220}
+  mytext: {fileID: 2056578892}
+--- !u!20 &412520220 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2851371692014235953, guid: 803ef69b8de97294390bf91f80b27856,
+    type: 3}
+  m_PrefabInstance: {fileID: 1003725672}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &567134304
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2493,7 +2553,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-48058
+  m_Name: pb_Mesh-77436
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2717,6 +2777,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2851371692533490861, guid: 803ef69b8de97294390bf91f80b27856,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6304092225171912779, guid: 803ef69b8de97294390bf91f80b27856,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -2735,7 +2800,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-48034
+  m_Name: pb_Mesh-77412
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2892,19 +2957,58 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!224 &1458098928 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2851371692533490861, guid: 803ef69b8de97294390bf91f80b27856,
+    type: 3}
+  m_PrefabInstance: {fileID: 1003725672}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1527636814 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 146142128107115983, guid: 971ef67cc1f0857459f00c0ff1a92d10,
     type: 3}
   m_PrefabInstance: {fileID: 2019917987}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1601351750 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3773007845671006138, guid: 971ef67cc1f0857459f00c0ff1a92d10,
+    type: 3}
+  m_PrefabInstance: {fileID: 2019917987}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1601351752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601351750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aae769cbf28146448989fee3b96837e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 70
+  saleText: Diese Edle Rifle Kostet 70 hp
+--- !u!65 &1601351753
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601351750}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.89622223, y: 2.6882887, z: 8.061888}
+  m_Center: {x: 0.051888123, y: 0.5441994, z: -3.3596952}
 --- !u!43 &1725072603
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-48082
+  m_Name: pb_Mesh-77460
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3061,6 +3165,39 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1734579945 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3773007846289283378, guid: 971ef67cc1f0857459f00c0ff1a92d10,
+    type: 3}
+  m_PrefabInstance: {fileID: 2019917987}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1734579949
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734579945}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0000007, y: 5.954501, z: 3.3264353}
+  m_Center: {x: 0.000030202988, y: -1.9772502, z: -0.01177082}
+--- !u!114 &1734579950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734579945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aae769cbf28146448989fee3b96837e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 50
+  saleText: "Leicht Rostige Deagle f\xFCr nur 50hp"
 --- !u!1 &1763619116
 GameObject:
   m_ObjectHideFlags: 0
@@ -3159,7 +3296,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-48070
+  m_Name: pb_Mesh-77448
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3328,6 +3465,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShopHouse
       objectReference: {fileID: 0}
+    - target: {fileID: 3197763173382335982, guid: 971ef67cc1f0857459f00c0ff1a92d10,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5151422751763300659, guid: 971ef67cc1f0857459f00c0ff1a92d10,
         type: 3}
       propertyPath: m_Mesh
@@ -3455,3 +3597,81 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 971ef67cc1f0857459f00c0ff1a92d10, type: 3}
+--- !u!1 &2056578891
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2056578894}
+  - component: {fileID: 2056578893}
+  - component: {fileID: 2056578892}
+  m_Layer: 5
+  m_Name: SaleInfo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2056578892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056578891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.99607843, g: 0.9647059, b: 0.9372549, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 30
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &2056578893
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056578891}
+  m_CullTransparentMesh: 0
+--- !u!224 &2056578894
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056578891}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1458098928}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 7.683277, y: -422.6409}
+  m_SizeDelta: {x: 534.63354, y: 72.12274}
+  m_Pivot: {x: 0.49999997, y: 0.5000001}
