@@ -29,10 +29,16 @@ public class WeaponBuy : MonoBehaviour
             if(sale != null)
             {
                 mytext.text = sale.saleText;
-                if (Input.GetKeyDown(KeyCode.B))
+                if (Input.GetKeyDown(KeyCode.B)&& sale.myGameobj != null)
                 {
                     myPlayerManager.changeHealth(-sale.price);
                     sale.Sell();
+                    
+                }
+                if(Input.GetKeyDown(KeyCode.B)&& sale.playermanager != null)
+                {
+                    myPlayerManager.changeHealth(-sale.price);
+                    sale.RandomAbilitybuy();
                 }
             }
             else

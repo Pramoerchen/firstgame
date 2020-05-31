@@ -143,7 +143,7 @@ MonoBehaviour:
   price: 95
   saleText: "Richtig Dickes ding f\xFCr 95 hp"
   myGameobj: {fileID: 803249660}
-  test: 0
+  playermanager: {fileID: 0}
 --- !u!64 &122485250
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -283,7 +283,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh68662
+  m_Name: pb_Mesh15016
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -452,7 +452,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-77424
+  m_Name: pb_Mesh-1962
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -615,7 +615,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-77472
+  m_Name: pb_Mesh-1972
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -778,7 +778,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-77400
+  m_Name: pb_Mesh-1964
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2568,7 +2568,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-77436
+  m_Name: pb_Mesh-1970
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2738,7 +2738,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 591943612, guid: 803ef69b8de97294390bf91f80b27856, type: 3}
       propertyPath: godmode
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 591943612, guid: 803ef69b8de97294390bf91f80b27856, type: 3}
+      propertyPath: health
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 591943612, guid: 803ef69b8de97294390bf91f80b27856, type: 3}
+      propertyPath: ability_push_isActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 591943612, guid: 803ef69b8de97294390bf91f80b27856, type: 3}
+      propertyPath: ability_thunder_isActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 591943612, guid: 803ef69b8de97294390bf91f80b27856, type: 3}
+      propertyPath: ability_barrel_isActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 591943612, guid: 803ef69b8de97294390bf91f80b27856, type: 3}
+      propertyPath: ability_slowmo_isActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1784943121628818961, guid: 803ef69b8de97294390bf91f80b27856,
         type: 3}
@@ -2844,7 +2864,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-77412
+  m_Name: pb_Mesh-1966
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3034,7 +3054,7 @@ MonoBehaviour:
   price: 70
   saleText: Diese Edle Rifle Kostet 70 hp
   myGameobj: {fileID: 207528751}
-  test: 0
+  playermanager: {fileID: 0}
 --- !u!65 &1601351753
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3054,7 +3074,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-77460
+  m_Name: pb_Mesh-1960
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3245,7 +3265,7 @@ MonoBehaviour:
   price: 50
   saleText: "Leicht Rostige Deagle f\xFCr nur 50hp"
   myGameobj: {fileID: 1180881891}
-  test: 0
+  playermanager: {fileID: 0}
 --- !u!1 &1763619116
 GameObject:
   m_ObjectHideFlags: 0
@@ -3344,7 +3364,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-77448
+  m_Name: pb_Mesh-1968
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3501,6 +3521,41 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &2019294936 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3773007845263987895, guid: 971ef67cc1f0857459f00c0ff1a92d10,
+    type: 3}
+  m_PrefabInstance: {fileID: 2019917987}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &2019294940
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019294936}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.024164071, z: 0.040099036}
+  m_Center: {x: 0, y: 0.0020820482, z: 0.00980052}
+--- !u!114 &2019294941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019294936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aae769cbf28146448989fee3b96837e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 50
+  saleText: "50 hp f\xFCr die chance auf eine m\xE4chtige F\xE4higkeit"
+  myGameobj: {fileID: 0}
+  playermanager: {fileID: 408653254}
 --- !u!1001 &2019917987
 PrefabInstance:
   m_ObjectHideFlags: 0

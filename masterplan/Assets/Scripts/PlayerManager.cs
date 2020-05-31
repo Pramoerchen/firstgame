@@ -12,10 +12,10 @@ public class PlayerManager : MonoBehaviour
 
     //ability bools
 
-    public bool ability_push_isActive;
-    public bool ability_thunder_isActive;
-    public bool ability_barrel_isActive;
-    public bool ability_slowmo_isActive;
+    public bool ability_push_isActive = false;
+    public bool ability_thunder_isActive = false;
+    public bool ability_barrel_isActive = false;
+    public bool ability_slowmo_isActive = false;
 
 
     //Push abilty
