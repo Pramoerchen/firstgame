@@ -9,9 +9,15 @@ public class Gun : MonoBehaviour
     private float nextTimeToFire = 0f;
     public ParticleSystem muzzleFlash;
     public GameObject impactEffect;
-    public bool isBuyed = false;
+    public bool isBuyed;
 
     public Camera fpsCam;
+
+
+    private void Start()
+    {
+        isBuyed = false; 
+    }
     // Update is called once per frame
     void Update()
     {
@@ -22,7 +28,7 @@ public class Gun : MonoBehaviour
         }
         if(!isBuyed)
         {
-            this.gameObject.SetActive(false);
+           this.gameObject.SetActive(false);
         }
     }
     void Shoot()

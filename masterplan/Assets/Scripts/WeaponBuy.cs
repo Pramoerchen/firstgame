@@ -32,7 +32,7 @@ public class WeaponBuy : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.B))
                 {
                     myPlayerManager.changeHealth(-sale.price);
-                    sale.sell(true);
+                    sale.Sell();
                 }
             }
             else
