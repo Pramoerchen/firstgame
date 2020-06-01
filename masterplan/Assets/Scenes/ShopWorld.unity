@@ -2956,19 +2956,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 591943612, guid: 803ef69b8de97294390bf91f80b27856, type: 3}
       propertyPath: ability_push_isActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 591943612, guid: 803ef69b8de97294390bf91f80b27856, type: 3}
       propertyPath: ability_thunder_isActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 591943612, guid: 803ef69b8de97294390bf91f80b27856, type: 3}
       propertyPath: ability_barrel_isActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 591943612, guid: 803ef69b8de97294390bf91f80b27856, type: 3}
       propertyPath: ability_slowmo_isActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1784943121628818961, guid: 803ef69b8de97294390bf91f80b27856,
         type: 3}
