@@ -18,7 +18,6 @@ public class PlayerManager : MonoBehaviour
     public bool ability_barrel_isActive = false;
     public bool ability_slowmo_isActive = false;
 
-
     //Push abilty
     private PushForce abilty_pushforce;
 
@@ -33,6 +32,16 @@ public class PlayerManager : MonoBehaviour
     //SlowMotion ability
     private TimeManager abilty_slowmotion;
 
+    // weapons
+
+    public GameObject weapon_ar;
+    public GameObject weapon_shotgun;
+    public GameObject weapon_deagle;
+
+    Gun weapon_deagle_gun;
+    Gun weapon_ar_gun;
+    Gun weapon_shotgun_gun;
+
 
     void Awake()
     {
@@ -45,16 +54,23 @@ public class PlayerManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        LoadPlayer();
-
-        maxhealth = health;
-
-        healthBar.SetMaxHealth((int)maxhealth);
+        
 
         // Get ability scripts
         abilty_pushforce = GetComponent<PushForce>();
         abilty_slowmotion = GetComponent<TimeManager>();
 
+        // Get weapons
+
+        weapon_deagle_gun = weapon_deagle.GetComponent<Gun>();
+        weapon_ar_gun = weapon_ar.GetComponent<Gun>();
+        weapon_shotgun_gun = weapon_shotgun.GetComponent<Gun>();
+
+        LoadPlayer();
+
+        maxhealth = health;
+
+        healthBar.SetMaxHealth((int)maxhealth);
 
     }
 
@@ -101,6 +117,15 @@ public class PlayerManager : MonoBehaviour
         GameMaster_Controll.Instance.ability_push_isActive = ability_push_isActive;
         GameMaster_Controll.Instance.ability_slowmo_isActive = ability_slowmo_isActive;
         GameMaster_Controll.Instance.ability_thunder_isActive = ability_thunder_isActive;
+
+        
+        GameMaster_Controll.Instance.weapon_deagle_isAcitve = weapon_deagle_gun.isBuyed;
+        
+        GameMaster_Controll.Instance.weapon_ar_isAcitve = weapon_ar_gun.isBuyed;
+        
+        GameMaster_Controll.Instance.weapon_shotgun_isAcitve = weapon_shotgun_gun.isBuyed;
+
+
     }
 
     void LoadPlayer()
@@ -112,6 +137,13 @@ public class PlayerManager : MonoBehaviour
         ability_slowmo_isActive = GameMaster_Controll.Instance.ability_slowmo_isActive;
         ability_thunder_isActive = GameMaster_Controll.Instance.ability_thunder_isActive;
 
+      
+        weapon_deagle_gun.isBuyed = GameMaster_Controll.Instance.weapon_deagle_isAcitve;
+
+        weapon_shotgun_gun.isBuyed = GameMaster_Controll.Instance.weapon_shotgun_isAcitve;
+
+        weapon_ar_gun.isBuyed = GameMaster_Controll.Instance.weapon_ar_isAcitve;
+
     }
 
     public void changeEnergie(float change)
@@ -122,7 +154,7 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
         healthBar.SetHealth((int)health);
 
         if (Input.GetKeyDown(KeyCode.Q) && ability_push_isActive)

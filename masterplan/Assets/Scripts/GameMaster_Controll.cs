@@ -17,6 +17,7 @@ public class GameMaster_Controll : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
         health = 100f;
     }
 
@@ -29,6 +30,10 @@ public class GameMaster_Controll : MonoBehaviour
     public bool ability_thunder_isActive = false;
     public bool ability_barrel_isActive = false;
     public bool ability_slowmo_isActive = false;
+
+    public bool weapon_deagle_isAcitve = false;
+    public bool weapon_ar_isAcitve = false;
+    public bool weapon_shotgun_isAcitve = false;
 
 
 

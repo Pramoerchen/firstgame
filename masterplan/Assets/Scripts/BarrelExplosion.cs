@@ -25,6 +25,9 @@ public class BarrelExplosion : MonoBehaviour
         
         // get playermanaer
         myPlayerManager = GameObject.Find("Player").GetComponent<PlayerManager>();
+
+        // ability cost
+        myPlayerManager.changeEnergie(-healthcost);
     }
 
     // Update is called once per frame
@@ -38,8 +41,7 @@ public class BarrelExplosion : MonoBehaviour
     }
     void Explode()
     {
-        // ability cost
-        myPlayerManager.changeEnergie(-healthcost);
+        
 
         GameObject explosionEffect = Instantiate(explosionParticle, transform.position, Quaternion.identity);
         Destroy(explosionEffect, 5f);

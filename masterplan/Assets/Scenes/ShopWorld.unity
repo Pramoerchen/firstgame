@@ -2644,6 +2644,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
+  ability_push_isActive: 0
+  ability_thunder_isActive: 0
+  ability_barrel_isActive: 0
+  ability_slowmo_isActive: 0
+  weapon_deagle_isAcitve: 0
+  weapon_ar_isAcitve: 0
+  weapon_shotgun_isAcitve: 0
 --- !u!4 &515927516
 Transform:
   m_ObjectHideFlags: 0
@@ -3023,11 +3030,6 @@ PrefabInstance:
     - target: {fileID: 2851371691548368980, guid: 803ef69b8de97294390bf91f80b27856,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2851371692533490861, guid: 803ef69b8de97294390bf91f80b27856,
-        type: 3}
-      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6304092225171912779, guid: 803ef69b8de97294390bf91f80b27856,

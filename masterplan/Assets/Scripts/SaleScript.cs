@@ -8,19 +8,13 @@ public class SaleScript : MonoBehaviour
     public string saleText;
     public GameObject WeaponObjectToUnlock;
     public GameObject playermanager;
-    // Start is called before the first frame update
-    void Start()
-    {
-        WeaponObjectToUnlock.SetActive(false);
-    }
-
-    // Update is called once per frame
 
     public void Sell()
     {
-        WeaponObjectToUnlock.SetActive(true);
         
+        WeaponObjectToUnlock.SetActive(true);
         WeaponObjectToUnlock.GetComponent<Gun>().isBuyed = true;
+        
     }
     public void RandomAbilitybuy()
     {

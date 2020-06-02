@@ -14,10 +14,7 @@ public class Gun : MonoBehaviour
     public Camera fpsCam;
 
 
-    private void Start()
-    {
-        isBuyed = false; 
-    }
+
     // Update is called once per frame
     void Update()
     {
@@ -26,10 +23,7 @@ public class Gun : MonoBehaviour
             nextTimeToFire = Time.time + 1f / fireRate;
             Shoot();
         }
-        if(!isBuyed)
-        {
-           this.gameObject.SetActive(false);
-        }
+        
     }
     void Shoot()
     {

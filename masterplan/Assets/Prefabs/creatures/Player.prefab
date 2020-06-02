@@ -865,7 +865,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 6304092225332251094}
-  health: 100
+  health: 1000
+  maxhealth: 100
   godmode: 0
   ability_push_isActive: 0
   ability_thunder_isActive: 0
@@ -876,6 +877,9 @@ MonoBehaviour:
   thunder_range: 100
   barrel_tospawn: {fileID: 5442700090945742542, guid: 985814c54763a224a96039db43483fea,
     type: 3}
+  weapon_ar: {fileID: 1784943121628818961}
+  weapon_shotgun: {fileID: 8296172668577424447}
+  weapon_deagle: {fileID: 6103492831218921385}
 --- !u!114 &136099170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1736,6 +1740,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Shotgun
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6d5b9726c0aee3a409b6a107da7a5273,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d5b9726c0aee3a409b6a107da7a5273, type: 3}
 --- !u!1 &8296172668577424447 stripped
@@ -1942,6 +1951,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: DesertEagle
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 4c44b917162fd59418206490d603e6d1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c44b917162fd59418206490d603e6d1, type: 3}
@@ -2336,6 +2350,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Rifle
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 9bcb0e824d054ea4cb6ba2992f6213b6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bcb0e824d054ea4cb6ba2992f6213b6, type: 3}
