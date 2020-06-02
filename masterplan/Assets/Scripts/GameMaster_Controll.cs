@@ -17,13 +17,14 @@ public class GameMaster_Controll : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        health = 100f;
     }
 
     // GLOBAL VARS
 
 
     public float health;
-
+ 
 
 
 }

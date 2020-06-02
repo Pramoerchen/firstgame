@@ -24,7 +24,11 @@ public class Player_UI : MonoBehaviour
         ability_4 = GameObject.Find("ability4");
         CurrentEnemiesUI = GameObject.Find("CurrentEnemiesUI").GetComponent<Text>();
         myPlayerManager = GameObject.Find("Player").GetComponent<PlayerManager>();
-        myEnemySpawnerScript = GameObject.FindGameObjectWithTag("Spawner").GetComponent<EnemySpawnerScript>();
+        if (GameObject.FindGameObjectWithTag("Spawner"))
+        {
+            myEnemySpawnerScript = GameObject.FindGameObjectWithTag("Spawner").GetComponent<EnemySpawnerScript>();
+        }
+        
 
     }
 

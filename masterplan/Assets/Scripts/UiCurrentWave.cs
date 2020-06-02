@@ -13,7 +13,10 @@ public class UiCurrentWave : MonoBehaviour
     void Start()
     {
         mytext = GetComponent<Text>();
-        myEnemySpawner = GameObject.Find("EnemySpawner").GetComponent<EnemySpawnerScript>();
+        if (GameObject.Find("EnemySpawner"))
+        { 
+            myEnemySpawner = GameObject.Find("EnemySpawner").GetComponent<EnemySpawnerScript>(); 
+        }
         
     }
 
