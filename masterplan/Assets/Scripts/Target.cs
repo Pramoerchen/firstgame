@@ -8,6 +8,8 @@ public class Target : MonoBehaviour
     public GameObject deathParticle;
     public GameObject drop;
     public int dropAmount =1;
+    public ParticleSystem dmgParticle;
+
 
     PlayerManager myPlayerManager;
 
@@ -19,7 +21,8 @@ public class Target : MonoBehaviour
     public void TakeDamage (float amount)
     {
         health -= amount;
-        
+        if (dmgParticle)
+            dmgParticle.Play();
 
         if (health <= 0)
         {
