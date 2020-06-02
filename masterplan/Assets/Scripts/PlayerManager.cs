@@ -78,13 +78,11 @@ public class PlayerManager : MonoBehaviour
             PlayerPrefs.SetInt("highscore", Spawner.currentWave);
         }
 
-        SavePlayer();
-
         SceneManager.LoadScene("MainScene");
     }
 
 
-    void SavePlayer()
+    public void SavePlayer()
     {
         GameMaster_Controll.Instance.health = health;
     }

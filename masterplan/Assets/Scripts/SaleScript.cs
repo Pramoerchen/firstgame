@@ -24,7 +24,7 @@ public class SaleScript : MonoBehaviour
     }
     public void RandomAbilitybuy()
     {
-        int i = Random.Range(0, 3);
+        int i = Random.Range(0, 4);
         Debug.Log(i);
         switch (i)
         {
