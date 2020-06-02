@@ -96,11 +96,22 @@ public class PlayerManager : MonoBehaviour
     public void SavePlayer()
     {
         GameMaster_Controll.Instance.health = health;
+
+        GameMaster_Controll.Instance.ability_barrel_isActive = ability_barrel_isActive;
+        GameMaster_Controll.Instance.ability_push_isActive = ability_push_isActive;
+        GameMaster_Controll.Instance.ability_slowmo_isActive = ability_slowmo_isActive;
+        GameMaster_Controll.Instance.ability_thunder_isActive = ability_thunder_isActive;
     }
 
     void LoadPlayer()
     {
         health = GameMaster_Controll.Instance.health;
+
+        ability_barrel_isActive = GameMaster_Controll.Instance.ability_barrel_isActive;
+        ability_push_isActive = GameMaster_Controll.Instance.ability_push_isActive;
+        ability_slowmo_isActive = GameMaster_Controll.Instance.ability_slowmo_isActive;
+        ability_thunder_isActive = GameMaster_Controll.Instance.ability_thunder_isActive;
+
     }
 
     public void changeEnergie(float change)

@@ -24,7 +24,12 @@ public class GameMaster_Controll : MonoBehaviour
 
 
     public float health;
- 
+    
+    public bool ability_push_isActive = false;
+    public bool ability_thunder_isActive = false;
+    public bool ability_barrel_isActive = false;
+    public bool ability_slowmo_isActive = false;
+
 
 
 }
