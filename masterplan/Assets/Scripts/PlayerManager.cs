@@ -8,6 +8,7 @@ public class PlayerManager : MonoBehaviour
     private Camera fpsCam;
     public HealthBar healthBar;
     public float health;
+    public float maxhealth;
     public bool godmode;
 
     //ability bools
@@ -46,6 +47,9 @@ public class PlayerManager : MonoBehaviour
     {
         LoadPlayer();
 
+        maxhealth = health;
+
+        healthBar.SetMaxHealth((int)maxhealth);
 
         // Get ability scripts
         abilty_pushforce = GetComponent<PushForce>();
@@ -67,6 +71,13 @@ public class PlayerManager : MonoBehaviour
             Die();
 
         }
+
+        if (health > maxhealth)
+        {
+            maxhealth = health;
+            healthBar.SetMaxHealth((int) maxhealth);
+        }
+
     }
 
     void Die()
