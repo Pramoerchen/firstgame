@@ -6,21 +6,21 @@ public class SaleScript : MonoBehaviour
 {
     public int price;
     public string saleText;
-    public GameObject myGameobj;
+    public GameObject WeaponObjectToUnlock;
     public GameObject playermanager;
     // Start is called before the first frame update
     void Start()
     {
-        myGameobj.SetActive(false);
+        WeaponObjectToUnlock.SetActive(false);
     }
 
     // Update is called once per frame
 
     public void Sell()
     {
-        myGameobj.SetActive(true);
-        Debug.Log(myGameobj.tag);
-        myGameobj.GetComponent<Gun>().isBuyed = true;
+        WeaponObjectToUnlock.SetActive(true);
+        Debug.Log(WeaponObjectToUnlock.tag);
+        WeaponObjectToUnlock.GetComponent<Gun>().isBuyed = true;
     }
     public void RandomAbilitybuy()
     {
