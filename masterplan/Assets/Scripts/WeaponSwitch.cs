@@ -39,7 +39,7 @@ public class WeaponSwitch : MonoBehaviour
         int i = 0;
         foreach(Transform weapon in transform)
         {
-            if (i == selectedWeapon)
+            if (i == selectedWeapon && weapon.GetComponent<Gun>().isBuyed)
                 weapon.gameObject.SetActive(true);
             else
                 weapon.gameObject.SetActive(false);

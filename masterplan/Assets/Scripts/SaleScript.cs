@@ -19,13 +19,13 @@ public class SaleScript : MonoBehaviour
     public void Sell()
     {
         WeaponObjectToUnlock.SetActive(true);
-        Debug.Log(WeaponObjectToUnlock.tag);
+        
         WeaponObjectToUnlock.GetComponent<Gun>().isBuyed = true;
     }
     public void RandomAbilitybuy()
     {
         int i = Random.Range(0, 4);
-        Debug.Log(i);
+        
         switch (i)
         {
             case 0:
