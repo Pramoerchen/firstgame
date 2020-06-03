@@ -9,9 +9,8 @@ public class EnemieManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        myTarget = gameObject.GetComponent<Target>();
+        myTarget = gameObject.GetComponent<Target>(); 
         
-        healthBar.SetMaxHealth((int)myTarget.health);
     }
 
     
@@ -21,5 +20,6 @@ public class EnemieManager : MonoBehaviour
     void Update()
     {
         healthBar.SetHealth((int)myTarget.health);
+        healthBar.SetMaxHealth((int)myTarget.max_health);
     }
 }

@@ -12,6 +12,7 @@ public class EnemySpawnerScript : MonoBehaviour
     public float spawnDelay = 10f;
     public int maxEnemies = 5;
     public int currentWave = 1;
+    public float difficulty = 1;
 
     //enemies left
     public int currentEnemies;
@@ -64,10 +65,11 @@ public class EnemySpawnerScript : MonoBehaviour
                     i++;                    
                     
                     
-                } while (i <= SpawnAmount);
+                } while (i <= SpawnAmount && i <= 100);
 
 
                 SpawnAmount = currentWave * currentWave/2;
+                difficulty = 1 + SpawnAmount / 100;
                 currentWave++;
 
             }
