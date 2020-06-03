@@ -13,7 +13,8 @@ public class WaveStart : MonoBehaviour
     {
         if(myEnemySpawner.GetComponent<EnemySpawnerScript>().currentEnemies == 0)
         { 
-        myEnemySpawner.GetComponent<EnemySpawnerScript>().isPlayerReady = true;
+
+            myEnemySpawner.GetComponent<EnemySpawnerScript>().isPlayerReady = false;
         }
     }
 }

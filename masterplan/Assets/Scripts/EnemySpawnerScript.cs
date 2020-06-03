@@ -46,11 +46,11 @@ public class EnemySpawnerScript : MonoBehaviour
 
             if (currentEnemies == 0)
             {
+                
                 if (currentWave % 10 == 0)
                 {
                     Instantiate(boss_prefab, bossSpawnPoint.position, bossSpawnPoint.rotation);
                     currentWave++;
-                    isPlayerReady = false;
                     return;
                 }
 
@@ -69,13 +69,10 @@ public class EnemySpawnerScript : MonoBehaviour
 
                 SpawnAmount = currentWave * currentWave/2;
                 currentWave++;
-                isPlayerReady = false;
-
 
             }
             else
             {
-                isPlayerReady = false;
                 return;
             }
         }
