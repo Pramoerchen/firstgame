@@ -67,7 +67,7 @@ public class EnemySpawnerScript : MonoBehaviour
                 } while (i <= SpawnAmount);
 
 
-                SpawnAmount = SpawnAmount * 1.5f;
+                SpawnAmount = currentWave * currentWave/2;
                 currentWave++;
                 isPlayerReady = false;
 

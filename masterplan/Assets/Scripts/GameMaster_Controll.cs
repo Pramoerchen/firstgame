@@ -19,6 +19,7 @@ public class GameMaster_Controll : MonoBehaviour
         }
 
         health = 100f;
+        wave = 1;
     }
 
     // GLOBAL VARS
@@ -35,6 +36,6 @@ public class GameMaster_Controll : MonoBehaviour
     public bool weapon_ar_isAcitve = false;
     public bool weapon_shotgun_isAcitve = false;
 
-
+    public int wave;
 
 }

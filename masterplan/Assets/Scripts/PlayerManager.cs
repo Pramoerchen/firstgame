@@ -47,6 +47,8 @@ public class PlayerManager : MonoBehaviour
     Gun weapon_ar_gun;
     Gun weapon_shotgun_gun;
 
+    EnemySpawnerScript Spawner;
+
 
     void Awake()
     {
@@ -70,6 +72,12 @@ public class PlayerManager : MonoBehaviour
         weapon_deagle_gun = weapon_deagle.GetComponent<Gun>();
         weapon_ar_gun = weapon_ar.GetComponent<Gun>();
         weapon_shotgun_gun = weapon_shotgun.GetComponent<Gun>();
+
+        if (GameObject.FindGameObjectWithTag("Spawner"))
+        {
+            Spawner = GameObject.FindGameObjectWithTag("Spawner").GetComponent<EnemySpawnerScript>();
+        }
+
 
         LoadPlayer();
 
@@ -103,7 +111,6 @@ public class PlayerManager : MonoBehaviour
 
     void Die()
     {
-        EnemySpawnerScript Spawner = GameObject.FindGameObjectWithTag("Spawner").GetComponent<EnemySpawnerScript>();
 
         if (Spawner.currentWave >= PlayerPrefs.GetInt("highscore"))
         {
@@ -125,6 +132,8 @@ public class PlayerManager : MonoBehaviour
         GameMaster_Controll.Instance.weapon_deagle_isAcitve = false;
         GameMaster_Controll.Instance.weapon_ar_isAcitve = false;
         GameMaster_Controll.Instance.weapon_shotgun_isAcitve = false;
+
+        GameMaster_Controll.Instance.wave = 1;
     }
     
     public void SavePlayer()
@@ -143,6 +152,11 @@ public class PlayerManager : MonoBehaviour
         
         GameMaster_Controll.Instance.weapon_shotgun_isAcitve = weapon_shotgun_gun.isBuyed;
 
+        if (Spawner)
+        {
+            GameMaster_Controll.Instance.wave = Spawner.currentWave;
+
+        }
 
     }
 
@@ -161,6 +175,12 @@ public class PlayerManager : MonoBehaviour
         weapon_shotgun_gun.isBuyed = GameMaster_Controll.Instance.weapon_shotgun_isAcitve;
 
         weapon_ar_gun.isBuyed = GameMaster_Controll.Instance.weapon_ar_isAcitve;
+
+        if (Spawner)
+        {
+            Spawner.currentWave = GameMaster_Controll.Instance.wave;
+
+        }
 
     }
 

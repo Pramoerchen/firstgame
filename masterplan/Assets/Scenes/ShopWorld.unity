@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2889,6 +2889,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d5b9726c0aee3a409b6a107da7a5273, type: 3}
+--- !u!1 &758043903 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 21640e684abef2543bab3c5802a3b809,
+    type: 3}
+  m_PrefabInstance: {fileID: 386933010}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &758043907
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758043903}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 212370497460711607, guid: 21640e684abef2543bab3c5802a3b809, type: 3}
 --- !u!1 &803249660 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8296172668577424447, guid: 803ef69b8de97294390bf91f80b27856,
@@ -2902,6 +2922,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 591943612, guid: 803ef69b8de97294390bf91f80b27856, type: 3}
+      propertyPath: health
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 2851371691343023751, guid: 803ef69b8de97294390bf91f80b27856,
         type: 3}
       propertyPath: m_Name
@@ -2910,17 +2934,17 @@ PrefabInstance:
     - target: {fileID: 2851371691548368980, guid: 803ef69b8de97294390bf91f80b27856,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -22.199951
+      value: -9.9
       objectReference: {fileID: 0}
     - target: {fileID: 2851371691548368980, guid: 803ef69b8de97294390bf91f80b27856,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.55
+      value: 16.31
       objectReference: {fileID: 0}
     - target: {fileID: 2851371691548368980, guid: 803ef69b8de97294390bf91f80b27856,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -20.082432
+      value: -15.2
       objectReference: {fileID: 0}
     - target: {fileID: 2851371691548368980, guid: 803ef69b8de97294390bf91f80b27856,
         type: 3}
