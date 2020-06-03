@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour
 {
+
+    private float start_health = 100f;
+
+
+
     private Camera fpsCam;
     public HealthBar healthBar;
     public float health;
@@ -104,11 +109,24 @@ public class PlayerManager : MonoBehaviour
         {
             PlayerPrefs.SetInt("highscore", Spawner.currentWave);
         }
-
+        reset_player();
         SceneManager.LoadScene("MainScene");
     }
 
+    void reset_player()
+    {
+        GameMaster_Controll.Instance.health = start_health;
 
+        GameMaster_Controll.Instance.ability_barrel_isActive = false;
+        GameMaster_Controll.Instance.ability_push_isActive = false;
+        GameMaster_Controll.Instance.ability_slowmo_isActive = false;
+        GameMaster_Controll.Instance.ability_thunder_isActive = false;
+
+        GameMaster_Controll.Instance.weapon_deagle_isAcitve = false;
+        GameMaster_Controll.Instance.weapon_ar_isAcitve = false;
+        GameMaster_Controll.Instance.weapon_shotgun_isAcitve = false;
+    }
+    
     public void SavePlayer()
     {
         GameMaster_Controll.Instance.health = health;
