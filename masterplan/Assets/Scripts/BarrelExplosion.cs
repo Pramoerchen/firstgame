@@ -33,7 +33,7 @@ public class BarrelExplosion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(myTarget.health < 1000 && !hasExploded)
+        if(myTarget.health < myTarget.max_health && !hasExploded)
         {
             Explode();
             hasExploded = true;

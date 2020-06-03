@@ -4,6 +4,7 @@ using UnityEngine;
 public class Target : MonoBehaviour
 {
     public float health = 50f;
+    public float max_health = 50f;
     private float heal = 5;
     public GameObject deathParticle;
     public GameObject drop;
@@ -12,10 +13,18 @@ public class Target : MonoBehaviour
 
 
     PlayerManager myPlayerManager;
+    public EnemySpawnerScript spawner;
 
     void Start()
     {
         myPlayerManager = GameObject.Find("Player").GetComponent<PlayerManager>();
+
+        if (GameObject.FindGameObjectWithTag("Spawner"))
+        {
+            spawner = GameObject.FindGameObjectWithTag("Spawner").GetComponent<EnemySpawnerScript>();
+            health = health * spawner.difficulty;
+            max_health = health;
+        }
     }
 
     public void TakeDamage (float amount)
