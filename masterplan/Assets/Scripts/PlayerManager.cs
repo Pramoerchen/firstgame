@@ -17,6 +17,8 @@ public class PlayerManager : MonoBehaviour
     public int extralife;
     public bool godmode;
 
+    private int god_mode_time = 5;
+
     //ability bools
 
     public bool ability_push_isActive = false;
@@ -124,8 +126,10 @@ public class PlayerManager : MonoBehaviour
     {
         if (extralife >= 1)
         {
-            extralife -= 1;
-            health = start_health;
+            GameMaster_Controll.Instance.extralife -= 1;
+            LoadPlayer();
+            godmode = true;
+            Invoke("SetGodModeBack", god_mode_time);
             return;
         }
 
@@ -135,6 +139,11 @@ public class PlayerManager : MonoBehaviour
         }
         reset_player();
         SceneManager.LoadScene("MainScene");
+    }
+
+    private void SetGodModeBack()
+    {
+        godmode = false;
     }
 
     void reset_player()
