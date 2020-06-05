@@ -11,6 +11,7 @@ public class PlayerManager : MonoBehaviour
 
 
     private Camera fpsCam;
+    [Header("-Player Settings-")]
     public HealthBar healthBar;
     public float health;
     public float maxhealth;
@@ -21,6 +22,7 @@ public class PlayerManager : MonoBehaviour
 
     //ability bools
 
+    [Header("-Abilitys Settings-")]
     public bool ability_push_isActive = false;
     public bool ability_thunder_isActive = false;
     public bool ability_barrel_isActive = false;
@@ -28,6 +30,8 @@ public class PlayerManager : MonoBehaviour
 
     //Push abilty
     private PushForce abilty_pushforce;
+
+    [Header("-init Settings-")]
 
     //Tunder abilty
     public GameObject thunder_particles;

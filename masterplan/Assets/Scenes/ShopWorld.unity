@@ -469,7 +469,7 @@ MonoBehaviour:
   price: 95
   saleText: "Richtig Dickes ding f\xFCr 95 hp"
   WeaponObjectToUnlock: {fileID: 803249660}
-  playermanager: {fileID: 408653254}
+  playermanager: {fileID: 0}
 --- !u!64 &122485250
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2715,6 +2715,10 @@ PrefabInstance:
       propertyPath: Kessel
       value: 
       objectReference: {fileID: 8296172669370333211}
+    - target: {fileID: 591943612, guid: 803ef69b8de97294390bf91f80b27856, type: 3}
+      propertyPath: godmode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2851371691343023751, guid: 803ef69b8de97294390bf91f80b27856,
         type: 3}
       propertyPath: m_Name
@@ -3314,7 +3318,7 @@ MonoBehaviour:
   price: 70
   saleText: Diese Edle Rifle Kostet 70 hp
   WeaponObjectToUnlock: {fileID: 207528751}
-  playermanager: {fileID: 408653254}
+  playermanager: {fileID: 0}
 --- !u!65 &1601351753
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3362,7 +3366,7 @@ MonoBehaviour:
   price: 50
   saleText: "Leicht Rostige Deagle f\xFCr nur 50hp"
   WeaponObjectToUnlock: {fileID: 1180881891}
-  playermanager: {fileID: 408653254}
+  playermanager: {fileID: 0}
 --- !u!1 &1763619116
 GameObject:
   m_ObjectHideFlags: 0
