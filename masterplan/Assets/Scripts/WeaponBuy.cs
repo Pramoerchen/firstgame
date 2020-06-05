@@ -26,6 +26,24 @@ public class WeaponBuy : MonoBehaviour
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
         {
             SaleScript sale = hit.transform.GetComponent<SaleScript>();
+            Extraleben_kessel kessel = hit.transform.GetComponent<Extraleben_kessel>();
+
+            if (kessel != null)
+            {
+                mytext.text = kessel.kesselText;
+
+                if (Input.GetKeyDown(KeyCode.B))
+                {
+                    if (!((myPlayerManager.health - kessel.amount_leben) <= 0))
+                    {
+                        myPlayerManager.changeHealth(-kessel.amount_leben);
+                        kessel.extra_leben(kessel.amount_leben);
+                        
+                    }
+                }
+
+            }
+
             if(sale != null)
             {
                 mytext.text = sale.saleText;

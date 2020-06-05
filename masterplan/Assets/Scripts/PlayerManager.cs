@@ -14,6 +14,7 @@ public class PlayerManager : MonoBehaviour
     public HealthBar healthBar;
     public float health;
     public float maxhealth;
+    public int extralife;
     public bool godmode;
 
     //ability bools
@@ -43,6 +44,10 @@ public class PlayerManager : MonoBehaviour
     public GameObject weapon_shotgun;
     public GameObject weapon_deagle;
 
+    public GameObject Kessel;
+
+    Extraleben_kessel kesselscript;
+
     Gun weapon_deagle_gun;
     Gun weapon_ar_gun;
     Gun weapon_shotgun_gun;
@@ -61,6 +66,12 @@ public class PlayerManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        // Get Kessel
+        if (GameObject.FindGameObjectWithTag("Kessel"))
+        {
+            kesselscript = Kessel.GetComponent<Extraleben_kessel>();
+        }
         
 
         // Get ability scripts
@@ -111,6 +122,12 @@ public class PlayerManager : MonoBehaviour
 
     void Die()
     {
+        if (extralife >= 1)
+        {
+            extralife -= 1;
+            health = start_health;
+            return;
+        }
 
         if (Spawner.currentWave >= PlayerPrefs.GetInt("highscore"))
         {
@@ -134,11 +151,20 @@ public class PlayerManager : MonoBehaviour
         GameMaster_Controll.Instance.weapon_shotgun_isAcitve = false;
 
         GameMaster_Controll.Instance.wave = 1;
+
+        GameMaster_Controll.Instance.lebenimkessel = 0f;
+        GameMaster_Controll.Instance.extralife = 0;
     }
     
     public void SavePlayer()
     {
         GameMaster_Controll.Instance.health = health;
+        GameMaster_Controll.Instance.extralife = extralife;
+        if (kesselscript)
+        {
+            GameMaster_Controll.Instance.lebenimkessel = kesselscript.lebenimkessel;
+        }
+        
 
         GameMaster_Controll.Instance.ability_barrel_isActive = ability_barrel_isActive;
         GameMaster_Controll.Instance.ability_push_isActive = ability_push_isActive;
@@ -163,7 +189,11 @@ public class PlayerManager : MonoBehaviour
     void LoadPlayer()
     {
         health = GameMaster_Controll.Instance.health;
-
+        extralife = GameMaster_Controll.Instance.extralife;
+        if (kesselscript)
+        {
+            kesselscript.lebenimkessel = GameMaster_Controll.Instance.lebenimkessel;
+        }
         ability_barrel_isActive = GameMaster_Controll.Instance.ability_barrel_isActive;
         ability_push_isActive = GameMaster_Controll.Instance.ability_push_isActive;
         ability_slowmo_isActive = GameMaster_Controll.Instance.ability_slowmo_isActive;

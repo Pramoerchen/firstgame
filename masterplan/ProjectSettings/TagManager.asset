@@ -12,6 +12,7 @@ TagManager:
   - DesertEagle
   - Rifle
   - Shotgun
+  - Kessel
   layers:
   - Default
   - TransparentFX

@@ -38,4 +38,8 @@ public class GameMaster_Controll : MonoBehaviour
 
     public int wave;
 
+    public int extralife;
+
+    public float lebenimkessel;
+
 }

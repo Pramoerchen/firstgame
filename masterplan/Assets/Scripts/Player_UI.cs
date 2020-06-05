@@ -11,6 +11,7 @@ public class Player_UI : MonoBehaviour
     GameObject ability_4;
     Text CurrentEnemiesUI;
     Text CurrentHealthUI;
+    Text CurrentExtraLifes;
 
     int currentEnemies;
 
@@ -25,6 +26,7 @@ public class Player_UI : MonoBehaviour
         ability_4 = GameObject.Find("ability4");
         CurrentEnemiesUI = GameObject.Find("CurrentEnemiesUI").GetComponent<Text>();
         CurrentHealthUI = GameObject.Find("health").GetComponent<Text>();
+        CurrentExtraLifes = GameObject.Find("extralife").GetComponent<Text>();
 
         myPlayerManager = GameObject.Find("Player").GetComponent<PlayerManager>();
         if (GameObject.FindGameObjectWithTag("Spawner"))
@@ -40,6 +42,7 @@ public class Player_UI : MonoBehaviour
     void Update()
     {
         CurrentHealthUI.text = myPlayerManager.maxhealth.ToString();
+        CurrentExtraLifes.text = $"Extra Life: {myPlayerManager.extralife}"; 
 
         if (myEnemySpawnerScript)
         {
