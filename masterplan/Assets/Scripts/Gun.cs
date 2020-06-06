@@ -28,11 +28,17 @@ public class Gun : MonoBehaviour
             this.gameObject.GetComponent<shotgun>().Fire();
         }
 
-        else if (Input.GetButton("Fire1")&& Time.time >= nextTimeToFire && this.gameObject.name != "Pistole")
+        if (Input.GetButtonDown("Fire1") && this.gameObject.name == "Flammenwerfer")
+        {
+            muzzleFlash.Play();
+        }
+
+        else if (Input.GetButton("Fire1")&& Time.time >= nextTimeToFire && this.gameObject.name == "Rifle1.1" || this.gameObject.name == "DesertEagle")
         {
             nextTimeToFire = Time.time + 1f / fireRate;
             Shoot();
         }
+
         
     }
     void Shoot()
