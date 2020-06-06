@@ -40,6 +40,7 @@ public class FireDamageTrigger : MonoBehaviour
             Target target = other.GetComponent<Target>();
             if (target != null && Time.time >= damageTrigger)
             {
+            Debug.Log("hab nen Gegner gefunden");
             damageTrigger = Time.time + 1f / damageIntervall;
                 target.TakeDamage(damage);
             }

@@ -245,22 +245,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &164238867
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 245758922717680889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5db9d73d47a86024687711398d94fa3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 10
-  damageIntervall: 1
-  fireExpanceSpeed: 3
-  maxRange: 20
 --- !u!1 &863467234140594666
 GameObject:
   m_ObjectHideFlags: 0
@@ -862,10 +846,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 6304092225332251094}
-  health: 10000
-  maxhealth: 1000
+  health: 100
+  maxhealth: 100
   extralife: 0
-  godmode: 1
+  godmode: 0
   ability_push_isActive: 0
   ability_thunder_isActive: 0
   ability_barrel_isActive: 0
@@ -1344,26 +1328,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3673532397402282395
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5554668553359030142}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f6731f6d587d1b438e7071aff4a523f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 10
-  range: 100
-  impactForce: 100
-  fireRate: 15
-  muzzleFlash: {fileID: 0}
-  impactEffect: {fileID: 0}
-  isBuyed: 1
-  fpsCam: {fileID: 2851371692014235953}
 --- !u!1 &6347129529825057468
 GameObject:
   m_ObjectHideFlags: 0
@@ -1714,11 +1678,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3890454086657216082}
     m_Modifications:
-    - target: {fileID: 398257514132629579, guid: 1471dd893c39a89458c6098c9e4ff751,
+    - target: {fileID: 3673532397402282395, guid: 1471dd893c39a89458c6098c9e4ff751,
         type: 3}
-      propertyPath: m_Name
-      value: FireDamageTrigger
-      objectReference: {fileID: 0}
+      propertyPath: fpsCam
+      value: 
+      objectReference: {fileID: 2851371692014235953}
     - target: {fileID: 5474649779688852428, guid: 1471dd893c39a89458c6098c9e4ff751,
         type: 3}
       propertyPath: m_Name
@@ -1779,35 +1743,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 42.084003
       objectReference: {fileID: 0}
-    - target: {fileID: 9052944638206327263, guid: 1471dd893c39a89458c6098c9e4ff751,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.16737731
-      objectReference: {fileID: 0}
-    - target: {fileID: 9052944638206327263, guid: 1471dd893c39a89458c6098c9e4ff751,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.016245455
-      objectReference: {fileID: 0}
-    - target: {fileID: 9052944638206327263, guid: 1471dd893c39a89458c6098c9e4ff751,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.025092501
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1471dd893c39a89458c6098c9e4ff751, type: 3}
---- !u!1 &5554668553359030142 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5474649779688852428, guid: 1471dd893c39a89458c6098c9e4ff751,
-    type: 3}
-  m_PrefabInstance: {fileID: 499892314974010546}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &245758922717680889 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 398257514132629579, guid: 1471dd893c39a89458c6098c9e4ff751,
-    type: 3}
-  m_PrefabInstance: {fileID: 499892314974010546}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8884894281578939757 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9052944638206327263, guid: 1471dd893c39a89458c6098c9e4ff751,
