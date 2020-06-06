@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5971135410484234658}
   - component: {fileID: 135448217799144795}
   - component: {fileID: 7709052558168308922}
+  - component: {fileID: 2716942394490802968}
   m_Layer: 0
   m_Name: DoubleShotgun
   m_TagString: Shotgun
@@ -29,7 +30,8 @@ Transform:
   m_LocalRotation: {x: -0, y: 0.80174404, z: 0.59766763, w: 0}
   m_LocalPosition: {x: 0.56, y: -0.157, z: 1.881}
   m_LocalScale: {x: 13.049292, y: 17.193024, z: 9.413992}
-  m_Children: []
+  m_Children:
+  - {fileID: 7545136006487903818}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -106.593994, y: 0, z: 180}
@@ -108,3 +110,50 @@ MonoBehaviour:
     type: 3}
   isBuyed: 0
   fpsCam: {fileID: 0}
+--- !u!114 &2716942394490802968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863895835393294727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de93e08f6dbde0548a6e5e748f964297, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BulletsShot: 100
+  BulletsSpread: 50
+  BulletTemplate: {fileID: 1808461404616131391, guid: eb2b0e90b81891544bab0e23a53d2b15,
+    type: 3}
+  tip: {fileID: 7545136006487903818}
+--- !u!1 &6615068213966758716
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7545136006487903818}
+  m_Layer: 0
+  m_Name: tip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7545136006487903818
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6615068213966758716}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.0675, z: -0.0367}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3424629882764948372}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
