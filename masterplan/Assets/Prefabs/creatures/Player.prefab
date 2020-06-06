@@ -583,7 +583,7 @@ Transform:
   - {fileID: 3359190091005205506}
   - {fileID: 5006512735421879852}
   - {fileID: 8348727424131893707}
-  - {fileID: 8884894281578939757}
+  - {fileID: 5157593224426667667}
   m_Father: {fileID: 2851371692014235954}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1683,6 +1683,46 @@ PrefabInstance:
       propertyPath: fpsCam
       value: 
       objectReference: {fileID: 2851371692014235953}
+    - target: {fileID: 4258818084374004603, guid: 1471dd893c39a89458c6098c9e4ff751,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 8.637458
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258818084374004603, guid: 1471dd893c39a89458c6098c9e4ff751,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.5000142
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258818084374004603, guid: 1471dd893c39a89458c6098c9e4ff751,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 8.989365
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258818084374004603, guid: 1471dd893c39a89458c6098c9e4ff751,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 11.435025
+      objectReference: {fileID: 0}
+    - target: {fileID: 4718799201403699745, guid: 1471dd893c39a89458c6098c9e4ff751,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.734
+      objectReference: {fileID: 0}
+    - target: {fileID: 4718799201403699745, guid: 1471dd893c39a89458c6098c9e4ff751,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.706
+      objectReference: {fileID: 0}
+    - target: {fileID: 4718799201403699745, guid: 1471dd893c39a89458c6098c9e4ff751,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.056
+      objectReference: {fileID: 0}
+    - target: {fileID: 4718799201403699745, guid: 1471dd893c39a89458c6098c9e4ff751,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5474649779688852428, guid: 1471dd893c39a89458c6098c9e4ff751,
         type: 3}
       propertyPath: m_Name
@@ -1745,9 +1785,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1471dd893c39a89458c6098c9e4ff751, type: 3}
---- !u!4 &8884894281578939757 stripped
+--- !u!4 &5157593224426667667 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 9052944638206327263, guid: 1471dd893c39a89458c6098c9e4ff751,
+  m_CorrespondingSourceObject: {fileID: 4718799201403699745, guid: 1471dd893c39a89458c6098c9e4ff751,
     type: 3}
   m_PrefabInstance: {fileID: 499892314974010546}
   m_PrefabAsset: {fileID: 0}
@@ -2120,6 +2160,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DoubleShotgun
+      objectReference: {fileID: 0}
+    - target: {fileID: 2716942394490802968, guid: 9849959ac8650f549be66056804a4e86,
+        type: 3}
+      propertyPath: BulletsShot
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 3424629882764948372, guid: 9849959ac8650f549be66056804a4e86,
         type: 3}

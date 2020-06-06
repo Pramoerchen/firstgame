@@ -10,11 +10,13 @@ public class FireDamageTrigger : MonoBehaviour
     public float fireExpanceSpeed = 3f;
     public float maxRange = 20f;
     BoxCollider m_Collider;
+    public List<GameObject> EnemysToBurn;
 
     private void Start()
     {
         //Fetch the Collider from the GameObject
         m_Collider = GetComponent<BoxCollider>();
+        EnemysToBurn = new List<GameObject>();
     }
 
     // Update is called once per frame
@@ -22,27 +24,39 @@ public class FireDamageTrigger : MonoBehaviour
     {
         if (Input.GetButton("Fire1"))
         {
-           float FireArea = 1f + 1*fireExpanceSpeed * Time.time;
-            if(FireArea >= maxRange)
-            {
-                FireArea = maxRange;
-            }
-            m_Collider.size = new Vector3(1f,1f,FireArea);
+            m_Collider.gameObject.SetActive(true);
         }
         else
         {
-            m_Collider.size = new Vector3(1f, 1f, 1f);
+            m_Collider.gameObject.SetActive(false);
+        }
+ 
+        
+        {
+            foreach (var Enemy in EnemysToBurn)
+            {
+               
+                if(Enemy == null)
+                {
+                    EnemysToBurn.Remove(Enemy);
+                }
+                Target myTarget = Enemy.GetComponent<Target>();
+
+                if(myTarget != null)
+                { 
+                    myTarget.TakeDamage(damage);
+            }
+            }
         }
     }
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-  
-            Target target = other.GetComponent<Target>();
-            if (target != null && Time.time >= damageTrigger)
-            {
-            Debug.Log("hab nen Gegner gefunden");
-            damageTrigger = Time.time + 1f / damageIntervall;
-                target.TakeDamage(damage);
-            }
+        if (!EnemysToBurn.Contains(other.gameObject))
+            EnemysToBurn.Add(other.gameObject);
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (EnemysToBurn.Contains(other.gameObject))
+            EnemysToBurn.Remove(other.gameObject);
     }
 }
