@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1939314840647105918
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7630679557525484279}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7630679557525484279
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939314840647105918}
+  m_LocalRotation: {x: 0.2159224, y: 0.756957, z: -0.3275101, w: 0.5226192}
+  m_LocalPosition: {x: 37.300007, y: -3.2500017, z: -8.299997}
+  m_LocalScale: {x: 41.707176, y: 11.196877, z: 10.479113}
+  m_Children:
+  - {fileID: 2020305838963261503}
+  m_Father: {fileID: 4718799201403699745}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4132310945072501685
 GameObject:
   m_ObjectHideFlags: 0
@@ -25,12 +56,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4132310945072501685}
-  m_LocalRotation: {x: 0.2159224, y: 0.756957, z: -0.3275101, w: 0.5226191}
-  m_LocalPosition: {x: 37.3, y: -3.25, z: -8.3}
-  m_LocalScale: {x: 41.70718, y: 11.196879, z: 10.479113}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4718799201403699745}
-  m_RootOrder: 1
+  m_Father: {fileID: 7630679557525484279}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &4258818084374004603
 BoxCollider:
@@ -4847,7 +4878,7 @@ Transform:
   m_LocalScale: {x: 0.016245455, y: 0.16737731, z: 0.025092501}
   m_Children:
   - {fileID: 1766949703249701693}
-  - {fileID: 2020305838963261503}
+  - {fileID: 7630679557525484279}
   - {fileID: 6266108934301127166}
   m_Father: {fileID: 0}
   m_RootOrder: 0
