@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 2799581049605252038}
   - component: {fileID: 8347459447555102322}
   - component: {fileID: 5945838807658169222}
-  - component: {fileID: 6651167862820560289}
+  - component: {fileID: 4881820046684240074}
   m_Layer: 0
   m_Name: Cube.001
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -80,7 +80,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &6651167862820560289
+--- !u!65 &4881820046684240074
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,10 +104,10 @@ GameObject:
   - component: {fileID: 8512134998125478225}
   - component: {fileID: 3408162095422237169}
   - component: {fileID: 6070726493464647547}
-  - component: {fileID: 6651167863072626269}
+  - component: {fileID: 244248291592115226}
   m_Layer: 0
   m_Name: Cube.003
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -173,7 +173,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &6651167863072626269
+--- !u!64 &244248291592115226
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -198,10 +198,10 @@ GameObject:
   - component: {fileID: 1169743016939486579}
   - component: {fileID: 3284216054013508465}
   - component: {fileID: 5625915621920128610}
-  - component: {fileID: 6651167863056238295}
+  - component: {fileID: 1105272664931774901}
   m_Layer: 0
   m_Name: Cube.005
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -267,7 +267,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &6651167863056238295
+--- !u!65 &1105272664931774901
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -294,7 +294,6 @@ GameObject:
   - component: {fileID: 6651167863213755967}
   - component: {fileID: 6651167863213755964}
   - component: {fileID: 6651167863213755965}
-  - component: {fileID: 1737768313575486791}
   m_Layer: 0
   m_Name: newRangeEnemy 1
   m_TagString: Enemy
@@ -387,11 +386,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 75
+  max_health: 50
   deathParticle: {fileID: 5283698816458880993, guid: be4980055f78cb04db2da2dae41ecaca,
     type: 3}
   drop: {fileID: 2295743085634939588, guid: 6e64e49ea5d8cfd47b723adfe00e6c53, type: 3}
   dropAmount: 1
   dmgParticle: {fileID: 2738291514471610142}
+  spawner: {fileID: 0}
 --- !u!114 &6651167863213755965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -410,19 +411,6 @@ MonoBehaviour:
   checkRate: 0.01
   range: 100
   FollowRange: 30
---- !u!65 &1737768313575486791
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3417208439983273601}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4315927690287081601
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,10 +422,10 @@ GameObject:
   - component: {fileID: 9144110055016879292}
   - component: {fileID: 1395339215746941239}
   - component: {fileID: 213124505414259700}
-  - component: {fileID: 6651167863244110553}
+  - component: {fileID: 4178642269813524523}
   m_Layer: 0
   m_Name: Cube.002
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -503,7 +491,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &6651167863244110553
+--- !u!65 &4178642269813524523
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -527,10 +515,10 @@ GameObject:
   - component: {fileID: 580647423704684235}
   - component: {fileID: 8659260700041284089}
   - component: {fileID: 1188612573481442955}
-  - component: {fileID: 6651167864628128660}
+  - component: {fileID: 5349959579279359778}
   m_Layer: 0
   m_Name: Cube.004
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -596,7 +584,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &6651167864628128660
+--- !u!65 &5349959579279359778
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

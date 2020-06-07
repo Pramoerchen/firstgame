@@ -1688,6 +1688,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flammenwerfer
       objectReference: {fileID: 0}
+    - target: {fileID: 5474649779688852428, guid: 1471dd893c39a89458c6098c9e4ff751,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9052944638206327263, guid: 1471dd893c39a89458c6098c9e4ff751,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1822,6 +1827,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rifle1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4143501144016556417, guid: 7f0063bfc07c98943b86ab0de8f0ba3a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f0063bfc07c98943b86ab0de8f0ba3a, type: 3}
@@ -2101,6 +2111,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pistole
       objectReference: {fileID: 0}
+    - target: {fileID: 8949903485174643928, guid: bc9922a834aaec04395a30c5dc78d1c1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc9922a834aaec04395a30c5dc78d1c1, type: 3}
 --- !u!4 &8348727424131893707 stripped
@@ -2120,6 +2135,22 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DoubleShotgun
+      objectReference: {fileID: 0}
+    - target: {fileID: 2716942394490802968, guid: 9849959ac8650f549be66056804a4e86,
+        type: 3}
+      propertyPath: BulletsShot
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2716942394490802968, guid: 9849959ac8650f549be66056804a4e86,
+        type: 3}
+      propertyPath: BulletTemplate
+      value: 
+      objectReference: {fileID: 4704763314949079245, guid: 5365c0587a113a848bc646f51f648f8f,
+        type: 3}
+    - target: {fileID: 2716942394490802968, guid: 9849959ac8650f549be66056804a4e86,
+        type: 3}
+      propertyPath: pelletFireVel
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 3424629882764948372, guid: 9849959ac8650f549be66056804a4e86,
         type: 3}
@@ -2181,6 +2212,31 @@ PrefabInstance:
       propertyPath: fpsCam
       value: 
       objectReference: {fileID: 2851371692014235953}
+    - target: {fileID: 7709052558168308922, guid: 9849959ac8650f549be66056804a4e86,
+        type: 3}
+      propertyPath: damage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7709052558168308922, guid: 9849959ac8650f549be66056804a4e86,
+        type: 3}
+      propertyPath: range
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7709052558168308922, guid: 9849959ac8650f549be66056804a4e86,
+        type: 3}
+      propertyPath: impactForce
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7709052558168308922, guid: 9849959ac8650f549be66056804a4e86,
+        type: 3}
+      propertyPath: fireRate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7709052558168308922, guid: 9849959ac8650f549be66056804a4e86,
+        type: 3}
+      propertyPath: isBuyed
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9849959ac8650f549be66056804a4e86, type: 3}
 --- !u!4 &5006512735421879852 stripped
@@ -2261,6 +2317,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DesertEagle
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841946535120429649, guid: 9d4684df19066954794543975e2f9d7f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8341626613076490692, guid: 9d4684df19066954794543975e2f9d7f,
         type: 3}
