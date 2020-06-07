@@ -10,11 +10,14 @@ public class FireDamageTrigger : MonoBehaviour
     public float fireExpanceSpeed = 3f;
     public float maxRange = 20f;
     BoxCollider m_Collider;
+    GameObject ParentofThis;
     public List<GameObject> EnemysToBurn;
+    Vector3 partentSaveTransform;
 
     private void Start()
     {
         //Fetch the Collider from the GameObject
+        ParentofThis = transform.parent.gameObject;
         m_Collider = GetComponent<BoxCollider>();
         EnemysToBurn = new List<GameObject>();
     }
@@ -24,15 +27,20 @@ public class FireDamageTrigger : MonoBehaviour
     {
         if (Input.GetButton("Fire1"))
         {
-            m_Collider.gameObject.SetActive(true);
+            float FireArea = 1 * fireExpanceSpeed * Time.time;
+            if (FireArea >= maxRange)
+            {
+                FireArea = maxRange;
+            }
+            ParentofThis.transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y,transform.localScale.z * FireArea);
         }
         else
         {
-            m_Collider.gameObject.SetActive(false);
+            ParentofThis.transform.localScale= new Vector3(0,0,0);
         }
  
         
-        {
+        
             foreach (var Enemy in EnemysToBurn)
             {
                
@@ -45,10 +53,11 @@ public class FireDamageTrigger : MonoBehaviour
                 if(myTarget != null)
                 { 
                     myTarget.TakeDamage(damage);
+                }
             }
-            }
-        }
+        
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if (!EnemysToBurn.Contains(other.gameObject))
