@@ -10,11 +10,16 @@ public class FireDamageTrigger : MonoBehaviour
     public float fireExpanceSpeed = 3f;
     public float maxRange = 20f;
     BoxCollider m_Collider;
+    GameObject ParentofThis;
+    public List<GameObject> EnemysToBurn;
+    Vector3 partentSaveTransform;
 
     private void Start()
     {
         //Fetch the Collider from the GameObject
+        ParentofThis = transform.parent.gameObject;
         m_Collider = GetComponent<BoxCollider>();
+        EnemysToBurn = new List<GameObject>();
     }
 
     // Update is called once per frame
@@ -22,27 +27,45 @@ public class FireDamageTrigger : MonoBehaviour
     {
         if (Input.GetButton("Fire1"))
         {
-           float FireArea = 1f + 1*fireExpanceSpeed * Time.time;
-            if(FireArea >= maxRange)
+            float FireArea = 1 * fireExpanceSpeed * Time.time;
+            if (FireArea >= maxRange)
             {
                 FireArea = maxRange;
             }
-            m_Collider.size = new Vector3(1f,1f,FireArea);
+            ParentofThis.transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y,transform.localScale.z * FireArea);
         }
         else
         {
-            m_Collider.size = new Vector3(1f, 1f, 1f);
+            ParentofThis.transform.localScale= new Vector3(0,0,0);
         }
-    }
-    private void OnTriggerStay(Collider other)
-    {
-  
-            Target target = other.GetComponent<Target>();
-            if (target != null && Time.time >= damageTrigger)
+ 
+        
+        
+            foreach (var Enemy in EnemysToBurn)
             {
-            Debug.Log("hab nen Gegner gefunden");
-            damageTrigger = Time.time + 1f / damageIntervall;
-                target.TakeDamage(damage);
+               
+                if(Enemy == null)
+                {
+                    EnemysToBurn.Remove(Enemy);
+                }
+                Target myTarget = Enemy.GetComponent<Target>();
+
+                if(myTarget != null)
+                { 
+                    myTarget.TakeDamage(damage);
+                }
             }
+        
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!EnemysToBurn.Contains(other.gameObject))
+            EnemysToBurn.Add(other.gameObject);
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (EnemysToBurn.Contains(other.gameObject))
+            EnemysToBurn.Remove(other.gameObject);
     }
 }
