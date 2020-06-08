@@ -12,6 +12,8 @@ public class shotgun : MonoBehaviour
 
     public Transform tip;
 
+    float maxspread = 0.1f;
+
     Camera fpsCam;
 
     void Awake()
@@ -30,8 +32,12 @@ public class shotgun : MonoBehaviour
             
             GameObject bullet = Instantiate(BulletTemplate, tip.position, Quaternion.identity);
 
+            
             Vector3 dir = (fpsCam.transform.forward).normalized;
-            bullet.GetComponent<Kugel>().Setup(dir, pelletFireVel);
+
+            Vector3 dir_withspread = dir + new Vector3(Random.Range(-maxspread, maxspread), Random.Range(-maxspread, maxspread), Random.Range(-maxspread, maxspread));
+
+            bullet.GetComponent<Kugel>().Setup(dir_withspread, pelletFireVel);
             
         }
 
