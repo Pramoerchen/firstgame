@@ -6,22 +6,20 @@ public class Fireball : MonoBehaviour
 {
     PlayerManager myPlayerManager;
     Rigidbody rb;
-    public float speed = 15;
     public float Damage = 75;
     // Start is called before the first frame update
-    void Start()
+    
+    
+    public void Setup(UnityEngine.Vector3 shootdir, float fireballspeed)
     {
-        rb = GetComponent<Rigidbody>();
-        rb.velocity = transform.forward*speed;
-        transform.LookAt(GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>());
-        Destroy(gameObject, 10f);
+
+        Rigidbody rb = GetComponent<Rigidbody>();
+        rb.AddForce(shootdir * fireballspeed, ForceMode.Impulse);
+
+
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.name == "Player")

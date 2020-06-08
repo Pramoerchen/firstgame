@@ -13,6 +13,7 @@ public class RangeEnemy : MonoBehaviour
     private float nextTimeToFire = 0f;
     public float range = 100f;
     public float FollowRange = 30f;
+    public float fireball_speed = 15;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +35,11 @@ public class RangeEnemy : MonoBehaviour
                 if (Time.time >= nextTimeToFire)
                 {
                     nextTimeToFire = Time.time + 1f / FireRate;
-                    Instantiate(ObjectToShoot, transform.position + new Vector3(0,1,0), transform.rotation);
+                    GameObject fireball = Instantiate(ObjectToShoot, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
+                    Vector3 dir = (transform.forward).normalized;
+                    
+                    fireball.GetComponent<Fireball>().Setup(dir, fireball_speed);
+
                 }
             }
 
