@@ -1,4 +1,5 @@
 ﻿ using UnityEngine;
+using UnityEngine.VFX;
 
 public class Gun : MonoBehaviour
 {
@@ -9,10 +10,16 @@ public class Gun : MonoBehaviour
     private float nextTimeToFire = 0f;
     public ParticleSystem muzzleFlash;
     public GameObject impactEffect;
+    public VisualEffect flammen;
     public bool isBuyed;
 
     public Camera fpsCam;
 
+    void Start()
+    {
+        if (this.gameObject.name == "Flammenwerfer2")
+            flammen.Stop();
+    }
 
 
     // Update is called once per frame
@@ -23,7 +30,7 @@ public class Gun : MonoBehaviour
             Shoot();
         }
 
-        if (Input.GetButtonDown("Fire1") && this.gameObject.name == "DoubleShotgun")
+        if (Input.GetButtonDown("Fire1") && Time.time >= nextTimeToFire && this.gameObject.name == "DoubleShotgun")
         {
             nextTimeToFire = Time.time + 1f / fireRate;
             if (muzzleFlash)
@@ -31,18 +38,30 @@ public class Gun : MonoBehaviour
             this.gameObject.GetComponent<shotgun>().Fire();
         }
 
-        if (Input.GetButtonDown("Fire1") && this.gameObject.name == "Flammenwerfer")
+        if (Input.GetButtonDown("Fire1") && this.gameObject.name == "Flammenwerfer2")
         {
-            muzzleFlash.Play();
+            flammen.Play();
+        }
+        else if (Input.GetButtonUp("Fire1") && this.gameObject.name == "Flammenwerfer2")
+        {
+            flammen.Stop();
         }
 
-        else if (Input.GetButton("Fire1")&& Time.time >= nextTimeToFire && this.gameObject.name == "Rifle1.1" || this.gameObject.name == "DesertEagle")
+        if (Input.GetButtonDown("Fire1") && Time.time >= nextTimeToFire && this.gameObject.name == "Rifle1.1")
         {
             nextTimeToFire = Time.time + 1f / fireRate;
             Shoot();
         }
 
+        if (Input.GetButtonDown("Fire1") && Time.time >= nextTimeToFire && this.gameObject.name == "DesertEagle")
+        {
+            nextTimeToFire = Time.time + 1f / fireRate;
+            Shoot();
+        }
         
+
+
+
     }
     void Shoot()
     {

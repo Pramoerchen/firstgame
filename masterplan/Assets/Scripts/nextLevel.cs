@@ -14,7 +14,10 @@ public class nextLevel : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        myPlayerManager.SavePlayer();
-        SceneManager.LoadScene(LadeLevel);
+        if (other.transform.tag == "Player")
+        { 
+            myPlayerManager.SavePlayer();
+            SceneManager.LoadScene(LadeLevel);
+        } 
     }
 }
