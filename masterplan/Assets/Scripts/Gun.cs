@@ -25,6 +25,9 @@ public class Gun : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1") && this.gameObject.name == "DoubleShotgun")
         {
+            nextTimeToFire = Time.time + 1f / fireRate;
+            if (muzzleFlash)
+                muzzleFlash.Play();
             this.gameObject.GetComponent<shotgun>().Fire();
         }
 
