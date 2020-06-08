@@ -19,6 +19,7 @@ public class BossAI : MonoBehaviour
     public float range = 100f;
     public float FollowRange = 30f;
     public GameObject ObjectToSpawn;
+    public float fireball_speed = 15f;
 
     // Start is called before the first frame update
     void Start()
@@ -42,7 +43,11 @@ public class BossAI : MonoBehaviour
                 if (Time.time >= nextTimeToFire)
                 {
                     nextTimeToFire = Time.time + 1f / FireRate;
-                    Instantiate(ObjectToShoot, transform.position + new Vector3(0, -1, 0), transform.rotation);
+          
+                    GameObject fireball = Instantiate(ObjectToShoot, transform.position + new Vector3(0, 0, 0), Quaternion.identity);
+                    Vector3 dir = (transform.forward).normalized;
+
+                    fireball.GetComponent<Fireball>().Setup(dir, fireball_speed);
                 }
             }
             else
@@ -50,7 +55,10 @@ public class BossAI : MonoBehaviour
                 if (Time.time >= nextTimeToSpawn)
                 {
                     nextTimeToSpawn = Time.time + 1f / SpawnRate;
-                    Instantiate(ObjectToSpawn, transform.position + new Vector3(1, 0, 0), transform.rotation);
+                    GameObject fireball = Instantiate(ObjectToShoot, transform.position + new Vector3(0, 0, 0), Quaternion.identity);
+                    Vector3 dir = (transform.forward).normalized;
+
+                    fireball.GetComponent<Fireball>().Setup(dir, fireball_speed);
                 }
             }
 

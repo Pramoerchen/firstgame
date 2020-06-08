@@ -29,8 +29,8 @@ public class shotgun : MonoBehaviour
         {
 
             
-            
-            GameObject bullet = Instantiate(BulletTemplate, tip.position, Quaternion.identity);
+
+            GameObject bullet = Instantiate(BulletTemplate, fpsCam.transform.position, Quaternion.identity);
 
             
             Vector3 dir = (fpsCam.transform.forward).normalized;

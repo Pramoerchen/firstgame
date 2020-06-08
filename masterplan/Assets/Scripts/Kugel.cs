@@ -6,14 +6,13 @@ using UnityEngine;
 public class Kugel : MonoBehaviour
 {
     
-    public float speed = 15;
     public float Damage = 20;
 
     // Update is called once per frame
 
     void Start()
     {
-        Destroy(gameObject, 10f);
+        Destroy(gameObject, 5f);
     }
 
     public void Setup(UnityEngine.Vector3 shootdir, float bulletspeed)
@@ -30,7 +29,14 @@ public class Kugel : MonoBehaviour
     {
         if (other.tag == "Enemy")
         {
-            other.transform.GetComponent<Target>().TakeDamage(Damage);
+            try
+            { 
+                other.transform.GetComponent<Target>().TakeDamage(Damage); 
+            }
+            catch
+            {
+                other.transform.GetComponentInParent<Target>().TakeDamage(Damage);
+            }
             Destroy(gameObject);
         }
         if (other.tag == "Ground")

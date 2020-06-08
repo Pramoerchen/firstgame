@@ -2179,7 +2179,7 @@ PrefabInstance:
     - target: {fileID: 2716942394490802968, guid: 9849959ac8650f549be66056804a4e86,
         type: 3}
       propertyPath: BulletsShot
-      value: 5
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2716942394490802968, guid: 9849959ac8650f549be66056804a4e86,
         type: 3}

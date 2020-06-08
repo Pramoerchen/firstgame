@@ -122,12 +122,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de93e08f6dbde0548a6e5e748f964297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BulletsShot: 100
-  BulletsSpread: 50
+  BulletsShot: 30
   BulletTemplate: {fileID: 4704763314949079245, guid: 5365c0587a113a848bc646f51f648f8f,
     type: 3}
-  pelletFireVel: 1000
-  maxSpread: 5
+  pelletFireVel: 200
   tip: {fileID: 7545136006487903818}
 --- !u!1 &6615068213966758716
 GameObject:
