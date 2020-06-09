@@ -6,7 +6,7 @@ using UnityEngine;
 public class Kugel : MonoBehaviour
 {
     
-    public float Damage = 20;
+    public float damage = 20;
 
     // Update is called once per frame
 
@@ -27,21 +27,26 @@ public class Kugel : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("Enemy") || other.transform.parent && other.transform.parent.CompareTag("Enemy"))
         {
-            try
-            { 
-                other.transform.GetComponent<Target>().TakeDamage(Damage); 
-            }
-            catch
+            Target target1 = other.GetComponent<Target>();
+            Target target2 = other.GetComponentInParent<Target>();
+
+            if (target1 != null)
             {
-                other.transform.GetComponentInParent<Target>().TakeDamage(Damage);
+                target1.TakeDamage(damage);
             }
-            Destroy(gameObject);
+            if (target2 != null)
+            {
+                target2.TakeDamage(damage);
+            }
+            Destroy(this.gameObject);
         }
+
+
         if (other.CompareTag("Ground"))
         {
-            Destroy(gameObject);
+            Destroy(this.gameObject);
         }
     }
 }
