@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 6022530142455746314}
   - component: {fileID: 47527670864655347}
   - component: {fileID: 54876927501744339}
+  - component: {fileID: 1604177811376704690}
+  - component: {fileID: -1145482505636209624}
   m_Layer: 0
   m_Name: Rocket
   m_TagString: Untagged
@@ -93,3 +95,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39c35f462b247f74982715b41905c0cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ExplosionDamage: 300
+  force: 300
+  radius: 15
+  explosionParticle: {fileID: 444887993112373276, guid: eb136f8b2893de6498f260776c23afd4,
+    type: 3}
+--- !u!54 &1604177811376704690
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1771053913084102447}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
+--- !u!65 &-1145482505636209624
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1771053913084102447}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.019999998, z: 0.05181032}
+  m_Center: {x: 0, y: 0, z: 0.008542534}
