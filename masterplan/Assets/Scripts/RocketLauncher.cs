@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class RocketLauncher : MonoBehaviour
 {
+    public GameObject RocketToFire;
+    public Transform tip;
+    public Camera fpsCam;
+    public float rocketSpeed = 100;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +21,10 @@ public class RocketLauncher : MonoBehaviour
     }
     public void Fire()
     {
-
+        RaycastHit hit;
+        Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit);
+            GameObject Rocket = Instantiate(RocketToFire, tip.transform.position, Quaternion.identity);
+        Vector3 dir = (fpsCam.transform.forward).normalized;
+        Rocket.GetComponent<Rocket>().Setup(dir, rocketSpeed);
     }
 }

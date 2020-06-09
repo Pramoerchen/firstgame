@@ -92,6 +92,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wave: 0
+--- !u!1 &1886959988
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1886959989}
+  m_Layer: 0
+  m_Name: tip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1886959989
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1886959988}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.03, z: 5.104}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 639602109738476395}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2056578891
 GameObject:
   m_ObjectHideFlags: 0
@@ -863,6 +893,7 @@ MonoBehaviour:
   weapon_ar: {fileID: 1784943121628818961}
   weapon_shotgun: {fileID: 8296172668577424447}
   weapon_deagle: {fileID: 6103492831218921385}
+  weapon_flammenwerfer: {fileID: 0}
   Kessel: {fileID: 0}
 --- !u!114 &136099170
 MonoBehaviour:
@@ -1254,6 +1285,44 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: E
+--- !u!114 &860021731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4520219166717481336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f6731f6d587d1b438e7071aff4a523f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  range: 0
+  impactForce: 0
+  fireRate: 2
+  muzzleFlash: {fileID: 0}
+  impactEffect: {fileID: 0}
+  flammen: {fileID: 0}
+  isBuyed: 1
+  fpsCam: {fileID: 2851371692014235953}
+--- !u!114 &860021732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4520219166717481336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb1c468a1cf481449603d94a871c4e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RocketToFire: {fileID: 1771053913084102447, guid: 12f4d762fdab85d408c5039a0e8b35b0,
+    type: 3}
+  tip: {fileID: 1886959989}
+  fpsCam: {fileID: 2851371692014235953}
+  rocketSpeed: 100
 --- !u!1 &4571019169460117755
 GameObject:
   m_ObjectHideFlags: 0
@@ -1751,15 +1820,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f0063bfc07c98943b86ab0de8f0ba3a, type: 3}
---- !u!1 &1784943121628818961 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4143501144016556417, guid: 7f0063bfc07c98943b86ab0de8f0ba3a,
-    type: 3}
-  m_PrefabInstance: {fileID: 2397542389355806608}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3359190091005205506 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1142776923791745938, guid: 7f0063bfc07c98943b86ab0de8f0ba3a,
+    type: 3}
+  m_PrefabInstance: {fileID: 2397542389355806608}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1784943121628818961 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4143501144016556417, guid: 7f0063bfc07c98943b86ab0de8f0ba3a,
     type: 3}
   m_PrefabInstance: {fileID: 2397542389355806608}
   m_PrefabAsset: {fileID: 0}
@@ -1937,12 +2006,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 406dbfe7058059741af50aaf37c44534, type: 3}
---- !u!224 &6304092225332251089 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 8137645020981449445, guid: 406dbfe7058059741af50aaf37c44534,
-    type: 3}
-  m_PrefabInstance: {fileID: 2851371692497328948}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &6304092225332251094 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8137645020981449442, guid: 406dbfe7058059741af50aaf37c44534,
@@ -1955,6 +2018,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 855aecc6c92aef841be3c50655598baf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &6304092225332251089 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8137645020981449445, guid: 406dbfe7058059741af50aaf37c44534,
+    type: 3}
+  m_PrefabInstance: {fileID: 2851371692497328948}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4157820048682649344
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2120,13 +2189,19 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 0578931ddea228b4bbef382339e6d397,
         type: 3}
       propertyPath: m_Name
-      value: racketenwerfer
+      value: RocketLauncher
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0578931ddea228b4bbef382339e6d397, type: 3}
 --- !u!4 &639602109738476395 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 0578931ddea228b4bbef382339e6d397,
+    type: 3}
+  m_PrefabInstance: {fileID: 5592035274920347761}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4520219166717481336 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 0578931ddea228b4bbef382339e6d397,
     type: 3}
   m_PrefabInstance: {fileID: 5592035274920347761}
   m_PrefabAsset: {fileID: 0}
@@ -2314,15 +2389,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9849959ac8650f549be66056804a4e86, type: 3}
---- !u!1 &8296172668577424447 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1863895835393294727, guid: 9849959ac8650f549be66056804a4e86,
-    type: 3}
-  m_PrefabInstance: {fileID: 7709052559019615672}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5006512735421879852 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3424629882764948372, guid: 9849959ac8650f549be66056804a4e86,
+    type: 3}
+  m_PrefabInstance: {fileID: 7709052559019615672}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8296172668577424447 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1863895835393294727, guid: 9849959ac8650f549be66056804a4e86,
     type: 3}
   m_PrefabInstance: {fileID: 7709052559019615672}
   m_PrefabAsset: {fileID: 0}
