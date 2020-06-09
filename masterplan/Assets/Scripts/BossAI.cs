@@ -55,7 +55,7 @@ public class BossAI : MonoBehaviour
                 if (Time.time >= nextTimeToSpawn)
                 {
                     nextTimeToSpawn = Time.time + 1f / SpawnRate;
-                    GameObject fireball = Instantiate(ObjectToShoot, transform.position + new Vector3(0, 0, 0), Quaternion.identity);
+                    GameObject fireball = Instantiate(ObjectToSpawn, transform.position + new Vector3(0, 0, 0), Quaternion.identity);
                     Vector3 dir = (transform.forward).normalized;
 
                     fireball.GetComponent<Fireball>().Setup(dir, fireball_speed);
