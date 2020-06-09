@@ -10,7 +10,6 @@ public class EnemySpawnerScript : MonoBehaviour
     public float SpawnAmount = 1f;
     public float spawnTime = 1f;
     public float spawnDelay = 10f;
-    public int maxEnemies = 5;
     public int currentWave = 1;
     public float difficulty = 1;
 

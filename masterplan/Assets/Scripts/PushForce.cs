@@ -36,10 +36,16 @@ public class PushForce : MonoBehaviour
                 rb.AddExplosionForce(force, transform.position, radius);
                 Debug.Log("rb gefunden");
             }
-            Target target = nearByoObject.GetComponent<Target>();
-            if (target != null)
+            Target target1 = nearByoObject.GetComponent<Target>();
+            Target target2 = nearByoObject.GetComponentInParent<Target>();
+
+            if (target1 != null)
             {
-                target.TakeDamage(damage);
+                target1.TakeDamage(damage);
+            }
+            if (target2 != null)
+            {
+                target2.TakeDamage(damage);
             }
         }
         // ability cost

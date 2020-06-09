@@ -36,6 +36,7 @@ public class GameMaster_Controll : MonoBehaviour
     public bool weapon_ar_isAcitve = false;
     public bool weapon_shotgun_isAcitve = false;
     public bool weapon_flammenwerfer_isAcitve = false;
+    public bool weapon_raketenwerfer_isAcitve = false;
 
     public int wave;
 

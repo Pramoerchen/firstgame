@@ -50,6 +50,7 @@ public class PlayerManager : MonoBehaviour
     public GameObject weapon_shotgun;
     public GameObject weapon_deagle;
     public GameObject weapon_flammenwerfer;
+    public GameObject weapon_raketenwerfer;
 
     public GameObject Kessel;
 
@@ -59,6 +60,7 @@ public class PlayerManager : MonoBehaviour
     Gun weapon_ar_gun;
     Gun weapon_shotgun_gun;
     Gun weapon_flammenwerfer_gun;
+    Gun weapon_raketenwerfer_gun;
 
     EnemySpawnerScript Spawner;
 
@@ -92,6 +94,7 @@ public class PlayerManager : MonoBehaviour
         weapon_ar_gun = weapon_ar.GetComponent<Gun>();
         weapon_shotgun_gun = weapon_shotgun.GetComponent<Gun>();
         weapon_flammenwerfer_gun = weapon_flammenwerfer.GetComponent<Gun>();
+        weapon_raketenwerfer_gun = weapon_raketenwerfer.GetComponent<Gun>();
 
         if (GameObject.FindGameObjectWithTag("Spawner"))
         {
@@ -166,6 +169,7 @@ public class PlayerManager : MonoBehaviour
         GameMaster_Controll.Instance.weapon_ar_isAcitve = false;
         GameMaster_Controll.Instance.weapon_shotgun_isAcitve = false;
         GameMaster_Controll.Instance.weapon_flammenwerfer_isAcitve = false;
+        GameMaster_Controll.Instance.weapon_raketenwerfer_isAcitve = false;
 
         GameMaster_Controll.Instance.wave = 1;
 
@@ -190,12 +194,10 @@ public class PlayerManager : MonoBehaviour
 
         
         GameMaster_Controll.Instance.weapon_deagle_isAcitve = weapon_deagle_gun.isBuyed;
-        
-        GameMaster_Controll.Instance.weapon_ar_isAcitve = weapon_ar_gun.isBuyed;
-        
+        GameMaster_Controll.Instance.weapon_ar_isAcitve = weapon_ar_gun.isBuyed; 
         GameMaster_Controll.Instance.weapon_shotgun_isAcitve = weapon_shotgun_gun.isBuyed;
-
         GameMaster_Controll.Instance.weapon_flammenwerfer_isAcitve = weapon_flammenwerfer_gun.isBuyed;
+        GameMaster_Controll.Instance.weapon_raketenwerfer_isAcitve = weapon_raketenwerfer_gun.isBuyed;
 
         if (Spawner)
         {
@@ -220,12 +222,10 @@ public class PlayerManager : MonoBehaviour
 
       
         weapon_deagle_gun.isBuyed = GameMaster_Controll.Instance.weapon_deagle_isAcitve;
-
         weapon_shotgun_gun.isBuyed = GameMaster_Controll.Instance.weapon_shotgun_isAcitve;
-
         weapon_ar_gun.isBuyed = GameMaster_Controll.Instance.weapon_ar_isAcitve;
-
         weapon_flammenwerfer_gun.isBuyed = GameMaster_Controll.Instance.weapon_flammenwerfer_isAcitve;
+        weapon_raketenwerfer_gun.isBuyed = GameMaster_Controll.Instance.weapon_raketenwerfer_isAcitve;
 
         if (Spawner)
         {
