@@ -27,7 +27,7 @@ public class Kugel : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Enemy")
+        if (other.CompareTag("Enemy"))
         {
             try
             { 
@@ -39,7 +39,7 @@ public class Kugel : MonoBehaviour
             }
             Destroy(gameObject);
         }
-        if (other.tag == "Ground")
+        if (other.CompareTag("Ground"))
         {
             Destroy(gameObject);
         }
