@@ -1,9 +1,10 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class WeaponSwitch : MonoBehaviour
 {
     public int selectedWeapon = 0;
-
+    List<Transform> active_weapons = new List<Transform>();
     // Start is called before the first frame update
     void Start()
     {
@@ -14,10 +15,12 @@ public class WeaponSwitch : MonoBehaviour
     void Update()
     {
 
+
+
         int previousSelectedWeapon = selectedWeapon;
         if (Input.GetAxis("Mouse ScrollWheel")>0f)
         {
-            if (selectedWeapon >= transform.childCount - 1)
+            if (selectedWeapon >= active_weapons.Count)
                 selectedWeapon = 0;
             else
             selectedWeapon++;
@@ -25,7 +28,7 @@ public class WeaponSwitch : MonoBehaviour
         if(Input.GetAxis("Mouse ScrollWheel") <0f)
         {
             if (selectedWeapon <= 0)
-                selectedWeapon = transform.childCount - 1;
+                selectedWeapon = active_weapons.Count;
             else
                 selectedWeapon--;
         }
@@ -36,13 +39,25 @@ public class WeaponSwitch : MonoBehaviour
     }
     void selectWeapon()
     {
-        int i = 0;
+        
         foreach(Transform weapon in transform)
+        {
+            if (weapon.GetComponent<Gun>().isBuyed && !active_weapons.Contains(weapon))
+                active_weapons.Add(weapon);
+
+            if (!weapon.GetComponent<Gun>().isBuyed && active_weapons.Contains(weapon))
+                active_weapons.Remove(weapon);
+
+            weapon.gameObject.SetActive(false);
+            Debug.Log(active_weapons.Count);
+
+        }
+        
+        int i = 0;
+        foreach(Transform weapon in active_weapons)
         {
             if (i == selectedWeapon && weapon.GetComponent<Gun>().isBuyed)
                 weapon.gameObject.SetActive(true);
-            else
-                weapon.gameObject.SetActive(false);
 
             i++;
             

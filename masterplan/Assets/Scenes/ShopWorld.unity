@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731713, g: 0.13414736, b: 0.12107852, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2970,6 +2970,10 @@ PrefabInstance:
       propertyPath: Kessel
       value: 
       objectReference: {fileID: 8296172669370333211}
+    - target: {fileID: 591943612, guid: 803ef69b8de97294390bf91f80b27856, type: 3}
+      propertyPath: weapon_flammenwerfer
+      value: 
+      objectReference: {fileID: 1340409583}
     - target: {fileID: 705150553856294100, guid: 803ef69b8de97294390bf91f80b27856,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -3038,6 +3042,11 @@ PrefabInstance:
     - target: {fileID: 2851371692533490861, guid: 803ef69b8de97294390bf91f80b27856,
         type: 3}
       propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4520219166717481336, guid: 803ef69b8de97294390bf91f80b27856,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6304092225171912779, guid: 803ef69b8de97294390bf91f80b27856,
@@ -3313,6 +3322,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1340409583 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2304913570205767798, guid: 803ef69b8de97294390bf91f80b27856,
+    type: 3}
+  m_PrefabInstance: {fileID: 1003725672}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1498662823
 Mesh:
   m_ObjectHideFlags: 0
@@ -3552,6 +3567,33 @@ MonoBehaviour:
   saleText: "Leicht Rostige Deagle f\xFCr nur 50hp"
   WeaponObjectToUnlock: {fileID: 1180881891}
   playermanager: {fileID: 0}
+--- !u!1 &1822948535 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4520219166717481336, guid: 803ef69b8de97294390bf91f80b27856,
+    type: 3}
+  m_PrefabInstance: {fileID: 1003725672}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1822948536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822948535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f6731f6d587d1b438e7071aff4a523f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  range: 0
+  impactForce: 0
+  fireRate: 0
+  muzzleFlash: {fileID: 0}
+  impactEffect: {fileID: 0}
+  flammen: {fileID: 0}
+  isBuyed: 0
+  fpsCam: {fileID: 0}
 --- !u!1 &2019294936 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3773007845263987895, guid: 971ef67cc1f0857459f00c0ff1a92d10,
