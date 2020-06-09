@@ -44,13 +44,21 @@ public class Rocket : MonoBehaviour
             {
                 rb.AddExplosionForce(force, transform.position, radius);
             }
-            Target target = nearByoObject.GetComponent<Target>();
-            if (target != null)
+            Target target1 = nearByoObject.GetComponent<Target>();
+            Target target2 = nearByoObject.GetComponentInParent<Target>();
+
+            if (target1 != null)
             {
-                target.TakeDamage(ExplosionDamage);
+                target1.TakeDamage(ExplosionDamage);
             }
+            if (target2 != null)
+            {
+                target2.TakeDamage(ExplosionDamage);
+            }
+
         }
 
         Destroy(gameObject);
     }
+
 }
