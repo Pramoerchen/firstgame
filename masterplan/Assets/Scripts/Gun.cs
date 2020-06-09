@@ -38,6 +38,14 @@ public class Gun : MonoBehaviour
             this.gameObject.GetComponent<shotgun>().Fire();
         }
 
+        if (Input.GetButtonDown("Fire1") && Time.time >= nextTimeToFire && this.gameObject.name == "RocketLauncher")
+        {
+            nextTimeToFire = Time.time + 1f / fireRate;
+            if (muzzleFlash)
+                muzzleFlash.Play();
+            this.gameObject.GetComponent<RocketLauncher>().Fire();
+        }
+
         if (Input.GetButtonDown("Fire1") && this.gameObject.name == "Flammenwerfer2")
         {
             flammen.Play();
