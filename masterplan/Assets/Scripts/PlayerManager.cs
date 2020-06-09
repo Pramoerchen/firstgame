@@ -49,6 +49,7 @@ public class PlayerManager : MonoBehaviour
     public GameObject weapon_ar;
     public GameObject weapon_shotgun;
     public GameObject weapon_deagle;
+    public GameObject weapon_flammenwerfer;
 
     public GameObject Kessel;
 
@@ -57,6 +58,7 @@ public class PlayerManager : MonoBehaviour
     Gun weapon_deagle_gun;
     Gun weapon_ar_gun;
     Gun weapon_shotgun_gun;
+    Gun weapon_flammenwerfer_gun;
 
     EnemySpawnerScript Spawner;
 
@@ -89,6 +91,7 @@ public class PlayerManager : MonoBehaviour
         weapon_deagle_gun = weapon_deagle.GetComponent<Gun>();
         weapon_ar_gun = weapon_ar.GetComponent<Gun>();
         weapon_shotgun_gun = weapon_shotgun.GetComponent<Gun>();
+        weapon_flammenwerfer_gun = weapon_flammenwerfer.GetComponent<Gun>();
 
         if (GameObject.FindGameObjectWithTag("Spawner"))
         {
@@ -162,6 +165,7 @@ public class PlayerManager : MonoBehaviour
         GameMaster_Controll.Instance.weapon_deagle_isAcitve = false;
         GameMaster_Controll.Instance.weapon_ar_isAcitve = false;
         GameMaster_Controll.Instance.weapon_shotgun_isAcitve = false;
+        GameMaster_Controll.Instance.weapon_flammenwerfer_isAcitve = false;
 
         GameMaster_Controll.Instance.wave = 1;
 
@@ -191,6 +195,8 @@ public class PlayerManager : MonoBehaviour
         
         GameMaster_Controll.Instance.weapon_shotgun_isAcitve = weapon_shotgun_gun.isBuyed;
 
+        GameMaster_Controll.Instance.weapon_flammenwerfer_isAcitve = weapon_flammenwerfer_gun.isBuyed;
+
         if (Spawner)
         {
             GameMaster_Controll.Instance.wave = Spawner.currentWave;
@@ -218,6 +224,8 @@ public class PlayerManager : MonoBehaviour
         weapon_shotgun_gun.isBuyed = GameMaster_Controll.Instance.weapon_shotgun_isAcitve;
 
         weapon_ar_gun.isBuyed = GameMaster_Controll.Instance.weapon_ar_isAcitve;
+
+        weapon_flammenwerfer_gun.isBuyed = GameMaster_Controll.Instance.weapon_flammenwerfer_isAcitve;
 
         if (Spawner)
         {
