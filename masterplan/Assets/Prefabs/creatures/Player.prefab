@@ -893,7 +893,7 @@ MonoBehaviour:
   weapon_ar: {fileID: 1784943121628818961}
   weapon_shotgun: {fileID: 8296172668577424447}
   weapon_deagle: {fileID: 6103492831218921385}
-  weapon_flammenwerfer: {fileID: 0}
+  weapon_flammenwerfer: {fileID: 2304913570205767798}
   Kessel: {fileID: 0}
 --- !u!114 &136099170
 MonoBehaviour:
@@ -1304,7 +1304,7 @@ MonoBehaviour:
   muzzleFlash: {fileID: 0}
   impactEffect: {fileID: 0}
   flammen: {fileID: 0}
-  isBuyed: 1
+  isBuyed: 0
   fpsCam: {fileID: 2851371692014235953}
 --- !u!114 &860021732
 MonoBehaviour:
@@ -1323,6 +1323,27 @@ MonoBehaviour:
   tip: {fileID: 1886959989}
   fpsCam: {fileID: 2851371692014235953}
   rocketSpeed: 100
+--- !u!114 &1822948539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4520219166717481336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f6731f6d587d1b438e7071aff4a523f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  range: 0
+  impactForce: 0
+  fireRate: 0
+  muzzleFlash: {fileID: 0}
+  impactEffect: {fileID: 0}
+  flammen: {fileID: 0}
+  isBuyed: 0
+  fpsCam: {fileID: 0}
 --- !u!1 &4571019169460117755
 GameObject:
   m_ObjectHideFlags: 0
@@ -2193,15 +2214,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0578931ddea228b4bbef382339e6d397, type: 3}
---- !u!4 &639602109738476395 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 0578931ddea228b4bbef382339e6d397,
-    type: 3}
-  m_PrefabInstance: {fileID: 5592035274920347761}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4520219166717481336 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 0578931ddea228b4bbef382339e6d397,
+    type: 3}
+  m_PrefabInstance: {fileID: 5592035274920347761}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &639602109738476395 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 0578931ddea228b4bbef382339e6d397,
     type: 3}
   m_PrefabInstance: {fileID: 5592035274920347761}
   m_PrefabAsset: {fileID: 0}
@@ -2385,7 +2406,7 @@ PrefabInstance:
     - target: {fileID: 7709052558168308922, guid: 9849959ac8650f549be66056804a4e86,
         type: 3}
       propertyPath: isBuyed
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9849959ac8650f549be66056804a4e86, type: 3}
@@ -2569,11 +2590,22 @@ PrefabInstance:
       propertyPath: fpsCam
       value: 
       objectReference: {fileID: 2851371692014235953}
+    - target: {fileID: 8800739085553448408, guid: e90e31877a53b46429c2fc5c86476301,
+        type: 3}
+      propertyPath: isBuyed
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e90e31877a53b46429c2fc5c86476301, type: 3}
 --- !u!4 &3001626572756183653 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5838401745330394166, guid: e90e31877a53b46429c2fc5c86476301,
+    type: 3}
+  m_PrefabInstance: {fileID: 8692439873710276179}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2304913570205767798 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7448235444651075109, guid: e90e31877a53b46429c2fc5c86476301,
     type: 3}
   m_PrefabInstance: {fileID: 8692439873710276179}
   m_PrefabAsset: {fileID: 0}
