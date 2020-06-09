@@ -23,7 +23,7 @@ public class RocketLauncher : MonoBehaviour
     {
         RaycastHit hit;
         Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit);
-            GameObject Rocket = Instantiate(RocketToFire, tip.transform.position, Quaternion.identity);
+        GameObject Rocket = Instantiate(RocketToFire, tip.transform.position, transform.rotation);
         Vector3 dir = (fpsCam.transform.forward).normalized;
         Rocket.GetComponent<Rocket>().Setup(dir, rocketSpeed);
     }
