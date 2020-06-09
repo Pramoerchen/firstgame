@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 3373009197093844284}
   - component: {fileID: 6022530142455746314}
   - component: {fileID: 47527670864655347}
+  - component: {fileID: 54876927501744339}
   m_Layer: 0
-  m_Name: rackete
+  m_Name: Rocket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80,3 +81,15 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &54876927501744339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1771053913084102447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39c35f462b247f74982715b41905c0cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
