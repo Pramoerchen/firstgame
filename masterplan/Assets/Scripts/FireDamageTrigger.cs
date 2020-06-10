@@ -48,13 +48,20 @@ public class FireDamageTrigger : MonoBehaviour
                 {
                     EnemysToBurn.Remove(Enemy);
                 }
-                Target myTarget = Enemy.GetComponent<Target>();
+            Debug.Log("gegner erkannt");
 
-                if(myTarget != null)
-                { 
-                    myTarget.TakeDamage(damage);
-                }
+            Target target1 = Enemy.GetComponent<Target>();
+            Target target2 = Enemy.GetComponentInParent<Target>();
+
+            if (target1 != null)
+            {
+                target1.TakeDamage(damage);
             }
+            if (target2 != null)
+            {
+                target2.TakeDamage(damage);
+            }
+        }
         
     }
 
