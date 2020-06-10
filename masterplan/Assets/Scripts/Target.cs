@@ -63,7 +63,7 @@ public class Target : MonoBehaviour
             
         }
 
-        myPlayerManager.changeHealth(heal);
+        myPlayerManager.changeHealth(heal * spawner.difficulty);
         Destroy(gameObject);
     }
 }
