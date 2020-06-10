@@ -5,7 +5,7 @@ using UnityEngine;
 public class FireDamageTrigger : MonoBehaviour
 {
     public float damage = 10;
-    private float damageTrigger = 1;
+    public float damageDuration = 4;
     public float damageIntervall = 1;
     public float fireExpanceSpeed = 3f;
     public float maxRange = 20f;
@@ -13,6 +13,7 @@ public class FireDamageTrigger : MonoBehaviour
     GameObject ParentofThis;
     public List<GameObject> EnemysToBurn;
     Vector3 partentSaveTransform;
+    private bool onFire;
 
     private void Start()
     {
@@ -32,47 +33,42 @@ public class FireDamageTrigger : MonoBehaviour
             {
                 FireArea = maxRange;
             }
-            ParentofThis.transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y,transform.localScale.z * FireArea);
+            ParentofThis.transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z * FireArea);
         }
         else
         {
-            ParentofThis.transform.localScale= new Vector3(0,0,0);
+            ParentofThis.transform.localScale = new Vector3(0, 0, 0);
         }
- 
-        
-        
-            foreach (var Enemy in EnemysToBurn)
-            {
-               
-                if(Enemy == null)
-                {
-                    EnemysToBurn.Remove(Enemy);
-                }
-            Debug.Log("gegner erkannt");
-
-            Target target1 = Enemy.GetComponent<Target>();
-            Target target2 = Enemy.GetComponentInParent<Target>();
-
-            if (target1 != null)
-            {
-                target1.TakeDamage(damage);
-            }
-            if (target2 != null)
-            {
-                target2.TakeDamage(damage);
-            }
-        }
-        
     }
+   
+
 
     private void OnTriggerEnter(Collider other)
     {
         if (!EnemysToBurn.Contains(other.gameObject))
-            EnemysToBurn.Add(other.gameObject);
+         StartCoroutine(DoFireDamage(damageDuration, 4, damage, other.gameObject));
     }
-    private void OnTriggerExit(Collider other)
+
+IEnumerator DoFireDamage(float damageDuration, int damageCount, float damageAmount, GameObject Enemy)
+{
+    onFire = true;
+    int currentCount = 0;
+    while (currentCount < damageCount)
     {
-        if (EnemysToBurn.Contains(other.gameObject))
-            EnemysToBurn.Remove(other.gameObject);
-    }
+        Target target1 = Enemy.GetComponent<Target>();
+        Target target2 = Enemy.GetComponentInParent<Target>();
+
+        if (target1 != null)
+        {
+            target1.TakeDamage(damage);
+        }
+        if (target2 != null)
+        {
+            target2.TakeDamage(damage);
+        }
+            yield return new WaitForSeconds(damageDuration);
+            currentCount++;
+        }
+    onFire = false;
+}
 }
