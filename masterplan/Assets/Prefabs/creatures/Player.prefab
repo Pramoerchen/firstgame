@@ -846,11 +846,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5db4bce1f4b2fdd48a03426ae6997798, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 6304092225332251094}
   health: 100
   maxhealth: 100
   extralife: 0
   godmode: 0
+  dmgMultiply: 1
   ability_push_isActive: 0
   ability_thunder_isActive: 0
   ability_barrel_isActive: 0
@@ -866,6 +866,7 @@ MonoBehaviour:
   weapon_flammenwerfer: {fileID: 2304913570205767798}
   weapon_raketenwerfer: {fileID: 4520219166717481336}
   Kessel: {fileID: 0}
+  healthBar: {fileID: 6304092225332251094}
 --- !u!114 &136099170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2267,6 +2268,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3890454086657216082}
     m_Modifications:
+    - target: {fileID: 4796393644783447820, guid: e90e31877a53b46429c2fc5c86476301,
+        type: 3}
+      propertyPath: maxRange
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 5838401745330394166, guid: e90e31877a53b46429c2fc5c86476301,
         type: 3}
       propertyPath: m_LocalPosition.x

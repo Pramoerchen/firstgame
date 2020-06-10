@@ -20,12 +20,14 @@ public class GameMaster_Controll : MonoBehaviour
 
         health = 100f;
         wave = 1;
+        dmgMultiply = 1f;
     }
 
     // GLOBAL VARS
 
 
     public float health;
+    public float dmgMultiply;
     
     public bool ability_push_isActive = false;
     public bool ability_thunder_isActive = false;

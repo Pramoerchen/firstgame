@@ -7,18 +7,19 @@ public class PlayerManager : MonoBehaviour
 {
 
     private float start_health = 100f;
+    private float start_dmgMultiply = 1f;
 
 
 
     private Camera fpsCam;
+    
     [Header("-Player Settings-")]
-    public HealthBar healthBar;
     public float health;
     public float maxhealth;
     public int extralife;
     public bool godmode;
-
     private int god_mode_time = 5;
+    public float dmgMultiply = 1;
 
     //ability bools
 
@@ -53,6 +54,7 @@ public class PlayerManager : MonoBehaviour
     public GameObject weapon_raketenwerfer;
 
     public GameObject Kessel;
+    public HealthBar healthBar;
 
     Extraleben_kessel kesselscript;
 
@@ -159,6 +161,7 @@ public class PlayerManager : MonoBehaviour
     void reset_player()
     {
         GameMaster_Controll.Instance.health = start_health;
+        GameMaster_Controll.Instance.dmgMultiply = start_dmgMultiply;
 
         GameMaster_Controll.Instance.ability_barrel_isActive = false;
         GameMaster_Controll.Instance.ability_push_isActive = false;
@@ -181,6 +184,8 @@ public class PlayerManager : MonoBehaviour
     {
         GameMaster_Controll.Instance.health = health;
         GameMaster_Controll.Instance.extralife = extralife;
+        GameMaster_Controll.Instance.dmgMultiply = dmgMultiply;
+
         if (kesselscript)
         {
             GameMaster_Controll.Instance.lebenimkessel = kesselscript.lebenimkessel;
@@ -211,6 +216,8 @@ public class PlayerManager : MonoBehaviour
     {
         health = GameMaster_Controll.Instance.health;
         extralife = GameMaster_Controll.Instance.extralife;
+        dmgMultiply = GameMaster_Controll.Instance.dmgMultiply;
+
         if (kesselscript)
         {
             kesselscript.lebenimkessel = GameMaster_Controll.Instance.lebenimkessel;
