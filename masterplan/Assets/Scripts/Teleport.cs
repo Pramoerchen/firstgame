@@ -9,9 +9,11 @@ public class Teleport : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if(other.CompareTag("Player"))
+        { 
         Physics.autoSyncTransforms = false;
         other.transform.position = TeleportTarget.transform.position;
         Physics.autoSyncTransforms = true;
-
+        }
     }
 }
