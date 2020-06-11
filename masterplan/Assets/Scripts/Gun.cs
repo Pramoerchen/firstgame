@@ -22,8 +22,8 @@ public class Gun : MonoBehaviour
         if (this.gameObject.name == "Flammenwerfer2")
             flammen.Stop();
 
-        myPlayerManager = GetComponent<PlayerManager>();
-        
+        myPlayerManager = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>();
+
 
     }
 
@@ -61,7 +61,7 @@ public class Gun : MonoBehaviour
             flammen.Stop();
         }
 
-        if (Input.GetButtonDown("Fire1") && Time.time >= nextTimeToFire && this.gameObject.name == "Rifle1.1")
+        if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire && this.gameObject.name == "Rifle1.1")
         {
             nextTimeToFire = Time.time + 1f / fireRate;
             Shoot();
