@@ -6,7 +6,7 @@ using UnityEngine;
 public class Kugel : MonoBehaviour
 {
     
-    public float damage = 20;
+    float damageperpellet;
 
     // Update is called once per frame
 
@@ -15,12 +15,13 @@ public class Kugel : MonoBehaviour
         Destroy(gameObject, 5f);
     }
 
-    public void Setup(UnityEngine.Vector3 shootdir, float bulletspeed)
+    public void Setup(UnityEngine.Vector3 shootdir, float bulletspeed, float damage)
     {
 
         Rigidbody rb = GetComponent<Rigidbody>();
         rb.AddForce(shootdir * bulletspeed, ForceMode.Impulse);
 
+        damageperpellet = damage;
 
     }
 
@@ -34,11 +35,11 @@ public class Kugel : MonoBehaviour
 
             if (target1 != null)
             {
-                target1.TakeDamage(damage);
+                target1.TakeDamage(damageperpellet);
             }
             if (target2 != null)
             {
-                target2.TakeDamage(damage);
+                target2.TakeDamage(damageperpellet);
             }
             Destroy(this.gameObject);
         }

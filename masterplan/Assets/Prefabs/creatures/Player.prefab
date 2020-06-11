@@ -2071,6 +2071,11 @@ PrefabInstance:
       propertyPath: pelletFireVel
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 2716942394490802968, guid: 9849959ac8650f549be66056804a4e86,
+        type: 3}
+      propertyPath: bulletsShot
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 3424629882764948372, guid: 9849959ac8650f549be66056804a4e86,
         type: 3}
       propertyPath: m_LocalPosition.x

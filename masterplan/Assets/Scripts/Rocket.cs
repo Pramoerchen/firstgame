@@ -8,10 +8,16 @@ public class Rocket : MonoBehaviour
     public float force = 300;
     public float radius = 15;
     public GameObject explosionParticle;
+
+    PlayerManager myPlayerManager;
+
     // Start is called before the first frame update
     void Start()
     {
+        myPlayerManager = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>();
+        ExplosionDamage = myPlayerManager.GetDamageWithMultiply(ExplosionDamage);
         Destroy(this.gameObject, 6f);
+
     }
 
     public void Setup(UnityEngine.Vector3 dir, float rocketspeed)

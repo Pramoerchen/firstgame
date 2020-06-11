@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class shotgun : MonoBehaviour
 {
-    public int BulletsShot; // Total bullets show per Shot of the gun
+    public int bulletsShot; // Total bullets show per Shot of the gun
+    public float totaldamage = 400f;
+
     public GameObject BulletTemplate; // Bullet to fire
 
     public float pelletFireVel;
@@ -16,6 +18,8 @@ public class shotgun : MonoBehaviour
 
     Camera fpsCam;
 
+    PlayerManager myPlayerManager;
+
     void Awake()
     {
         // if no camera referenced, grab the main camera
@@ -23,12 +27,17 @@ public class shotgun : MonoBehaviour
             fpsCam = Camera.main;
     }
 
+    void Start()
+    {
+        myPlayerManager = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>();
+    }
+
     public void Fire()
     {
-        for (int i = 0; i < BulletsShot; i++)
+        for (int i = 0; i < bulletsShot; i++)
         {
 
-            
+            float damageperbullet = myPlayerManager.GetDamageWithMultiply(totaldamage / bulletsShot);
 
             GameObject bullet = Instantiate(BulletTemplate, fpsCam.transform.position, Quaternion.identity);
 
@@ -37,7 +46,7 @@ public class shotgun : MonoBehaviour
 
             Vector3 dir_withspread = dir + new Vector3(Random.Range(-maxspread, maxspread), Random.Range(-maxspread, maxspread), Random.Range(-maxspread, maxspread));
 
-            bullet.GetComponent<Kugel>().Setup(dir_withspread, pelletFireVel);
+            bullet.GetComponent<Kugel>().Setup(dir_withspread, pelletFireVel, damageperbullet);
             
         }
 

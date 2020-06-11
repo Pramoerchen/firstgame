@@ -15,10 +15,16 @@ public class Gun : MonoBehaviour
 
     public Camera fpsCam;
 
+    PlayerManager myPlayerManager;
+
     void Start()
     {
         if (this.gameObject.name == "Flammenwerfer2")
             flammen.Stop();
+
+        myPlayerManager = GetComponent<PlayerManager>();
+        
+
     }
 
 
@@ -80,7 +86,7 @@ public class Gun : MonoBehaviour
             Target target = hit.transform.GetComponent<Target>();
             if (target != null)
             {
-                target.TakeDamage(damage);
+                target.TakeDamage(myPlayerManager.GetDamageWithMultiply(damage));
             }
             if(hit.rigidbody != null)
             {

@@ -15,8 +15,13 @@ public class FireDamageTrigger : MonoBehaviour
     Vector3 partentSaveTransform;
     private bool onFire;
 
+    PlayerManager myPlayerManager;
+
     private void Start()
     {
+        myPlayerManager = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>();
+        damage = myPlayerManager.GetDamageWithMultiply(damage);
+
         //Fetch the Collider from the GameObject
         ParentofThis = transform.parent.gameObject;
         m_Collider = GetComponent<BoxCollider>();

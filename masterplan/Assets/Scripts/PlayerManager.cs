@@ -158,6 +158,11 @@ public class PlayerManager : MonoBehaviour
         godmode = false;
     }
 
+    public float GetDamageWithMultiply(float damage)
+    {
+        return damage * dmgMultiply;
+    }
+
     void reset_player()
     {
         GameMaster_Controll.Instance.health = start_health;
