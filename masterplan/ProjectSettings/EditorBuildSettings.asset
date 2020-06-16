@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/MainScene_backup.unity
     guid: 34c59a82be56cef4bbed78d6962e57e5
+  - enabled: 1
+    path: Assets/Scenes/MysteryIndusty.unity
+    guid: 145099cba1453f64691ce7ace287a9cd
   m_configObjects: {}

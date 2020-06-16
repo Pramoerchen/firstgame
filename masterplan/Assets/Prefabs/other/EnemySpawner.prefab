@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 559739124059726986}
   m_Layer: 0
   m_Name: EnemySpawner
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51,6 +51,8 @@ MonoBehaviour:
   spawnTime: 1
   spawnDelay: 10
   currentWave: 0
+  difficulty: 1
+  currentEnemies: 0
   spawnPoints:
   - {fileID: 559739125531631189}
   - {fileID: 559739125106354374}
@@ -59,6 +61,9 @@ MonoBehaviour:
   ObjectsToSpawn:
   - {fileID: 1069545473900312400, guid: c330d0d3c2de6ec408a16a146b5d8be3, type: 3}
   - {fileID: 4555976528227140607, guid: feed1865bfc700a4995ef48d2b0df396, type: 3}
+  isPlayerReady: 1
+  boss_prefab: {fileID: 0}
+  bossSpawnPoint: {fileID: 0}
 --- !u!1 &559739124441121691
 GameObject:
   m_ObjectHideFlags: 0
