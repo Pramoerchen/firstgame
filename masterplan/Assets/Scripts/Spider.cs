@@ -36,6 +36,7 @@ public class Spider : MonoBehaviour
         {
             nextTimeToFire = Time.time + fireRate;
             AttackReady = true;
+            myanimator.SetBool("isAttacking", false);
         }
 
 

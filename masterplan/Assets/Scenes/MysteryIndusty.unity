@@ -24737,6 +24737,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3837042234827443506, guid: 027e6682b620f1840b84680364e113b9,
         type: 3}
+    - target: {fileID: 559739124059726986, guid: 378afd62346829f47b665ae7429d9d11,
+        type: 3}
+      propertyPath: SpawnAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 559739124059726986, guid: 378afd62346829f47b665ae7429d9d11,
+        type: 3}
+      propertyPath: difficulty
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 559739124059726986, guid: 378afd62346829f47b665ae7429d9d11,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 559739124059726987, guid: 378afd62346829f47b665ae7429d9d11,
         type: 3}
       propertyPath: m_Name
