@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4423918687226315748}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 160.6, y: 6.717, z: -36.692}
+  m_LocalPosition: {x: 160.6, y: 6.69, z: -36.692}
   m_LocalScale: {x: 0.37014702, y: 0.37014702, z: 0.37014702}
   m_Children:
   - {fileID: 4467670709493467182}
@@ -52,7 +52,7 @@ NavMeshAgent:
   m_AutoBraking: 0
   m_AutoRepath: 1
   m_Height: 3.21
-  m_BaseOffset: 2.11
+  m_BaseOffset: 1.14
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &4423918687226315751
@@ -219,6 +219,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spider1.2.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3837042234827443506, guid: 027e6682b620f1840b84680364e113b9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 3888226027419038240, guid: 027e6682b620f1840b84680364e113b9,
         type: 3}
