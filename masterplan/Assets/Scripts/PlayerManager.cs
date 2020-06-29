@@ -150,7 +150,7 @@ public class PlayerManager : MonoBehaviour
             PlayerPrefs.SetInt("highscore", Spawner.currentWave);
         }
         reset_player();
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("ShopWorld");
     }
 
     private void SetGodModeBack()
