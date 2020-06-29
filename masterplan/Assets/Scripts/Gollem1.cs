@@ -1,11 +1,10 @@
-﻿ using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gollem : MonoBehaviour
+public class Gollem1 : MonoBehaviour
 {
     Transform playerTransform;
-    UnityEngine.AI.NavMeshAgent myNavMesh;
     public float checkRate = 0.01f;
     float nextCheck;
     public float radius = 9;
@@ -21,8 +20,6 @@ public class Gollem : MonoBehaviour
         myanimator = GetComponent<Animator>();
         if (GameObject.FindGameObjectWithTag("Player").activeInHierarchy)
             playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
-
-        myNavMesh = gameObject.GetComponent<UnityEngine.AI.NavMeshAgent>();
     }
 
     // Update is called once per frame
@@ -30,7 +27,6 @@ public class Gollem : MonoBehaviour
     {
         if (Time.time > nextCheck)
             nextCheck = Time.time + checkRate;
-        FollowPlayer();
         AttackPlayer();
         if (Time.time > nextTimeToFire)
         {
@@ -38,23 +34,18 @@ public class Gollem : MonoBehaviour
             AttackReady = true;
             myanimator.SetBool("isAttacking", false);
         }
+        var lookDir = playerTransform.position - transform.position;
+        lookDir.y = 0f; //this is the critical part, this makes the look direction perpendicular to 'up'
+        transform.rotation = Quaternion.LookRotation(lookDir, Vector3.up);
 
 
     }
-    void FollowPlayer()
-    {
-        myNavMesh.transform.LookAt(playerTransform);
-        myNavMesh.destination = playerTransform.position;
-    }
+
 
     void AttackPlayer()
     {
         //OverlapSphere erstellen um nach Player zu suchen
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit))
-        {
-            if (hit.transform.tag == "Player")
-            {
+
                 Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
                 foreach (var nearByoObject in colliders)
                 {
@@ -67,7 +58,6 @@ public class Gollem : MonoBehaviour
                         AttackReady = false;
                     }
                 }
-            }
-        }
+
     }
 }
