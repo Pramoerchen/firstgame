@@ -45,6 +45,7 @@ public class Gollem : MonoBehaviour
     {
         myNavMesh.transform.LookAt(playerTransform);
         myNavMesh.destination = playerTransform.position;
+        myNavMesh.updateRotation = false;
     }
 
     void AttackPlayer()
