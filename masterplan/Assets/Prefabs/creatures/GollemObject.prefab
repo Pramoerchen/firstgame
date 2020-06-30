@@ -100,6 +100,9 @@ MonoBehaviour:
   radius: 4
   attackDmg: 95
   fireRate: 1
+  BreakingPoint: 60
+  MiniGollem: {fileID: 6348033197012658809, guid: cdc3e4f1ee5ab674db21eba958f1a2ad,
+    type: 3}
 --- !u!1001 &5410743707761112095
 PrefabInstance:
   m_ObjectHideFlags: 0
