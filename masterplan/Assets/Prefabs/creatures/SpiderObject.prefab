@@ -285,6 +285,12 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 8296172668027156323, guid: 027e6682b620f1840b84680364e113b9,
+        type: 3}
+      propertyPath: Spiderweb
+      value: 
+      objectReference: {fileID: 2766957875878015499, guid: 9f4de7faac54f1644afcb434db1dcd57,
+        type: 3}
     - target: {fileID: 8296172668027156327, guid: 027e6682b620f1840b84680364e113b9,
         type: 3}
       propertyPath: m_IsKinematic

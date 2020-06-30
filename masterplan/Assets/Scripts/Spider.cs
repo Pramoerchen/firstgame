@@ -13,6 +13,8 @@ public class Spider : MonoBehaviour
     Animator myanimator;
     public float fireRate = 1f;
     float nextTimeToFire;
+    public GameObject Spiderweb;
+    Target myTarget;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +22,7 @@ public class Spider : MonoBehaviour
         myanimator = GetComponent<Animator>();
         if (GameObject.FindGameObjectWithTag("Player").activeInHierarchy)
             playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        myTarget = GetComponent<Target>();
     }
 
     // Update is called once per frame
@@ -37,6 +40,11 @@ public class Spider : MonoBehaviour
         var lookDir = playerTransform.position - transform.position;
         lookDir.y = 0f; //this is the critical part, this makes the look direction perpendicular to 'up'
         transform.rotation = Quaternion.LookRotation(lookDir, Vector3.up);
+
+        if(myTarget.health <= 0)
+        {
+            Instantiate(Spiderweb, transform.position + new Vector3(0, 0, 0), Quaternion.identity);
+        }
 
 
     }

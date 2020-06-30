@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class Spiderweb : MonoBehaviour
 {
+    
     CharacterMovement myCharMovement;
+
+    private void Start()
+    {
+        Destroy(transform.parent.gameObject, 5f);
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
