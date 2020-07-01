@@ -144,11 +144,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  max_health: 50
   deathParticle: {fileID: 1286428059694248887, guid: eff988a91e4765448b9e4a8494f3445e,
     type: 3}
   drop: {fileID: 2295743085634939588, guid: 6e64e49ea5d8cfd47b723adfe00e6c53, type: 3}
   dropAmount: 1
   dmgParticle: {fileID: 5560512276289848768}
+  spawner: {fileID: 0}
 --- !u!114 &1069545473900312411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,7 +181,7 @@ NavMeshAgent:
   m_Radius: 0.015
   m_Speed: 10
   m_Acceleration: 8
-  avoidancePriority: 50
+  avoidancePriority: 54
   m_AngularSpeed: 120
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1

@@ -44,7 +44,7 @@ public class Gollem1 : MonoBehaviour
         if(myTarget.health < BreakingPoint)
         {
             Instantiate(MiniGollem, transform.position + new Vector3(Random.Range(0f,2f), 1, Random.Range(0f, 2f)), Quaternion.identity);
-            Destroy(transform.parent.gameObject, 0.5f);
+            Destroy(transform.parent.gameObject, 0.1f);
         }
 
     }

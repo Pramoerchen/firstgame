@@ -141,7 +141,7 @@ NavMeshAgent:
   m_Radius: 0.99999946
   m_Speed: 3.14
   m_Acceleration: 25.23
-  avoidancePriority: 50
+  avoidancePriority: 2
   m_AngularSpeed: 120
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
@@ -164,11 +164,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1000
+  max_health: 50
   deathParticle: {fileID: 6006798168773456408, guid: d97c2ae6a78cf874e874c23e03fe46e3,
     type: 3}
   drop: {fileID: 2295743085634939588, guid: 6e64e49ea5d8cfd47b723adfe00e6c53, type: 3}
   dropAmount: 10
   dmgParticle: {fileID: 8500632950915868645}
+  spawner: {fileID: 0}
 --- !u!114 &6833431755381410287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,6 +192,7 @@ MonoBehaviour:
   FollowRange: 30
   ObjectToSpawn: {fileID: 1069545473900312400, guid: c330d0d3c2de6ec408a16a146b5d8be3,
     type: 3}
+  fireball_speed: 15
 --- !u!1001 &4006600386442981475
 PrefabInstance:
   m_ObjectHideFlags: 0
