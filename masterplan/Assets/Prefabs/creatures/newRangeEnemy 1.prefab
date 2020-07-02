@@ -294,6 +294,7 @@ GameObject:
   - component: {fileID: 6651167863213755967}
   - component: {fileID: 6651167863213755964}
   - component: {fileID: 6651167863213755965}
+  - component: {fileID: 3047574322538281865}
   m_Layer: 0
   m_Name: newRangeEnemy 1
   m_TagString: Enemy
@@ -412,6 +413,19 @@ MonoBehaviour:
   range: 100
   FollowRange: 30
   fireball_speed: 15
+--- !u!65 &3047574322538281865
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3417208439983273601}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4315927690287081601
 GameObject:
   m_ObjectHideFlags: 0

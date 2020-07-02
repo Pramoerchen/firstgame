@@ -44,7 +44,7 @@ public class Turret : MonoBehaviour
     {
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit))
-            if(hit.transform.tag == "Enemy")
+            if(hit.transform.tag == "Enemy"|| hit.transform.tag == "Forcefield")
             {
                 hit.transform.GetComponent<Target>().TakeDamage(damage);
                 muzzleFlash.Play();
