@@ -13,6 +13,7 @@ TagManager:
   - Rifle
   - Shotgun
   - Kessel
+  - Forcefield
   layers:
   - Default
   - TransparentFX

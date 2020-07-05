@@ -28,6 +28,7 @@ public class WeaponBuy : MonoBehaviour
             SaleScript sale = hit.transform.GetComponent<SaleScript>();
             Extraleben_kessel kessel = hit.transform.GetComponent<Extraleben_kessel>();
             DamageShop damageShop = hit.transform.GetComponent<DamageShop>();
+            LevelBuys levelBuys = hit.transform.GetComponent<LevelBuys>();
 
             if (kessel != null)
             {
@@ -43,6 +44,21 @@ public class WeaponBuy : MonoBehaviour
                     }
                 }
 
+            }
+
+            if(levelBuys != null)
+            {
+                mytext.text = levelBuys.saleInfoText;
+                Debug.Log(mytext.text);
+
+                if (Input.GetKeyDown(KeyCode.B))
+                {
+                    if (!((myPlayerManager.health - levelBuys.price) <= 0))
+                    {
+                        myPlayerManager.changeHealth(-levelBuys.price);
+                        levelBuys.buy();
+                    }
+                }
             }
 
             if (damageShop != null)

@@ -837,9 +837,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 258227693068213458d461b6f3600557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
-  fireRate: 2
-  range: 10
+  damage: 15
+  fireRate: 4
+  range: 30
   muzzleFlash: {fileID: 1308782125252655681}
   muzzleFlash1: {fileID: 251795309129242695}
 --- !u!1 &1338697895058174815
@@ -3688,7 +3688,7 @@ Transform:
   m_GameObject: {fileID: 8481866884007461644}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 59.939873, y: 7.8210893, z: -23.08763}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 8005640039562185073}
   - {fileID: 7932146122953358789}
