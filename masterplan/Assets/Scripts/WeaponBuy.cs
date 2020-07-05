@@ -46,7 +46,7 @@ public class WeaponBuy : MonoBehaviour
 
             }
 
-            if(levelBuys != null)
+            else if(levelBuys != null)
             {
                 mytext.text = levelBuys.saleInfoText;
                 Debug.Log(mytext.text);
@@ -61,7 +61,7 @@ public class WeaponBuy : MonoBehaviour
                 }
             }
 
-            if (damageShop != null)
+            else if (damageShop != null)
             {
                 mytext.text = damageShop.infotext;
                 if ( Input.GetKeyDown(KeyCode.B))
@@ -74,7 +74,7 @@ public class WeaponBuy : MonoBehaviour
                 }
             }
 
-            if(sale != null)
+            else if(sale != null)
             {
                 mytext.text = sale.saleText;
                 if (Input.GetKeyDown(KeyCode.B)&& sale.WeaponObjectToUnlock != null)

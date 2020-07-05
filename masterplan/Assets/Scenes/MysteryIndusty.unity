@@ -6310,7 +6310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f8e6d2b3cbf7b844be7f2a533ec5f03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  saleInfoText: sale
+  saleInfoText: 250 for a autoturret
   price: 250
   isBuyed: 0
   gameobjectToSpawn: {fileID: 8481866884007461644, guid: 30b3ae8816d503047884688d2e1af8a5,
@@ -7493,7 +7493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f8e6d2b3cbf7b844be7f2a533ec5f03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  saleInfoText: sale
+  saleInfoText: 750 for a autoturret
   price: 750
   isBuyed: 0
   gameobjectToSpawn: {fileID: 8481866884007461644, guid: 30b3ae8816d503047884688d2e1af8a5,
@@ -19399,7 +19399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f8e6d2b3cbf7b844be7f2a533ec5f03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  saleInfoText: sale
+  saleInfoText: 500 for a autoturret
   price: 500
   isBuyed: 0
   gameobjectToSpawn: {fileID: 8481866884007461644, guid: 30b3ae8816d503047884688d2e1af8a5,
@@ -19510,7 +19510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f8e6d2b3cbf7b844be7f2a533ec5f03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  saleInfoText: sale
+  saleInfoText: 1000 for a autoturret
   price: 1000
   isBuyed: 0
   gameobjectToSpawn: {fileID: 8481866884007461644, guid: 30b3ae8816d503047884688d2e1af8a5,
