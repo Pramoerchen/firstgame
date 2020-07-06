@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.99607843, g: 0.9647059, b: 0.9372549, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -169,7 +169,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ' '
+  m_Text: 
 --- !u!1 &136155176562136842
 GameObject:
   m_ObjectHideFlags: 0
@@ -2154,7 +2154,7 @@ PrefabInstance:
     - target: {fileID: 7709052558168308922, guid: 9849959ac8650f549be66056804a4e86,
         type: 3}
       propertyPath: fireRate
-      value: 20
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7709052558168308922, guid: 9849959ac8650f549be66056804a4e86,
         type: 3}
@@ -2252,6 +2252,16 @@ PrefabInstance:
       propertyPath: fpsCam
       value: 
       objectReference: {fileID: 2851371692014235953}
+    - target: {fileID: 8341626613076490692, guid: 9d4684df19066954794543975e2f9d7f,
+        type: 3}
+      propertyPath: damage
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8341626613076490692, guid: 9d4684df19066954794543975e2f9d7f,
+        type: 3}
+      propertyPath: fireRate
+      value: 1.6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d4684df19066954794543975e2f9d7f, type: 3}
 --- !u!4 &7127139634490154426 stripped
@@ -2449,7 +2459,8 @@ PrefabInstance:
       propertyPath: isBuyed
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8924665523630079068, guid: d50e753aea1dc6a4b9e4ed2e7c2ebd08, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d50e753aea1dc6a4b9e4ed2e7c2ebd08, type: 3}
 --- !u!1 &4520219166717481336 stripped
 GameObject:
