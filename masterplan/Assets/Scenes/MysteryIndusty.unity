@@ -11915,34 +11915,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 472740924, guid: 803ef69b8de97294390bf91f80b27856, type: 3}
-      propertyPath: damage
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 472740924, guid: 803ef69b8de97294390bf91f80b27856, type: 3}
-      propertyPath: fireRate
-      value: 1.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398675714, guid: 803ef69b8de97294390bf91f80b27856, type: 3}
-      propertyPath: fireRate
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2056578892, guid: 803ef69b8de97294390bf91f80b27856, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2056578892, guid: 803ef69b8de97294390bf91f80b27856, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2056578892, guid: 803ef69b8de97294390bf91f80b27856, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2056578892, guid: 803ef69b8de97294390bf91f80b27856, type: 3}
-      propertyPath: m_Text
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 705150553856294100, guid: 803ef69b8de97294390bf91f80b27856,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -12023,8 +11995,7 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1822948539, guid: 803ef69b8de97294390bf91f80b27856, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 803ef69b8de97294390bf91f80b27856, type: 3}
 --- !u!1 &1109536280
 GameObject:

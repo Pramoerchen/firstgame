@@ -11,11 +11,13 @@ public class Turret : MonoBehaviour
     float nextTimeToFire = 1f;
     public ParticleSystem muzzleFlash;
     public ParticleSystem muzzleFlash1;
+    PlayerManager myPlayerManager;
 
     // Start is called before the first frame update
     void Start()
     {
         myTransform = GetComponent<Transform>();
+        myPlayerManager = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>();
     }
 
     // Update is called once per frame
@@ -46,7 +48,7 @@ public class Turret : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.forward, out hit))
             if(hit.transform.tag == "Enemy"|| hit.transform.tag == "Forcefield")
             {
-                hit.transform.GetComponent<Target>().TakeDamage(damage);
+                hit.transform.GetComponent<Target>().TakeDamage(myPlayerManager.GetDamageWithMultiply(damage));
                 muzzleFlash.Play();
                 muzzleFlash1.Play();
                 nextTimeToFire = Time.time + 1f / fireRate;

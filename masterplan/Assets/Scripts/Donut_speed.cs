@@ -14,6 +14,7 @@ public class Donut_speed : MonoBehaviour
             var player = other.GetComponent<CharacterMovement>();
             player.speed +=speedBonus;
             StartCoroutine(speed());
+            GetComponent<Collider>().enabled = false;
             transform.position = transform.position + new Vector3(0, -100, 0);
             Destroy(gameObject, speedTime + 0.5f);
         }
