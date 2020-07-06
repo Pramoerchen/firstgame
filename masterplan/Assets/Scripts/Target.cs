@@ -64,7 +64,14 @@ public class Target : MonoBehaviour
         }
 
         myPlayerManager.changeHealth(heal * spawner.difficulty);
+        if(transform.parent == null)
+        {
         Destroy(gameObject,0.01f);
+        }
+        else
+        {
         Destroy(transform.parent.gameObject, 0.01f);
+        }
+        
     }
 }
